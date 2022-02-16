@@ -1,0 +1,245 @@
+.overlap-above {
+  margin-top: -11.125rem;
+}
+.dashboard-subheading {
+  font-size: 14px !important;
+  line-height: 0 !important;
+}
+
+.card a {
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
+.card-footer-link {
+  bottom: 20px;
+  left: 20px;
+  margin: auto;
+  min-height: 35px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.card-body .card-items li:last-child {
+  border-bottom: none !important;
+}
+
+.card-items {
+  min-height: 150px;
+}
+
+.card-body h2 {
+  font-size: 40px;
+  color: #231f20;
+  letter-spacing: 0;
+  line-height: 42px;
+  font-weight: 500;
+}
+
+.card-bg-white .card-items a {
+  color: #000;
+  text-decoration: none;
+}
+.card {
+  height: 352px;
+  /* // width:350px; */
+  border: 0;
+  border-radius: 0;
+  background: #ffffff;
+  box-shadow: 0 2px 2px 0 rgba(125, 125, 125, 0.5);
+}
+
+.card-body {
+  min-height: 170px;
+  position: relative;
+}
+
+.bi::before {
+  font-size: 15px !important;
+  font-weight: bold !important;
+  margin-top: 5px !important;
+  -webkit-text-stroke-width: medium;
+}
+
+.card-body h2 {
+  /* //   font-family: DIN2014-Regular; */
+  font-size: 40px;
+  color: #231f20;
+  letter-spacing: 0;
+  line-height: 42px;
+}
+
+.bg-white .card-body .position-absolute {
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #000000;
+}
+.bg-white .card-body .position-absolute ul li:last-child {
+  border: none;
+}
+
+.card-items li {
+  border-bottom: 1px solid rgb(92, 92, 92);
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+.card-items {
+  min-height: 150px;
+}
+
+.card-items li {
+  padding: 0 0 3px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #ffffff;
+  position: relative;
+}
+.card-items a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.icon-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px;
+  background-color: #000000;
+  color: #ffffff;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  align-items: center;
+}
+.card-bg-white .card-body .position-absolute {
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #000000;
+}
+
+.card-items li {
+  border-bottom: 1px solid rgb(92, 92, 92);
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.absolute-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.service-message {
+  display: inline-table;
+  vertical-align: middle;
+  width: 70%;
+  margin-left: 0.2em;
+}
+
+/* @media */
+
+@media (max-width: 1199px) {
+  .card-body h2 {
+    width: 90%;
+  }
+}
+
+@media (max-width: 991px) {
+  .card-body h2 {
+    font-size: 1.7rem;
+  }
+
+  p {
+    display: none;
+  }
+  li a {
+    /* //       font-family: DIN2014-Regular; */
+    font-size: 16px;
+    color: #231f20;
+    letter-spacing: 0;
+    line-height: 22px;
+  }
+
+  .card-items li:last-child {
+    /* background: red; */
+    border-bottom: none !important;
+  }
+  a {
+    /* // font-family: DIN2014-Demi; */
+    font-size: 16px;
+    color: #231f20;
+    letter-spacing: 0;
+    line-height: 26px;
+  }
+  .card-footer {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .card-footer-link {
+    bottom: 20px;
+    left: 20px;
+    margin: auto;
+    min-height: 35px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .card-footer-button {
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    min-height: 35px;
+    padding: 10px;
+    width: 90%;
+  }
+}
+
+@media (min-width: 995px) and (max-width: 1024px) {
+  .overlap-above {
+    margin-top: -10.125rem;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 768px) {
+  .card {
+    height: 22rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .overlap-above {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .card {
+    height: auto;
+  }
+}
+
+@media (max-width: 325px) {
+  .card-body h2 {
+    margin: 3rem 0;
+    font-size: 2rem;
+  }
+}

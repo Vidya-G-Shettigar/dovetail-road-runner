@@ -1,0 +1,280 @@
+<div class="panels">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body pb-0">
+            <div class="form-group">
+              <div id="searchbar">
+                <h2 class="heading d-block">Product availability</h2>
+                <label class="subheading" for="productSearch">
+                  I’D LIKE TO FIND AVAILABLE PRODUCTS IN:
+                </label>
+                <!-- <p-dropdown
+                  name="dropdown"
+                  aria-expanded="true"
+                  class="dashboard-dropDown"
+                  [options]="cities"
+                  #kk
+                  (ngModelChange)="selecte($event)"
+                  (keyup.enter)="uclicked(kk)"
+                  [(ngModel)]="selectedCity"
+                  placeholder="Enter A State To Search"
+                  [editable]="true"
+                  optionLabel="name"
+                ></p-dropdown> -->
+            
+                <p-autoComplete [completeOnFocus]='true'  class="product-availability" id="iamautoselect"   (keyup.enter)="uclicked(kk)" (onFocus)="searchCountr()" [dropdown]="true"  placeholder='Enter a state to search'  (ngModelChange)='selectedfromDropdown($event)' #kk  inputId="autocomplete" [(ngModel)]="value2" (completeMethod)="searchCountry($event)" [suggestions]="filteredCountries" field="name"></p-autoComplete>
+
+              </div>
+              <!-- <div class="input-group">
+                <div
+                  class="
+                    col-12
+                    my
+                    typeahead
+                    individual-widget
+                    productSearch
+                    ng-star-inserted
+                  "
+                  id="typeahead-section-productSearch"
+                >
+                  <div
+                    class="p-autocomplete p-component p-autocomplete-dd col-12"
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      role="searchbox"
+                      aria-haspopup="true"
+                      class="
+                        ng-tns-c73-0
+                        p-autocomplete-input
+                        p-inputtext
+                        p-component
+                        p-autocomplete-dd-input
+                        ng-star-inserted
+                      "
+                      autocomplete="off"
+                      type="text"
+                      id="productSearch"
+                      aria-controls="pr_id_1_list"
+                      aria-expanded="false"
+                      aria-activedescendant="p-highlighted-option"
+                      placeholder="Enter a state to search"
+                    />
+                  </div>
+                </div>
+              </div> -->
+              <section style="display: none" id="iam-bckbtn">
+                <div class="search-citydata">
+                  <div class="col-lg-4 col-sm-12 col-xs-12">
+                    <h2 style="font-weight: 300; font-size: 1.85rem">Product availability</h2>
+                    <h6 style="margin-bottom: 40px; margin-top: 40px">
+                      These products are currently  
+                      <br>
+                      available in {{selectedState.name}}.
+                    </h6>
+                    <span 
+                      ><a
+                        style="
+                          text-decoration: underline;
+                          cursor: pointer;
+                          font-weight: 700;
+                          font-size: 15px;
+                         
+                        "
+                        (click)="gobackToSearch()"
+                        >SEARCH AGAIN</a
+                      ></span
+                    >
+                  </div>
+                  <div class="col-lg-8 col-sm-12 col-xs-12 row">
+                    <!-- last1 -->
+                    <div
+                      class="
+                        search-citydata__gridparent
+                        col-lg-4 col-md-4 col-sm-12 col-xs-12
+                      "
+                    >
+                      <div
+                        class="search-citydata__gridchild"
+                        style="
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;
+                        "
+                      >
+                        <img
+                          class="productimage"
+                          alt="img"
+                          src={{iut1}}
+                        />
+                        <h6 style="padding-top: 1.4rem; font-weight: 700">
+                          Business Owners Policy
+                        </h6>
+                        <a class="search-citydata__gridchild-link" style="font-weight: 600;font-size: 16px;"  href=""
+                          >GET A QUOTE</a
+                        >
+                      </div>
+                    </div>
+                    <!-- last2 -->
+                    <div
+                      class="
+                        search-citydata__gridparent
+                        col-lg-4 col-md-4 col-sm-12 col-xs-12
+                      "
+                    >
+                      <div
+                        class="search-citydata__gridchild"
+                        style="
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;
+                        "
+                      >
+                        <img
+                          class="productimage"
+                          alt="img"
+                          src={{iut2}} style="width: 25px;"
+                        />
+                        <h6 style="padding-top: 0.7rem; font-weight: 700">
+                        Cyber Liability
+                        </h6>
+                        <a class="search-citydata__gridchild-link" style="font-weight: 600;font-size: 16px;" href=""
+                          >GET A QUOTE</a
+                        >
+                      </div>
+                    </div>
+                    <!-- last3 -->
+                    <div
+                      class="
+                        search-citydata__gridparent
+                        col-lg-4 col-md-4 col-sm-12 col-xs-12
+                      "
+                    >
+                      <div
+                        class="search-citydata__gridchild"
+                        style="
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;
+                        "
+                      >
+                        <img
+                          class="productimage"
+                          alt="img"
+                          src={{iut3}}
+                        />
+                        <h6 style="padding-top: 1.4rem; font-weight: 700">
+                          General Liability
+                        </h6>
+                        <a class="search-citydata__gridchild-link" style="font-weight: 600;font-size: 16px;" href=""
+                          >GET A QUOTE</a
+                        >
+                      </div>
+                    </div>
+                    <!-- last4 -->
+                    <div
+                      class="
+                        search-citydata__gridparent
+                        col-lg-4 col-md-4 col-sm-12 col-xs-12
+                      "
+                    >
+                      <div
+                        class="search-citydata__gridchild"
+                        style="
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;
+                        "
+                      >
+                        <img
+                          class="productimage"
+                          alt="img"
+                          src={{iut4}}
+                        />
+                        <h6 style="padding-top: 1.2rem; font-weight: 700">
+                          Professional Liability
+                        </h6>
+                        <a class="search-citydata__gridchild-link" style="font-weight: 600;font-size: 16px;" href=""
+                          >GET A QUOTE</a
+                        >
+                      </div>
+                    </div>
+                    <!-- last5 -->
+                    <div
+                      class="
+                        search-citydata__gridparent
+                        col-lg-4 col-md-4 col-sm-12 col-xs-12
+                      "
+                    >
+                      <div
+                        class="search-citydata__gridchild"
+                        style="
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;
+                        "
+                      >
+                        <img
+                          class="productimage"
+                          alt="img"
+                          src={{iut5}} style="width: 25px;"
+                        />
+                        <h6 style="padding-top: 1.2rem; font-weight: 700">
+                          Umbrella
+                        </h6>
+                        <a class="search-citydata__gridchild-link" style="font-weight: 600;font-size: 16px;" href=""
+                          >GET A QUOTE</a
+                        >
+                      </div>
+                    </div>
+
+                    <!-- last6 -->
+                    <div
+                      class="
+                        search-citydata__gridparent
+                        col-lg-4 col-md-4 col-sm-12 col-xs-12
+                      "
+                    >
+                      <div
+                        class="search-citydata__gridchild"
+                        style="
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;
+                        "
+                      >
+                        <img
+                          class="productimage"
+                          alt="img"
+                          src={{iut6}}
+                        />
+                        <h6 style="padding-top: 1.4rem; font-weight: 700">
+                          Workers Compensation
+                        </h6>
+                        <a class="search-citydata__gridchild-link" style="font-weight: 600;font-size: 16px;" href=""
+                          >GET A QUOTE</a
+                        >
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+
+ -->
+
+<!-- <div *ngFor="let anim of selectedState.Business;">
+  {{anim.name}}
+  {{anim.label}}
+  </div> -->

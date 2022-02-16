@@ -1,0 +1,77 @@
+<div class="container pb-4 victor-recent-cover">
+  <div class="row">
+    <div class="col-12">
+      <div class="card panels">
+        <div class="card-body px-0 pb-0">
+          <h2 class="px-4 demi-weight">Recent Activity</h2>
+          <div class="col-md-12 mt-2 parent-table-wrapper px-0">
+            <div class="p-tabview p-component">
+              <div class='p-tabview__child'>
+                <ul
+                class="nav nav-tabs p-tabview-nav"
+                id="myTab"
+                role="tablist  "
+              >
+                <li
+                  class="nav-item p-highlight ng-star-inserted"
+                  role="presentation"
+                >
+                  <a
+                    role="tab"
+                    pripple=""
+                    class="nav-link p-tabview-nav-link p-ripple active"
+                    id=" home-tab p-tabpanel-0-label"
+                    data-bs-toggle="tab"
+                    data-bs-target="#home"
+                    aria-selected="true"
+                    aria-controls="p-tabpanel-0"
+                    aria-controls="home"
+                    tabindex="0"
+                    (click)="Quotesclick()"
+                  >
+                    <span class="p-tabview-title ng-star-inserted"
+                      >Active Quotes</span
+                    ></a
+                  >
+                </li>
+
+                <li role="presentation" class="ng-star-inserted">
+                  <a
+                    role="tab"
+                    pripple=""
+                    class="nav-link p-tabview-nav-link p-ripple"
+                    id=" profile-tab p-tabpanel-1-label"
+                    aria-selected="false"
+                    aria-controls="profile"
+                    aria-controls="p-tabpanel-1"
+                    tabindex="0"
+                    data-bs-toggle="tab"
+                    data-bs-target="#profile"
+                    (click)="Policyclick()"
+                    ><span class="p-tabview-title ng-star-inserted"
+                      >Policies Sold</span
+                    ></a
+                  >
+                </li>
+                <!-- <li class="p-tabview-ink-bar"></li> -->
+              </ul>
+              </div>
+            
+
+              <app-table></app-table>
+            </div>
+            <!--  p-tabview p-component -->
+
+            <div class="card-footer bg-orange">
+              <a href="{{ url }}"> {{ text }}</a>
+              <!-- <a href="javaScript:void(0)" (click)="navigate(table.link.url)">{{
+                table?.link?.label
+              }}</a> -->
+            </div>
+          </div>
+          <!--  parent-table-wrapper -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

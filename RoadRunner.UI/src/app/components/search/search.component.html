@@ -1,0 +1,44 @@
+<section class="header-area bg-orange-sm-banner search-result-wrapper">
+  <div class="container px-3 px-sm-3 px-md-0 px-lg-0">
+    <div class="input-group px-0">
+      <input
+        type="text"
+        class="form-control border-right-0 border rounded-0 search-textbox"
+        placeholder="Enter at least 3 characters for searching..."
+        id="key-search"
+        name="searchInput"
+        [(ngModel)]="searchInput"
+      />
+      <span class="input-group-append bg-black">
+        <button
+          class="btn input-group-text bg-transparent rounded-0 text-white"
+          role="button"
+        >
+          <em class="bi bi-search"></em>
+        </button>
+      </span>
+    </div>
+  </div>
+</section>
+
+<section class="gbl-search">
+  <div class="container min-h-search">
+    <div class="row">
+      <div class="col-md-12 px-0">
+        <ng-container>
+          <div class="header-text pt-3">Search Results for</div>
+        </ng-container>
+        <ul>
+          <li
+            *ngFor="
+              let programmingLanguage of programmingLanguages
+                | search: searchInput
+            "
+          >
+            {{ programmingLanguage }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

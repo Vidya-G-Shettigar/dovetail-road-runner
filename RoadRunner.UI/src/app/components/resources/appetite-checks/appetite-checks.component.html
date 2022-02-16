@@ -1,0 +1,44 @@
+<div class="risk-wapper bg-grey">
+  <section class="header-area">
+    <app-global-small-banner></app-global-small-banner>
+  </section>
+  <section class="appetite-checks">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="card panels">
+            <div class="card-body px-0 pb-0">
+              <h2 class="px-4">{{ card.heading }}</h2>
+              <h5 class="px-4 demi-weight">{{ card.subheading }}</h5>
+              <div class="col-md-12 mt-2 parent-table-wrapper px-0">
+                <hr class="hr-line" />
+                <div class="risk-documents" *ngFor="let item of card.appetite">
+                  <strong
+                    ><span>{{ item.name }}</span></strong
+                  >
+                  <span class="ml-auto float-end">
+                    <span class="text-underline d-sm-inline-block d-none">
+                      <strong
+                        ><a target="_blank" href=" {{ item.target }} " download>
+                          {{ item.downloadTitle }}
+                        </a></strong
+                      ></span
+                    >
+                    <a target="_blank" href="{{ item.target }} " download>
+                      <img
+                        class="ms-3 mb-sm-1"
+                        src="{{ item.downloadIcon }} "
+                        alt="download"
+                      />
+                    </a>
+                  </span>
+                  <hr />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

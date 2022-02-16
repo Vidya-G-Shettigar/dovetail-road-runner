@@ -1,0 +1,58 @@
+<div class="find-more px-0">
+  <div class="container title-width">
+    <div class="title">
+      <h3>{{ FindmoreData.findMoreCard.heading }}</h3>
+    </div>
+  </div>
+  <!-- <div class="container container-fluid px-0"> -->
+  <div class="container container-fluid px-0">
+    <p-carousel
+      [value]="FindmoreData.findMoreCard.cards"
+      [numVisible]="3"
+      [numScroll]="3"
+      [responsiveOptions]="responsiveOptions"
+      class="pos-relative"
+    >
+      <ng-template let-card pTemplate="item" class="ui-carousel-next">
+        <div class="p-grid">
+          <div class="card-tile">
+            <div class="card" [style.background-color]="card.backgroundColor">
+              <div class="card-header">
+                <span class="icon">
+                  <i [class]="card.iconClass" aria-hidden="true"></i>
+                </span>
+                <img [src]="card.image" alt="" />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  {{ card.heading }}
+                </h5>
+                <p class="card-text">
+                  {{ card.subheading }}
+                </p>
+                <!-- 
+                 <ng-container *ngIf="card?.link?.target === 'blank'; else  link">
+        <p><a (click)="onClick(card?.link?.url)">{{card?.link?.label}}</a></p>
+      </ng-container> -->
+                <ng-container *ngIf="card.link?.target === 'blank'; else link">
+                  <p>
+                    <a (click)="onClick(card?.link?.url)" class="pointer">{{
+                      card.link?.label
+                    }}</a>
+                  </p>
+                </ng-container>
+                <ng-template #link>
+                  <p>
+                    <a [routerLink]="card?.link?.url" class="pointer">{{
+                      card?.link?.label
+                    }}</a>
+                  </p>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</div>

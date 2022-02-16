@@ -1,0 +1,28 @@
+<div
+  class="card text-white overlap-above mb-3"
+  [style.background-color]="cards.getQuoteCard.backgroundColor"
+>
+  <div class="card-body">
+    <span class="icon-top-right"
+      ><em [class]="cards.getQuoteCard.iconClass"></em
+    ></span>
+    <h2 class="mb-4 mt-2 dashboard-title-width">
+      {{ cards.getQuoteCard.heading }}
+    </h2>
+    <p>{{ cards.getQuoteCard.subheading }}</p>
+    <a [routerLink]="['/primary-rating-state']">
+      <button
+        class="
+          btn btn-white
+          d-block
+          position-absolute
+          card-footer-button
+          rounded-0
+        "
+        type="submit"
+      >
+        {{ cards.getQuoteCard.buttons[0].label }}
+      </button>
+    </a>
+  </div>
+</div>

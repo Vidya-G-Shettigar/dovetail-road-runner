@@ -1,0 +1,22 @@
+
+version: '3.4'
+services:
+    # your client docker container
+    drr_ui_client:
+        env_file: .env
+        image: "drr_ui_client:${TAG}"
+        container_name: drr_ui_client
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - ${HOST_PORT}:${SERVER_PORT}
+        restart: always
+        networks:
+            - victor_drr
+        volumes:
+            - /opt/docker_volumes/drr/web/log:/app/log
+
+networks:
+      victor_drr:
+         external: true

@@ -1,0 +1,69 @@
+.signInBoxRD {
+  border: 1px solid #e35205;
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+.headerRDA {
+  font-family: dinOT;
+  font-size: 23pt;
+  font-weight: bold;
+}
+
+#divDovetailTermsAndConditions {
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.15em;
+  line-height: 1.5em;
+}
+div {
+  /* font-family: DIN2014Regular; */
+}
+
+a {
+  font-family: dinOT;
+  color: rgb(0, 57, 118);
+}
+a:hover {
+  border-bottom-color: transparent;
+  color: #777 !important;
+  text-decoration: none;
+}
+
+input[type="text"]:focus {
+  outline: 2px solid #006a8e;
+}
+
+input[type="password"]:focus {
+  outline: 2px solid #006a8e;
+}
+
+.textboxRD {
+  font-family: DIN2014Regular !important;
+  font-size: 14pt;
+  border-color: #a6a6a6 !important;
+}
+
+.form-control {
+  border: solid 1px #006699 !important;
+  height: 40px !important;
+}
+
+.SignInRDTL {
+  border-style: none !important;
+  background-color: #006a8e;
+  color: #ffffff;
+  /* font-family: DIN2014Demi !important; */
+  font-size: 15pt;
+  /* font-weight: bold; */
+
+  font-family: Din-Dim !important;
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+.invalid-feedback {
+  display: block;
+}

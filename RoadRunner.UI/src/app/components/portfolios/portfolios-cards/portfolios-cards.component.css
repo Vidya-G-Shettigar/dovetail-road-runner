@@ -1,0 +1,248 @@
+.shadow-hard {
+  box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.2);
+}
+.card {
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 30px;
+}
+.card-header {
+  display: flex;
+  border: 0;
+  border-radius: 0;
+  min-height: 264px;
+}
+
+/* .overlap-above.position-relative.resource-cards {
+  background-color: #f0efef;
+} */
+
+.portfolio-data-value-email {
+  cursor: pointer !important;
+  font-size: 14px;
+}
+
+.portfolio-data-value {
+  font-size: 15px !important;
+}
+
+.card-items {
+  min-height: 150px;
+}
+.card-items li {
+  border-bottom: 1px solid #c4c4c4;
+  margin-bottom: 6px;
+  padding: 7.5px 0 9.5px;
+  position: relative;
+}
+
+.card-items li:last-child {
+  border-bottom: none !important;
+  margin-bottom: 15px;
+}
+
+.card {
+  margin-bottom: 14px;
+}
+
+.pointer {
+  cursor: auto;
+}
+
+.card {
+  word-wrap: break-word;
+  background-clip: border-box;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  position: relative;
+  border: white;
+}
+
+.bg-teal {
+  background-color: #64ccc9 !important;
+}
+
+.card-header {
+  display: flex;
+  min-height: 273px;
+}
+
+.card-body {
+  min-height: 280px;
+  padding: 24px 32px;
+  position: relative;
+  background-color: white;
+}
+
+.topsection {
+  left: 0;
+  margin-top: -17.15rem;
+  right: 0;
+  /* top: -170px; */
+  /* position: absolute; */
+}
+.shadow-hard {
+  box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.2);
+}
+
+.card-body h2 {
+  font-size: 40px;
+  font-weight: 400;
+  color: #231f20;
+  letter-spacing: 0;
+  line-height: 27px;
+}
+
+.card-body p {
+  font-size: 16px;
+  color: #000;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+.card-body .card-footer-link {
+  bottom: 20px;
+  left: 32px;
+  margin: auto;
+  min-height: 25px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.card-header img {
+  display: block;
+  width: 100%;
+  margin: auto;
+  max-width: 175px;
+}
+
+.card-footer a {
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+}
+.card-body {
+  min-height: 280px;
+  position: relative;
+  padding: 24px 32px;
+}
+
+.card-body a {
+  /* text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: 600; */
+  font-size: 16px;
+  color: #000;
+}
+
+.bg-teal {
+  background-color: #64ccc9 !important;
+}
+.bg-orange {
+  background-color: #e35205 !important;
+}
+.bg-blue {
+  background-color: #006a8e !important;
+}
+
+.portfolio-cards_footer {
+  min-height: calc(100vh - 145px);
+}
+
+@media (max-width: 991px) {
+  .card-header {
+    min-height: 0;
+  }
+  /* .card-header img {
+    max-width: 155px;
+    padding: 15%;
+  } */
+
+  .card-body {
+    min-height: 385px;
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .card-body h2 {
+    font-size: 26px;
+    line-height: 33px;
+    margin: 0 0 8px;
+    color: #000;
+  }
+
+  .card-items {
+    min-height: 243px;
+  }
+
+  .card-body .card-footer-link {
+    bottom: 20px;
+    left: 16px;
+    margin: auto;
+    min-height: 25px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-body {
+    min-height: 200px;
+    padding: 20px 15px;
+  }
+
+  .card-body h2 {
+    font-size: 28px;
+    font-weight: 400;
+    color: #231f20;
+    letter-spacing: 0;
+    line-height: 42px;
+  }
+  /* .card-header img {
+    max-width: 165px;
+    padding: 5%;
+  } */
+
+  .card-body .card-footer-link {
+    left: 15px;
+    min-height: 0;
+    font-size: 16px;
+  }
+
+  .card-body a {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 527px) and (min-width: 320px) {
+  .card-header img {
+    width: 35%;
+  }
+
+  .card-header {
+    height: 150px;
+  }
+
+  .topsection {
+    left: 0;
+    margin-top: -18.15rem;
+    right: 0;
+  }
+}
+
+.card-header {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  margin-bottom: 0;
+  padding: 0.75rem 1.25rem;
+}

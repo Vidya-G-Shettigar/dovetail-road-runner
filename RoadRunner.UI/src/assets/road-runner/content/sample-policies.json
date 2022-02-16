@@ -1,0 +1,336 @@
+{
+  "route_name": "sample-policies",
+  "banner": {
+    "backgroundImage": "assets/road-runner/images/background/light-blue-hero-bg.png",
+    "backgroundImageDesktop": "assets/road-runner/images/backgrounds/light-blue-hero-bg.png",
+    "backgroundImageMobile": "assets/road-runner/images/backgrounds/light-blue-hero-bg_Mobile_retina.png",
+    "title": "Find specimen policies",
+    "heading": "check the details",
+    "subHeading": "Specimen policy documents to support your work",
+    "titleColor": "black",
+    "link": [
+      {
+        "title": "BACK TO RESOURCES",
+        "label": "BACK TO RESOURCES",
+        "target": "/resources"
+      }
+    ]
+  },
+  "samples": [
+    {
+      "name": "business line",
+      "nonCollapsedLabel": "TO GET STARTED, CHOOSE A BUSINESS LINE.",
+      "expandLink": "Choose another  ",
+      "completedIcon": "assets/road-runner/images/Tick_Grey-circle_Teal.svg"
+    },
+    {
+      "name": "carrier",
+      "nonCollapsedLabel": "Now choose a carrier.",
+      "expandLink": "Choose another ",
+      "completedIcon": "assets/road-runner/images/Tick_Grey-circle_Teal.svg"
+    },
+    {
+      "name": "documents",
+      "nonCollapsedLabel": "We've Found these documents",
+      "nonCollapsedSubLabel": "Click on them to view or download them directly",
+      "collapsedLabel": "Explore documentation"
+    }
+  ],
+  "options": [
+    {
+      "name": "workers compensation",
+      "label": "Worker's Compensation",
+      "selected": false,
+      "icon": {
+        "name": "dollarSign",
+        "identifier": "assets/road-runner/images/Product_Activate_Workers-Compensation_Icon.png"
+      },
+      "carrier": [
+        {
+          "name": "AmTrust",
+          "label": "AmTrust",
+          "selected": false,
+          "logo": "assets/road-runner/images/AmTrust-Financial.png",
+          "logoTitle": "AmTrust",
+          "availability": true,
+          "documents": [
+            {
+              "name": "documentID",
+              "label": "AmTrust – Workers Compensation Specimen Policy Form ",
+              "title": "Title of actual PDF",
+              "target": "https://engage.dovetailinsurance.com/acton/attachment/39204/f-7c829e06-dcd8-49e4-9f5c-48bd3f9d67c9/1/-/-/-/-/AmTrust%20WC%20Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "/onevictor/assets/road-runner/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "AmTrust – Cyber Specimen Policy Form ",
+              "title": "Title of actual PDF",
+              "target": "https://engage.dovetailinsurance.com/acton/attachment/39204/f-943044e6-a328-4f93-bbe7-3aeb6a4e60a7/1/-/-/-/-/AmTrust%20Cyber%20Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "/onevictor/assets/road-runner/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "AmTrust – EPLI Specimen Policy Form",
+              "title": "Title of actual PDF",
+              "target": "https://engage.dovetailinsurance.com/acton/attachment/39204/f-ea1a2ed7-a302-4ce7-89c3-4c20b8d0106e/1/-/-/-/-/AmTrust%20EPLI%20Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "/onevictor/assets/road-runner/images/Download_Icon_Blue.svg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "general liablity",
+      "label": "General Liability",
+      "selected": false,
+      "icon": {
+        "name": "dollarSign",
+        "identifier": "assets/road-runner/images/Product_Activate_General-Liability_Icon.png"
+      },
+      "carrier": [
+        {
+          "name": "homestie",
+          "label": "Homesite",
+          "selected": false,
+          "logo": "assets/road-runner/images/homesite-logo.png",
+          "logoTitle": "Homesite",
+          "availability": true,
+          "documents": [
+            {
+              "name": "documentID",
+              "label": "Homesite Commercial General Liability Coverage Form ",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite Commercial General Liability Coverage Form.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "/onevictor/assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite Commercial Inland Marine Conditions ",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite Commercial Inland Marine Conditions.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite Contractors E&O Endorsement",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite Contractors E&O Endorsement.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite Contractors Equipment Coverage Form",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite Contractors Equipment Coverage Form.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite Damage to Property of Others Endorsement",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite Damage to Property of Others Endorsement.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite Deductible Liability Endorsement",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite Deductible Liability Endorsement.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite Misc Items Blanket Coverage",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite Misc Items Blanket Coverage.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite Misc Professional Liability Endorsement",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite Misc Professional Liability Endorsement.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "business owners policy",
+      "label": "Business Owners Policy",
+      "selected": false,
+      "icon": {
+        "name": "dollarSign",
+        "identifier": "assets/dovetail/images/Product_Activate_Business-Owners-Policy_Icon.png"
+      },
+      "carrier": [
+        {
+          "name": "homestie",
+          "label": "Homesite",
+          "selected": false,
+          "logo": "assets/dovetail/images/homesite-logo.png",
+          "logoTitle": "Homesite",
+          "availability": true,
+          "documents": [
+            {
+              "name": "documentID",
+              "label": "Homesite BOP Coverage Form Specimen ",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite BOP Coverage Form Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "/onevictor/assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite BOP Cyber Specimen ",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite BOP Cyber Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite BOP Direct Damage Specimen",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite BOP Direct Damage Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite BOP ECommerce Specimen",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite BOP ECommerce Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite BOP Employee Benefits Specimen",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite BOP Employee Benefits Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "/onevictor/assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite BOP Enhancement End Specimen",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite BOP Enhancement End Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite BOP Enhancement End Summary Specimen",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite BOP Enhancement End Summary Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite BOP EPL Endorsement Specimen",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documentsHomesite BOP EPL Endorsement Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite BOP Equip Breakdown Specimen",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite BOP Equip Breakdown Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite BOP Food Contamination Specimen",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite BOP Food Contamination Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite BOP HNOA Specimen",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite BOP HNOA Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite BOP Ord or Law Specimen",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite BOP Ord or Law Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite BOP Pet Endorsement Specimen",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite BOP Pet Endorsement Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite BOP Printers E&O Specimen",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite BOP Printers E&O Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite BOP Restaurant Endorsement Specimen",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite BOP Restaurant Endorsement Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite BOP Spoilage Coverage Specimen",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite BOP Spoilage Coverage Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite BOP Time Element Specimen",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite BOP Time Element Specimen.pdf",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            },
+            {
+              "name": "documentID",
+              "label": "Homesite BOP Water Backup & Sump Overflow Specimen",
+              "title": "Title of actual PDF",
+              "target": "assets/dovetail/documents/Homesite BOP Water Backup & Sump Overflow Specimen",
+              "downloadTitle": "Download",
+              "downloadIcon": "assets/dovetail/images/Download_Icon_Blue.svg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

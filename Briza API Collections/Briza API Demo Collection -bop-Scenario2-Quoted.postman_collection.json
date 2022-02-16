@@ -1,0 +1,1433 @@
+{
+	"info": {
+		"_postman_id": "71d16f43-b891-4aa1-9fb5-525dc9f5b1a9",
+		"name": "Briza API Demo Collection -bop-Scenario2-Quoted",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API Keys",
+			"item": [
+				{
+					"name": "Create API Key",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json()",
+									"pm.collectionVariables.set('api_key_id', response.id)",
+									"",
+									"const response = pm.response.json()",
+									"pm.collectionVariables.set('api_key', response.secretKey)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/api-keys",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"api-keys"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List API Keys",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/api-keys",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"api-keys"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete API Key",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/api-keys/{{apikey_id}}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"api-keys",
+								"{{apikey_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Brokerages",
+			"item": [
+				{
+					"name": "Register brokerage",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json()",
+									"pm.collectionVariables.set('brokerage_id', response.id)",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\": \"YOUR_BROKERAGE_NAME\",\n\"email\": \"YOUR-BROKERAGE-EMAIL@mailinator.com\",\n\"number\": \"1234567890\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/brokerages",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"brokerages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List brokerage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/brokerages/{{brokerage_id}}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"brokerages",
+								"{{brokerage_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update brokerage",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/brokerages/{{brokerage_id}}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"brokerages",
+								"{{brokerage_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add license details to brokerage",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json()",
+									"pm.collectionVariables.set('license_id', response.id)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"jurisdictionCode\": \"IL\",\n\"number\": \"1234567\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/brokerages/{{brokerage_id}}/licenses",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"brokerages",
+								"{{brokerage_id}}",
+								"licenses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List brokerage licences",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/brokerages/{{brokerage_id}}/licenses",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"brokerages",
+								"{{brokerage_id}}",
+								"licenses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update brokerage license",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/brokerages/{{brokerage_id}}/licenses/{{license_id}}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"brokerages",
+								"{{brokerage_id}}",
+								"licenses",
+								"{{license_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get brokerage license",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/brokerages/{{brokerage_id}}/licenses/{{license_id}}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"brokerages",
+								"{{brokerage_id}}",
+								"licenses",
+								"{{license_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete brokerage license",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/brokerages/{{brokerage_id}}/licenses/{{license_id}}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"brokerages",
+								"{{brokerage_id}}",
+								"licenses",
+								"{{license_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add credential details to brokerage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"underwriterId\": \"f5789b03-44e1-4a3c-8e30-efc4611a8534\",\n\"credentials\": {\n\"producerClient\": \"briza\"\n},\n\"underwriterId\": \"b6a21a44-b10a-49bb-a74d-c5732fad8d8f\",\n\"credentials\": {\n\"contractNumber\": \"briza\",\n\"branchCode\": \"briza\"\n},\n\"underwriterId\": \"c115da39-3a2e-457f-9073-681cdde3e531\",\n\"credentials\": {\n\"portalUsername\": \"briza\",\n\"agencyId\": \"briza\"\n},\n\"underwriterId\": \"2069e663-2d18-47c7-b2a6-daad0f78d822\",\n\"credentials\": {\n\"publishableKey\": \"briza\",\n\"secretKey\": \"briza\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/brokerages/{{brokerage_id}}/credentials/",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"brokerages",
+								"{{brokerage_id}}",
+								"credentials",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List brokerage credentials",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/brokerages/{{brokerage_id}}/credentials",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"brokerages",
+								"{{brokerage_id}}",
+								"credentials"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update brokerage credential",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json()",
+									"pm.collectionVariables.set('credential_id', response.id)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"underwriterId\": \"c7ef929c-d8af-411b-ac60-146beeee55cc\",\n\"credentials\": {\n\"agencyName\": \"briza\",\n\"agencyContractNumber\": \"briza\",\n\"agencySubcode\": \"briza\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/brokerages/{{brokerage_id}}/credentials/{{credential_id}}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"brokerages",
+								"{{brokerage_id}}",
+								"credentials",
+								"{{credential_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get brokerage credential",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/brokerages/{{brokerage_id}}/credentials/{{credential_id}}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"brokerages",
+								"{{brokerage_id}}",
+								"credentials",
+								"{{credential_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete brokerage credential",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/brokerages/{{brokerage_id}}/credentials/{{credential_id}}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"brokerages",
+								"{{brokerage_id}}",
+								"credentials",
+								"{{credential_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pre-applications",
+			"item": [
+				{
+					"name": "Create pre-application",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json()",
+									"pm.collectionVariables.set('pre_app_id', response.id)",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"brokerageId\": \"{{brokerage_id}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/pre-applications",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"pre-applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Answer pre-application questions",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"answers\": {\n  \"NumberOfLocations\": 1,\n  \"BusinessName\": \"123 Store\",\n  \"LinkEmail\": \"test@smnetserv.com\",\n  \"RequestedTypesOfInsurance\": [\n    \"bop\"\n  ],\n  \"Location1Address\": {\n  \"street\":\"508 Sunset View Ter SE\",\n  \"secondary\":\"\",\n  \"city\":\"Leesburg\",\n  \"region\":\"VA\",\n  \"postalCode\":\"20175\",\n  \"county\":\"\",\n  \"country\":\"US\"\n},\n  \"Location1ClassOfBusiness\": \"453998-19\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/pre-applications/{{pre_app_id}}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"pre-applications",
+								"{{pre_app_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List pre-applications",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/pre-applications",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"pre-applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get pre-application",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/pre-applications/{{pre_app_id}}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"pre-applications",
+								"{{pre_app_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Applications",
+			"item": [
+				{
+					"name": "Create application",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json()",
+									"pm.collectionVariables.set('app_id', response.id)",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"preApplicationId\": \"{{pre_app_id}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/applications",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Answer application questions",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"answers\": {\n\"Location1ClassOfBusiness\": \"453998-19\",\n\"PhoneNumber\": \"8659452481\",\n\"ApplicantFirstName\": \"Aus\",\n\"ApplicantLastName\": \"Biz\",\n\"EmailAddress\": \"In.Wi@e.com\",\n\"SubmittedByBroker\": false,\n\"BusinessStartDate\": \"2021-03-03\",\n\"Location1BuildingOwnership\": \"lessee\",\n\"Location1BuildingLimit\": \"10000\",\n\"Location1BusinessPersonalPropertyLimit\": \"10000\",\n\"Location1AutomaticSprinkler\": \"yes\",\n\"EstimatedAnnualGrossSales1\": \"10000\",\n\"PolicyStartDate\": \"2021-11-12\",\n\"PropertyBuildingCoverage\": true,\n\"Location1PayrollExpense\": \"10000\",\n\"LossHasAny\": \"no\",\n\"Loss1AmountPaid\": 3000,\n\"Loss1Description\": \"abc\",\n\"Loss1Type\": \"gl\",\n\"Loss2AmountPaid\": 2000,\n\"Loss2Description\": \"yyy\",\n\"Loss2Type\": \"gl\",\n\"Owner1Payroll\": \"10000\",\n\"NumberOfOwners\": 1,\n\"Location1TotalEmployees\": 1,\n\"BusinessOwnershipStructure\":\"association\",\n        \"Location1NumberOfFullTimeEmployees\":1,\n        \"Location1SquareFeetOccupied\":250,\n        \"Location1BuildingConstruction\":\"frame-construction\",\n        \"Location1NumberOfStoriesInBuilding\":12,\n        \"Location1BuildingYearBuilt\":\"2015\",\n        \"ArtRestorationService\":\"yes\"\n}\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/applications/{{app_id}}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"applications",
+								"{{app_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get application",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/applications/{{app_id}}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"applications",
+								"{{app_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List application products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/applications/{{app_id}}/products",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"applications",
+								"{{app_id}}",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Quotes",
+			"item": [
+				{
+					"name": "Create new quotes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"applicationId\": \"{{app_id}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/quotes",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"quotes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List quotes by application",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/applications/{{app_id}}/quotes",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"applications",
+								"{{app_id}}",
+								"quotes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a quote",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json()",
+									"pm.collectionVariables.set('quote_id', response.id)",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/quotes/{{quote_id}}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"quotes",
+								"{{quote_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get coverages questionnaire",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/quotes/{{quote_id}}/coverages",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"quotes",
+								"{{quote_id}}",
+								"coverages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get acknowledgement questionnaire",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/quotes/{{quote_id}}/acknowledgements",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"quotes",
+								"{{quote_id}}",
+								"acknowledgements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a quote",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"coverageAnswers\": { },\n\"acknowledgementAnswers\": { }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/quotes/{{quote_id}}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"quotes",
+								"{{quote_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get proposal document",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/quotes/{{quote_id}}/proposal",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"quotes",
+								"{{quote_id}}",
+								"proposal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Policies",
+			"item": [
+				{
+					"name": "Create a policy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json()",
+									"pm.collectionVariables.set('policy_id', response.id)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quoteId\": \"{{quote_id}}\",\n    \"installmentFrequency\": \"yearly\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/policies",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"policies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update quote with acknolwedgement answers",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"acknowledgementAnswers\":{\n                \"ExcludesBankruptcyReceivershipLien\":true,\n                \"ExcludesInvestmentBanking\":true,\n                \"ExcludesLaborPlacement\":true,\n                \"UnderstandSummaryOfCoverages\":true\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/quotes/{{quote_id}}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"quotes",
+								"{{quote_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a policy Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json()",
+									"pm.collectionVariables.set('policy_id', response.id)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quoteId\": \"{{quote_id}}\",\n    \"installmentFrequency\": \"yearly\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/policies",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"policies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List policies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/applications/{{app_id}}/quotes/{{quote_id}}/policies",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"applications",
+								"{{app_id}}",
+								"quotes",
+								"{{quote_id}}",
+								"policies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pay policy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"meta\": {\n\"name\": \"John Doe\",\n\"number\": \"4242424242424242\",\n\"cvc\": \"123\",\n\"expMonth\": \"12\",\n\"expYear\": \"2022\",\n\"cardType\": \"visa\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/policies/{{policy_id}}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"policies",
+								"{{policy_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get policy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/policies/{{policy_id}}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"policies",
+								"{{policy_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Links",
+			"item": [
+				{
+					"name": "Create link",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json()",
+									"pm.collectionVariables.set('active_token', response.activeToken.value)",
+									"",
+									"const response = pm.response.json()",
+									"pm.collectionVariables.set('links_id', response.id)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"preApplicationId\": \"{{pre_app_id}}\",\n\"type\": \"policyholder\",\n\"email\": \"send-link-to-email@mailinator.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/links",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"links"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a link",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json()",
+									"pm.collectionVariables.set('active_token', response.activeToken.value)",
+									"",
+									"const response = pm.response.json()",
+									"pm.collectionVariables.set('link_id', response.id)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"preApplicationId\": \"{{pre_app_id}}\",\n\"type\": \"policyholder\",\n\"email\": \"send-link-to-email@mailinator.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/links/{{link_id}}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"links",
+								"{{link_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List links by pre-application",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"preApplicationId\": \"{{pre_app_id}}\",\n\"type\": \"policyholder\",\n\"email\": \"send-link-to-email@mailinator.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/{{pre_app_id}}/links",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"{{pre_app_id}}",
+								"links"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Class Codes",
+			"item": [
+				{
+					"name": "Lists workers' compensation class codes by state",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/workers-compensation-class-codes?state=VA",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"workers-compensation-class-codes"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": "VA"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Business classes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/business-classes",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"business-classes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Underwriters and Products",
+			"item": [
+				{
+					"name": "List underwriters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/underwriters",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"underwriters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{base_url}}{{prefix}}/products",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{base_url}}{{prefix}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "ApiKey {{api_key}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api_key",
+			"value": "sk-3710fc3ff4a882b460aad5eaf5d69a53a8cd32889d7c85b327b7f3939653e077d72a733e7bf3fb97"
+		},
+		{
+			"key": "scheme",
+			"value": "https"
+		},
+		{
+			"key": "base_url",
+			"value": "api.briza-sandbox.io"
+		},
+		{
+			"key": "prefix",
+			"value": "/api/v2"
+		},
+		{
+			"key": "brokerage_id",
+			"value": "d563843e-758d-4d24-96f0-b08a684e4844"
+		},
+		{
+			"key": "underwriter_id",
+			"value": "f5789b03-44e1-4a3c-8e30-efc4611a8534"
+		},
+		{
+			"key": "product_id",
+			"value": ""
+		},
+		{
+			"key": "pre_app_id",
+			"value": ""
+		},
+		{
+			"key": "app_id",
+			"value": ""
+		},
+		{
+			"key": "quote_id",
+			"value": ""
+		},
+		{
+			"key": "policy_id",
+			"value": ""
+		},
+		{
+			"key": "license_id",
+			"value": ""
+		},
+		{
+			"key": "active_token",
+			"value": ""
+		},
+		{
+			"key": "link_id",
+			"value": ""
+		},
+		{
+			"key": "api_key_id",
+			"value": ""
+		},
+		{
+			"key": "credential_id",
+			"value": ""
+		}
+	]
+}

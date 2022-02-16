@@ -1,0 +1,118 @@
+{
+  "route_name": "latest-insights",
+  "heading": "Sort by: Newest",
+  "subHeading": "122 insights",
+  "title": "Latest insights",
+  "banner": {
+    "backgroundImage": "assets/road-runner/images/background/blue-hero-lg-bg.png",
+    "backgroundImageDesktop": "assets/road-runner/images/background/blue-hero-lg-bg.png",
+    "backgroundImageMobile": "assets/road-runner/images/background/portfolio-hero-banner-Mobile.png",
+    "title": "Latest insights",
+    "heading": "Our knowledge",
+    "subHeading": "The Dovetail team's take on the topics of today.",
+    "link": [
+      {
+        "name": "back_to-resources",
+        "label": "BACK TO RESOURCES",
+        "target": "/resources"
+      }
+    ]
+  },
+  "loadingScreen": {
+    "backgroundImage": "assets/road-runner/images/Popup_Background-image_retina.png",
+    "title": "deep dive for data",
+    "heading": "We’re doing a",
+    "subHeading": "We work with carriers, reference agencies and other databases to help you give your clients the best coverage options.",
+    "footer": "The scope of the search means it can take a few moments to return results, so please bear with us while we move things on to the next step."
+  },
+  "rows": [
+    {
+      "cards": [
+        {
+          "name": "",
+          "heading": "AGENCY OF THE FUTURE",
+          "subheading": "Find out how new technologies are empowering agents to enhance their value.",
+          "backgroundColor": "#E35205",
+          "image": "assets/road-runner/images/star.png",
+          "redirectUrl": "quotes",
+          "link": {
+            "name": "download",
+            "label": "DISCOVER MORE",
+            "url": "https://engage.dovetailinsurance.com/acton/media/39204/dovetail-agency-of-the-future",
+            "target": "blank"
+          }
+        },
+        {
+          "name": "",
+          "heading": "6 WORKERS COMP EXPOSURES ",
+          "subheading": "Keep an eye out for these hazards to help prevent claims.",
+          "backgroundColor": "#006A8E",
+          "image": "assets/road-runner/images/people-group.png",
+          "link": {
+            "name": "learnmore",
+            "label": "LEARN MORE",
+            "url": "https://engage.dovetailinsurance.com/acton/media/39204/6-exposures-that-affect-workers-comp-rates",
+            "target": "blank"
+          }
+        },
+        {
+          "name": "",
+          "heading": "5 TIPS TO AVOID SLIPS & TRIPS",
+          "subheading": "Prevention is the best medicine when it comes to employee slips and trips.",
+          "backgroundColor": "#64CCC9",
+          "image": "assets/road-runner/images/bandaids.png",
+          "link": {
+            "name": "discovermore",
+            "label": "DISCOVER MORE",
+            "url": "https://engage.dovetailinsurance.com/acton/media/39204/5-tips-to-avoid-slips-and-trips",
+            "target": "blank"
+          }
+        }
+      ]
+    },
+    {
+      "cards": [
+        {
+          "name": "",
+          "heading": "5 TECHNOLOGY SCAMS TO AVOID",
+          "subheading": "While working from home, we have become more vulnerable to technology scams",
+          "backgroundColor": "#E35205",
+          "image": "assets/road-runner/images/phishing.png",
+          "redirectUrl": "quotes",
+          "link": {
+            "name": "download",
+            "label": "DOWNLOAD",
+            "url": "https://engage.dovetailinsurance.com/acton/attachment/39204/f-68b07369-34d5-4a61-8b5a-dff2147994be/1/-/-/-/-/Technology%20Scams%20Storybook-Dovetail.pdf",
+            "target": "blank"
+          }
+        },
+        {
+          "name": "",
+          "heading": "ONLINE MEETING BEST PRACTICES",
+          "subheading": "How to effectively communicate using online video conferencing",
+          "backgroundColor": "#006A8E",
+          "image": "assets/road-runner/images/computer-laptop.png",
+          "link": {
+            "name": "download",
+            "label": "DOWNLOAD",
+            "url": "https://engage.dovetailinsurance.com/acton/attachment/39204/f-e0c3b1e3-4090-4f2e-9a8e-d67bafe5207c/1/-/-/-/-/Online%20Meeting%20Best%20Practices-Dovetail.pdf",
+            "target": "blank"
+          }
+        },
+        {
+          "name": "",
+          "heading": "Supporting Clients in a Changing Insurance Market",
+          "subheading": "A guide to help navigate hard market discussions with clients.",
+          "backgroundColor": "#64ccc9",
+          "image": "assets/road-runner/images/distribution_white.png",
+          "link": {
+            "name": "download",
+            "label": "DOWNLOAD",
+            "url": "https://engage.dovetailinsurance.com/acton/attachment/39204/f-2e54dcd9-b704-4af9-bea1-70c996efbab9/1/-/-/-/-/Hardening%20Market.pdf",
+            "target": "blank"
+          }
+        }
+      ]
+    }
+  ]
+}

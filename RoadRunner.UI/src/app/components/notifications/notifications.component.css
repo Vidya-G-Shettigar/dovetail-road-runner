@@ -1,0 +1,122 @@
+.notify-header {
+    display: none!important;
+}
+
+.notify-chbx {
+    margin-left: 40px;
+}
+
+.notifications_footer {
+    min-height: calc(100vh - 145px);
+}
+
+@media (max-width: 960px) {
+    .tabel-rows {
+        display: flex !important;
+        justify-content: space-evenly;
+        align-items: center !important;
+        border-bottom: 1px solid #e9ecef;
+    }
+    .notify-table-date-col {
+        text-align: end;
+        margin-left: auto;
+    }
+    .notify-header {
+        display: block !important;
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .tabel-rows {
+        align-items: center !important;
+    }
+    .data-overflowclip {
+        width: 6rem;
+    }
+    .notify-chbx {
+        margin-left: 30px;
+    }
+}
+
+.data-overflowclip {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.victor-recent-cover {
+    margin-bottom: 13em;
+}
+
+.custom-row {
+    background-color: #fff;
+}
+
+.highlight {
+    background-color: #c4f4fc !important;
+    font-weight: bold;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.custom-button, .custom-button:hover {
+    color: #0d89ec !important;
+    background-color: #fff !important;
+    font-weight: bold;
+    display: block;
+}
+
+@media (min-width: 767px) {
+    .custom-button {
+        margin-left: 12px;
+    }
+}
+
+.notification-icon {
+    color: white;
+    background-color: orangered;
+    border-radius: 8px;
+}
+
+.card-header {
+    background-color: #e35205;
+    color: #fff;
+    font-size: 28px;
+}
+
+.card-body {
+    font-size: 18px;
+    padding: 32px 1.25rem;
+}
+
+.custom-button-close {
+    float: right;
+    border: none;
+}
+
+.no-background {
+    background-color: transparent;
+}
+
+.error-popup {
+    align-items: center;
+    background: rgba(0,0,0,.4);
+    display: flex;
+    position: fixed;
+    z-index: 1060;
+    top: 0;    
+    bottom: 0;    
+    justify-content: center;
+    padding: .625em;
+    width: 100%;
+}
+
+.filter-header {
+    color: #231f20;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+}

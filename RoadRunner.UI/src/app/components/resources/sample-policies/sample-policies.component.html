@@ -1,0 +1,237 @@
+<section class="sample-policies bg-grey">
+  <section class="header-area">
+    <app-global-small-banner></app-global-small-banner>
+  </section>
+</section>
+<section class="py-5 d-flex bg-grey samplepolicies_footer">
+  <!-- Accordion Content Stats-->
+  <div class="container">
+    <p-accordion
+      class="
+        accordion-dovetail
+        hideAccordionLink
+        hideAccordionOpenIcon
+        hideAccordionCloseIcon
+      "
+    >
+      <ng-container>
+        <!-- business line accordion tab starts here-->
+        <div class="mb-3 shadow-hard">
+          <p-accordionTab
+            [selected]="accordionSelectionArray[0]"
+            [disabled]="accordionDisabledArray[0]"
+          >
+            <!-- disables the header click-->
+            <p-header class="w-100" (click)="stopPropagation($event)">
+              <!-- shows the completed tick icon-->
+              <span>
+                <img
+                  class="tickmark"
+                  [src]="sample.samples[0].completedIcon"
+                  *ngIf="accordionHeader[0]"
+                />
+              </span>
+              <!-- shows the default accordion header  if there is no selection made-->
+              <span
+                class="bold-weight headname text-uppercase pointer"
+                *ngIf="accordionHeader[0] == null"
+              >
+                {{ sample.samples[0].nonCollapsedLabel }}
+              </span>
+              <!-- shows the selected accordion header -->
+
+              <span
+                class="selection-title dovetail-selection-title"
+                *ngIf="accordionHeader[0]"
+              >
+                {{ accordionHeader[0] }}
+              </span>
+              <!-- Shows choose another business line-->
+              <span
+                class="
+                  float-right
+                  mt-md-0
+                  py-sm-2
+                  custom-font
+                  text-underline
+                  dovetail-selection-title
+                  pointer
+                "
+                *ngIf="accordionHeader[0]"
+                (click)="enableCurrentAccordion(0)"
+              >
+                {{ sample.samples[0].expandLink }}{{ sample.samples[0].name }}
+              </span>
+            </p-header>
+            <!-- loads all business line-->
+
+            <div
+              class="
+                businessheadder-content
+                d-flex
+                flex-column
+                justify-content-between
+              "
+            >
+              <div class="row ml-1 mr-1">
+                <div
+                  class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-3"
+                  *ngFor="let lob of sample.businessLine; let lobindex = index"
+                >
+                  <div
+                    class="
+                      selection-box
+                      text-center
+                      justify-content-between
+                      pointer
+                    "
+                    (click)="getCarrier(lob.name, lobindex)"
+                    [ngClass]="{
+                      highlight: lastselectedlob === lobindex ? true : false,
+                      'business-line-disable':
+                        lastselectedlob === lobindex ? false : true
+                    }"
+                  >
+                    <img [src]="lob.icon.identifier" />
+                    <div>{{ lob.label }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </p-accordionTab>
+        </div>
+        <!-- business line accordion tab ends here-->
+        <!-- carrrier accordion tab starts here-->
+        <div class="mb-3 shadow-hard">
+          <p-accordionTab
+            [selected]="accordionSelectionArray[1]"
+            [disabled]="accordionDisabledArray[1]"
+          >
+            <!-- disables the header click-->
+            <p-header class="w-100" (click)="stopPropagation($event)">
+              <!-- shows the completed tick icon-->
+              <span>
+                <img
+                  class="tickmark"
+                  [src]="sample.samples[1].completedIcon"
+                  *ngIf="accordionHeader[1]"
+                />
+              </span>
+              <!-- shows the default accordion header  if there is no selection made-->
+              <span
+                class="text-uppercase bold-weight pointer"
+                *ngIf="accordionHeader[1] == null"
+              >
+                {{ sample.samples[1].nonCollapsedLabel }}
+              </span>
+              <!-- shows the selected accordion header -->
+              <span
+                class="selection-title dovetail-selection-title"
+                *ngIf="accordionHeader[1]"
+              >
+                {{ accordionHeader[1] }}
+              </span>
+              <!-- Shows choose another carrier -->
+              <span
+                class="
+                  float-right
+                  mt-md-0
+                  py-sm-2
+                  custom-font
+                  text-underline
+                  dovetail-selection-title
+                  pointer
+                "
+                *ngIf="
+                  accordionHeader[1] &&
+                  !accordionSelectionArray[1] &&
+                  !accordionDisabledArray[1]
+                "
+                (click)="enableCurrentAccordion(1)"
+              >
+                {{ sample.samples[1].expandLink }}{{ sample.samples[1].name }}
+              </span>
+            </p-header>
+            <!-- loads all carrier-->
+            <div
+              class="col-lg-4 col-md-6 col-sm-6"
+              *ngFor="let carrier of carriers; let carrierindex = index"
+            >
+              <a
+                class="d-flex flex-column"
+                (click)="
+                  getDocuments(carrier.label, carrierindex, carrier.name)
+                "
+              >
+                <img
+                  class="carrier-logo selection-box pointer"
+                  [src]="carrier.logo"
+                  [ngClass]="{
+                    highlight:
+                      lastselectedcarrier === carrierindex ? true : false,
+                    'carrier-logo-highlight':
+                      lastselectedcarrier === carrierindex ? true : false
+                  }"
+                />
+              </a>
+            </div>
+          </p-accordionTab>
+        </div>
+        <!-- carrrier accordion tab ends here-->
+        <!-- document accordion tab starts here-->
+        <div class="mb-3 shadow-hard marginbottom">
+          <p-accordionTab
+            [selected]="accordionSelectionArray[2]"
+            [disabled]="accordionDisabledArray[2]"
+          >
+            <!-- disables the header click-->
+            <p-header
+              class="w-100 text-uppercase bold-weight pointer"
+              (click)="stopPropagation($event)"
+            >
+              <!-- shows the completed tick icon-->
+              <span>
+                <img class="tickmark" [src]="sample.samples[2].completedIcon" />
+              </span>
+              <!-- shows the default accordion header  if there is no selection made-->
+              <span>
+                {{ sample.samples[2].nonCollapsedLabel }}
+              </span>
+            </p-header>
+            <!-- loads all documents-->
+            <div
+              class="document-list custom-margin"
+              *ngFor="let document of documents"
+            >
+              <!-- document name label -->
+              <a target="_blank" [href]="document.target">
+                <span class="text-underline documents">
+                  {{ document.label }}
+                </span>
+              </a>
+              <!-- <span>
+                <a [href]="document.target">{{ document.label }}</a>
+              </span> -->
+              <!-- document download link -->
+              <span class="float-right pointer">
+                <!-- <a [href]="document.target">Download</a> -->
+                <a target="_blank" [href]="document.target">
+                  <span class="text-underline d-md-inline-block pointer">{{
+                    document.downloadTitle
+                  }}</span>
+                  <!-- document download icon link -->
+                  <img
+                    class="custom-margin pointer mobileicon"
+                    [src]="document.downloadIcon"
+                  />
+                </a>
+              </span>
+            </div>
+          </p-accordionTab>
+        </div>
+        <!-- document accordion tab starts here-->
+      </ng-container>
+    </p-accordion>
+  </div>
+  <!-- Accordion Content Ends-->
+</section>

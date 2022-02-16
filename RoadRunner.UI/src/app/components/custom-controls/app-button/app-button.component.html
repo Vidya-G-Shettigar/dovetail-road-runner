@@ -1,0 +1,12 @@
+<button
+  *ngIf="inputButtonShow"
+  class="custom-button-color"
+  [ngClass]="inputButtonClass"
+  mat-raised-button
+  [color]="inputButtonColor"
+  [disabled]="inputButtonDisabled"
+  (click)="onButtonClick()"
+  [attr.type]="inputButtonType"
+>
+  {{ inputButtonText }}
+</button>

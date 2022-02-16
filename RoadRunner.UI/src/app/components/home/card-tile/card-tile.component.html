@@ -1,0 +1,32 @@
+<div class="card-tile">
+  <div
+    class="card"
+    [style.background-color]="FindmoreData.findMoreCard.cards.backgroundColor"
+  >
+    <div class="card-header">
+      <span class="icon">
+        <i
+          [class]="FindmoreData.findMoreCard.cards.iconClass"
+          aria-hidden="true"
+        ></i>
+      </span>
+      <img [src]="FindmoreData.findMoreCard?.cards.image" alt="" />
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ FindmoreData.findMoreCard.cards.heading }}</h5>
+      <p class="card-text">{{ FindmoreData.findMoreCard.cards.subheading }}</p>
+      <ng-container>
+        <p>
+          <a>{{ FindmoreData.findMoreCard?.link?.label }}</a>
+        </p>
+      </ng-container>
+      <ng-template #link>
+        <p>
+          <a [routerLink]="FindmoreData.findMoreCard?.link?.url">{{
+            FindmoreData.findMoreCard?.link?.label
+          }}</a>
+        </p>
+      </ng-template>
+    </div>
+  </div>
+</div>

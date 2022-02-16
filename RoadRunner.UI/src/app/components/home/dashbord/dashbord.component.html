@@ -1,0 +1,39 @@
+<!-- <app-announcement></app-announcement> -->
+<ng-container>
+  <main>
+    <section class="login-area overlapped">
+      <div class="container">
+        <h1 class="mb-0">{{ DashboardData?.heading }} testUser1.</h1>
+        <h1 class="font-weight-normal mt-0">Test Dovetail Agency</h1>
+      </div>
+    </section>
+    <section class="overlap-background">
+      <section>
+        <div class="container w-100">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
+              <app-get-quotget-quote-card> </app-get-quotget-quote-card>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
+              <app-quick-summary-card> </app-quick-summary-card>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
+              <app-latest-notification-card></app-latest-notification-card>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="recent-activity">
+        <app-recent-activity></app-recent-activity>
+        <div class="product-availability-block">
+          <app-product-availability></app-product-availability>
+        </div>
+        <div>
+          <app-find-more> </app-find-more>
+
+          <!-- <app-card-tile></app-card-tile> -->
+        </div>
+      </section>
+    </section>
+  </main>
+</ng-container>

@@ -1,0 +1,51 @@
+{
+  "route_name": "contact-us",
+  "title": "Contact Us",
+  "heading": "How can we",
+  "shortheading": "help you?",
+  "subheading": "If you need help using this platform, you’ve spotted something you’d like to talk about, or if you have questions about Dovetail, we’re right here.",
+  "contactAddressCard": {
+    "name": "If you want to send us mail",
+    "heading": "We’d always encourage you to use one of the options above first, so we can try to help you faster. But if you need to send us documents or letters, you can write to:",
+    "subheading": "Headquarters – Dovetail Insurance",
+    "cardAddressLink": "1333 Main Street, Suite 600, Columbia, SC 29201",
+    "cardExternalLink": "If you need to file a claim",
+    "link": {
+      "namePartOne": "Click",
+      "namePartTwo": "for a list of claims contacts by carrier",
+      "label": "here",
+      "url": "https://engage.dovetailinsurance.com/acton/media/39204/dovetail-claims-resources"
+    }
+  },
+  "contactCard1": {
+    "name": "Live Chat",
+    "heading": "MY CLIENTS",
+    "subheading": "Talk to the team and get quick answers to your questions – Monday - Friday 8:00 AM - 9:00 PM ET",
+    "image": "assets/road-runner/images/LiveChat_Tile_Icon_White_retina.png",
+    "iconClass": "fa fa-search"
+  },
+  "contactCard2": {
+    "name": "Phone",
+    "heading": "MY CLIENTS",
+    "phone": "(833) 423 0746",
+    "subheading": "We’re here Monday to Friday, 8:00 AM - 9:00 PM ET.",
+    "link": {
+      "name": "",
+      "label": ""
+    },
+    "image": "assets/road-runner/images/Phone_Tile_Icon_White.png",
+    "iconClass": "fa fa-search"
+  },
+  "contactCard3": {
+    "name": "Email",
+    "heading": "MY CLIENTS",
+    "email": "info@dovetailinsurance.com",
+    "subheading": "One of our team members will get back to you as soon as possible.",
+    "link": {
+      "name": "",
+      "label": ""
+    },
+    "image": "assets/road-runner/images/Email_Tile_Icon_White_retina.png",
+    "iconClass": "fa fa-search"
+  }
+}

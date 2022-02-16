@@ -1,0 +1,124 @@
+@media (max-width: 1200px) {
+  .header-area h1 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 1024px) {
+  .header-area h5 {
+    font-weight: 400;
+    font-size: 19px;
+    letter-spacing: 0;
+    line-height: 28px;
+  }
+}
+.header-contact {
+  padding-bottom: 0 !important;
+}
+.header-contact a:hover {
+  text-decoration: none;
+}
+.header-area h5 {
+  width: 87%;
+}
+.font-20 {
+  font-size: 20px;
+}
+.the-link {
+  color: #000;
+  text-decoration: underline;
+}
+.contact-us {
+  min-height: calc(100vh - 85px);
+  max-height: 100%;
+  overflow: auto;
+}
+
+.header-contact {
+  padding-bottom: 0 !important;
+  min-height: 472px;
+  font-family: dinOT-bold;
+}
+
+.header-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 74px;
+  /* min-height: 162px; */
+}
+
+.orangev-lg-bg {
+  background: url(/assets/road-runner/images/orange-hero-lg-bg.png) no-repeat
+    top;
+  background-size: cover;
+}
+
+.paratext {
+  font-size: 16px;
+  line-height: normal;
+}
+
+h1.tearms-headding-text {
+  font-size: 48px;
+}
+
+.heading {
+  font-size: 30px;
+  line-height: 36px;
+  color: #0a7ea0;
+  margin: 2rem 0 3rem;
+}
+.text-red {
+  color: #f00;
+  font-family: dinOT-bold;
+  text-decoration: underline;
+}
+h5,
+h6 {
+  margin: 1rem 0;
+}
+
+/* a {
+  color: rgb(6, 69, 173);
+  font-weight: bolder;
+  font-size: 17px;
+}
+
+a:hover {
+  color: rgb(6, 69, 173) !important;
+  text-decoration: underline;
+} */
+
+.otherlinks {
+  color: rgb(6, 69, 173);
+  font-weight: bold;
+}
+
+.otherlinks:hover {
+  color: rgb(6, 69, 173) !important;
+  text-decoration: underline;
+}
+
+/* p {
+  line-height: normal;
+} */
+
+.listtext {
+  font-size: 17px;
+}
+.overlap-above {
+  padding-bottom: 20px;
+  color: black;
+}
+ol li {
+  margin-top: 1rem;
+}
+ul {
+  list-style-type: disc;
+}
+ul li {
+  margin-top: 0.5rem;
+}
+address {
+  margin-top: 1rem;
+}

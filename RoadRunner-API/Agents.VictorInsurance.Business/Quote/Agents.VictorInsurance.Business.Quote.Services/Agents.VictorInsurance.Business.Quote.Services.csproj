@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Agents.VictorInsurance.Business.Quote.Repository\Agents.VictorInsurance.Business.Quote.Repository.csproj" />
+    <ProjectReference Include="..\Agents.VictorInsurance.Business.Quote.Infrastructure\Agents.VictorInsurance.Business.Quote.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Automapper" Version="10.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+<PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>

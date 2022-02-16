@@ -1,0 +1,131 @@
+.common-quote-header .top-section {
+  width: 100%;
+  background-size: cover;
+}
+
+.common-quote-header .top-section .quote-header-area {
+  margin: 2.5rem 0;
+}
+.common-quote-header .top-section .quote-header-area .header {
+  font-size: 48px;
+  color: #fff;
+  letter-spacing: 0;
+  line-height: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.headname {
+  font-family: dinOT-bold;
+}
+.common-quote-header .top-section .quote-header-area .header.text-black {
+  color: #231f20;
+}
+.common-quote-header .top-section .quote-header-area .sub-header {
+  font-size: 48px;
+  color: #fff;
+  letter-spacing: 0;
+  line-height: 48px;
+}
+.common-quote-header .top-section .quote-header-area .sub-header.text-black {
+  color: #231f20;
+}
+@media (max-width: 575px) {
+  .common-quote-header .top-section .quote-header-area .header,
+  .common-quote-header .top-section .quote-header-area .sub-header {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+.common-quote-header .bottom-section {
+  background-color: #fff;
+  width: 100%;
+}
+.common-quote-header .bottom-section a {
+  font-size: 16px;
+  color: #231f20;
+  letter-spacing: 0;
+  line-height: 26px;
+  cursor: pointer !important;
+}
+
+/* .uploadButton {
+  color: #fff;
+  background: #006a8e;
+  border: 1px solid #006a8e;
+  font-size: 16px;
+  letter-spacing: 1.14px;
+  text-align: center;
+  line-height: 28px;
+  width: 256px;
+} */
+
+input[type="file"] {
+  display: none;
+}
+
+.common-quote-header .bottom-section .btn {
+  margin-right: 0;
+  padding: 11px 0.75rem;
+}
+.custom-file-upload {
+  /* border: 1px solid #ccc; */
+  /* display: inline-block; */
+  /* padding: 6px 12px; */
+
+  cursor: pointer;
+  color: #fff;
+  background: #006a8e;
+  border: 1px solid #006a8e;
+  font-size: 16px;
+  letter-spacing: 1.14px;
+  text-align: center;
+  line-height: 28px;
+  width: 247px;
+  margin-right: 0;
+  padding: 8px 0;
+}
+
+.demi-weight {
+  font-weight: 600;
+}
+.common-quote-header .bottom-section .quote-header-area {
+  margin: 1rem 0;
+  width: 100%;
+  background: #fff;
+}
+.common-quote-header .bottom-section .quote-header-area .header-left {
+  font-size: 22px;
+  color: #231f20;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+.common-quote-header
+  .bottom-section
+  .quote-header-area
+  .header-left.header-left-xl {
+  font-size: 22px;
+}
+@media (min-width: 1025px) {
+  .common-quote-header
+    .bottom-section
+    .quote-header-area
+    .header-left.header-left-xl {
+    font-size: 28px;
+  }
+}
+.common-quote-header .bottom-section .quote-header-area button {
+  color: #fff;
+  background: #006a8e;
+  border: 1px solid #006a8e;
+  font-size: 16px;
+  letter-spacing: 1.14px;
+  text-align: center;
+  line-height: 26px;
+  width: 256px;
+}
+@media (max-width: 1024px) {
+  .common-quote-header .bottom-section .quote-header-area button {
+    width: 100%;
+  }
+}

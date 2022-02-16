@@ -1,0 +1,11 @@
+{
+    "route_name": "primary-rating-state",
+    "banner": {
+        "name": "primary-rating-state",
+        "backgroundImage": "assets/road-runner/images/orange-hero-lg-bg.png",
+        "backgroundImageDesktop": "assets/road-runner/images/orange-hero-lg-bg.png",
+        "backgroundImageMobile": "assets/road-runner/images/contact-us-mobile-banner.png",
+        "title": "Quote, bind and",
+        "heading": "issue in minutes"
+    }
+}

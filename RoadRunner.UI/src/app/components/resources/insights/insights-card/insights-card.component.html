@@ -1,0 +1,251 @@
+<div class="container">
+  <div class="row-margin">
+    <div class="row marginbottom">
+      <div class="col-md-4">
+        <div class="card-tile">
+          <div
+            class="card"
+            [style.background-color]="insights.rows[0].cards[0].backgroundColor"
+          >
+            <div class="card-header">
+              <img [src]="insights.rows[0].cards[0].image" alt="" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title headname">
+                {{ insights.rows[0].cards[0].heading }}
+              </h5>
+              <p class="card-text">
+                {{ insights.rows[0].cards[0].subheading }}
+              </p>
+              <ng-container
+                *ngIf="
+                  insights.rows[0].cards[0].link.target === 'blank';
+                  else link
+                "
+              >
+                <p>
+                  <a (click)="onClick(insights.rows[0].cards[0].link?.url)">{{
+                    insights.rows[0].cards[0].link?.label
+                  }}</a>
+                </p>
+              </ng-container>
+              <ng-template #link>
+                <p>
+                  <a [routerLink]="insights.rows[0].cards[0]?.link?.url">{{
+                    insights.rows[0].cards[0]?.link?.label
+                  }}</a>
+                </p>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-tile">
+          <div
+            class="card"
+            [style.background-color]="insights.rows[0].cards[1].backgroundColor"
+          >
+            <div class="card-header">
+              <img [src]="insights.rows[0].cards[1].image" alt="" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title headname">
+                {{ insights.rows[0].cards[1].heading }}
+              </h5>
+              <p class="card-text">
+                {{ insights.rows[0].cards[1].subheading }}
+              </p>
+              <ng-container
+                *ngIf="
+                  insights.rows[0].cards[1].link.target === 'blank';
+                  else link
+                "
+              >
+                <p>
+                  <a (click)="onClick(insights.rows[0].cards[1].link?.url)">{{
+                    insights.rows[0].cards[1].link?.label
+                  }}</a>
+                </p>
+              </ng-container>
+              <ng-template #link>
+                <p>
+                  <a [routerLink]="insights.rows[0].cards[1]?.link?.url">{{
+                    insights.rows[0].cards[1]?.link?.label
+                  }}</a>
+                </p>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+
+      <div class="col-md-4">
+        <div class="card-tile">
+          <div
+            class="card"
+            [style.background-color]="insights.rows[0].cards[2].backgroundColor"
+          >
+            <div class="card-header">
+              <img [src]="insights.rows[0].cards[2].image" alt="" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title headname">
+                {{ insights.rows[0].cards[2].heading }}
+              </h5>
+              <p class="card-text">
+                {{ insights.rows[0].cards[2].subheading }}
+              </p>
+              <ng-container
+                *ngIf="
+                  insights.rows[0].cards[2].link.target === 'blank';
+                  else link
+                "
+              >
+                <p>
+                  <a (click)="onClick(insights.rows[0].cards[2].link?.url)">{{
+                    insights.rows[0].cards[2].link?.label
+                  }}</a>
+                </p>
+              </ng-container>
+              <ng-template #link>
+                <p>
+                  <a [routerLink]="insights.rows[0].cards[2]?.link?.url">{{
+                    insights.rows[0].cards[2]?.link?.label
+                  }}</a>
+                </p>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Second row  -->
+
+      <div class="col-md-4">
+        <div class="card-tile">
+          <div
+            class="card"
+            [style.background-color]="insights.rows[1].cards[0].backgroundColor"
+          >
+            <div class="card-header">
+              <img [src]="insights.rows[1].cards[0].image" alt="" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title headname">
+                {{ insights.rows[1].cards[0].heading }}
+              </h5>
+              <p class="card-text">
+                {{ insights.rows[1].cards[0].subheading }}
+              </p>
+              <ng-container
+                *ngIf="
+                  insights.rows[1].cards[0].link.target === 'blank';
+                  else link
+                "
+              >
+                <p>
+                  <a (click)="onClick(insights.rows[1].cards[0].link?.url)">{{
+                    insights.rows[1].cards[0].link?.label
+                  }}</a>
+                </p>
+              </ng-container>
+              <ng-template #link>
+                <p>
+                  <a [routerLink]="insights.rows[0].cards[0]?.link?.url">{{
+                    insights.rows[1].cards[0]?.link?.label
+                  }}</a>
+                </p>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+
+      <div class="col-md-4">
+        <div class="card-tile">
+          <div
+            class="card"
+            [style.background-color]="insights.rows[1].cards[1].backgroundColor"
+          >
+            <div class="card-header">
+              <img [src]="insights.rows[1].cards[1].image" alt="" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title headname">
+                {{ insights.rows[1].cards[1].heading }}
+              </h5>
+              <p class="card-text">
+                {{ insights.rows[1].cards[1].subheading }}
+              </p>
+              <ng-container
+                *ngIf="
+                  insights.rows[1].cards[1].link.target === 'blank';
+                  else link
+                "
+              >
+                <p>
+                  <a (click)="onClick(insights.rows[1].cards[1].link?.url)">{{
+                    insights.rows[1].cards[1].link?.label
+                  }}</a>
+                </p>
+              </ng-container>
+              <ng-template #link>
+                <p>
+                  <a [routerLink]="insights.rows[0].cards[1]?.link?.url">{{
+                    insights.rows[1].cards[1]?.link?.label
+                  }}</a>
+                </p>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+
+      <div class="col-md-4">
+        <div class="card-tile">
+          <div
+            class="card"
+            [style.background-color]="insights.rows[1].cards[2].backgroundColor"
+          >
+            <div class="card-header">
+              <img [src]="insights.rows[1].cards[2].image" alt="" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title headname">
+                {{ insights.rows[1].cards[2].heading }}
+              </h5>
+              <p class="card-text">
+                {{ insights.rows[1].cards[2].subheading }}
+              </p>
+              <ng-container
+                *ngIf="
+                  insights.rows[1].cards[2].link.target === 'blank';
+                  else link
+                "
+              >
+                <p>
+                  <a (click)="onClick(insights.rows[1].cards[2].link?.url)">{{
+                    insights.rows[1].cards[2].link?.label
+                  }}</a>
+                </p>
+              </ng-container>
+              <ng-template #link>
+                <p>
+                  <a
+                    [routerLink]="insights.rows[0].cards[2]?.link?.url"
+                    class="headname"
+                    >{{ insights.rows[1].cards[2]?.link?.label }}</a
+                  >
+                </p>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

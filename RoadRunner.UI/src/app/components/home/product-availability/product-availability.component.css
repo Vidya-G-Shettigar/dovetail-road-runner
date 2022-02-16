@@ -1,0 +1,192 @@
+input {
+  background: #ffffff !;
+  font-size: 16px;
+  padding: 0.375rem 0.75rem;
+  width: 100%;
+  height: 48px;
+  border: 0.0625rem solid #c4c4c4;
+  font-weight: 400;
+  line-height: 1.5;
+  background-clip: padding-box;
+  display: block;
+  border-radius: 0;
+  margin-bottom: 1.5em;
+}
+
+input:focus {
+  border-color: #ffffff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+input.error {
+  border: 1.375px solid #e35205;
+}
+
+span.ui-button-icon-left.ui-clickable.pi.pi-caret-down {
+  top: 50%;
+  left: 50%;
+}
+span.ui-button-icon-left.ui-clickable.pi.pi-caret-down:hover {
+  color: #ffffff;
+}
+
+.ui-autocomplete .ui-autocomplete-dropdown .ui-button-text.ui-clickable {
+  background: transparent;
+}
+
+button {
+  color: #000000;
+}
+
+.ui-autocomplete .ui-autocomplete-dropdown.ui-corner-all {
+  color: #000000;
+}
+
+ui-autocomplete .ui-autocomplete-dropdown.ui-corner-all:hover {
+  background-color: #e35205;
+  border: 1px solid #e35205;
+}
+
+.ui-inputtext:enabled:focus:not(.ui-state-error) {
+  border-color: #c4c4c4;
+}
+
+.is-error input {
+  border: 1.375px solid #e35205 !important;
+}
+
+.ng-pristine.ng-invalid.ng-touched > .ui-autocomplete > .ui-inputtext,
+.ng-dirty.ng-invalid > .ui-autocomplete > .ui-inputtext {
+  border: 1px solid #e35205 !important;
+}
+
+.ui-autocomplete .ui-autocomplete-panel .ui-autocomplete-list-item:focus,
+.ui-autocomplete .ui-autocomplete-panel .ui-autocomplete-list-item:hover {
+  background-color: #e35205;
+}
+
+.ui-autocomplete-loader {
+  display: none;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.panels h2 {
+  margin-bottom: 20px;
+}
+.heading {
+  color: #231f20;
+  letter-spacing: 0;
+  line-height: 40px;
+}
+.panels label {
+  font-weight: 700;
+  width: 100%;
+}
+
+.product-search {
+  visibility: hidden;
+}
+.subheading {
+  color: #006a8e;
+  font-size: 15px;
+  letter-spacing: 0.1px;
+  line-height: 26px;
+}
+.product-availability-block label {
+  display: block;
+  margin: 0;
+}
+.panels {
+  margin: 0 auto 30px;
+}
+
+.card {
+  word-wrap: break-word;
+  background-clip: border-box;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  position: relative;
+}
+
+.card-body {
+  min-height: 170px;
+  position: relative;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+}
+
+.pb-0,
+.py-0 {
+  padding-bottom: 25px !important;
+}
+.input-group {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+}
+.input-group {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+}
+.search-citydata__gridparent {
+  padding: 10px 0;
+}
+.search-citydata__gridparent {
+  border-bottom: 2px solid #f3f2f2;
+}
+.search-citydata__gridchild:nth-child(odd) {
+  border-right: 2px solid #f3f2f2;
+}
+.search-citydata {
+  display: flex;
+}
+.search-citydata__gridchild-link {
+  /* border-bottom: 2px solid;
+  margin-bottom: 1.4rem;
+  font-weight: 600; */
+  text-decoration: underline;
+  color: black;
+  font-weight: 600;
+}
+
+/* .productimage {
+  background-image: url('/src/assets/road-runner/images/Portfolio/cyber@2x.png')!important;
+background-repeat: no-repeat;
+} */
+/* .search-citydata__gridchild-link:hover {
+  text-decoration: none;
+} */
+@media (max-width: 992px) {
+  .search-citydata {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .search-citydata__gridchild:nth-child(odd) {
+    border-right: none;
+  }
+  .search-citydata__gridparent {
+    margin-top: 20px;
+  }
+  .search-citydata {
+    text-align: left;
+  }
+}

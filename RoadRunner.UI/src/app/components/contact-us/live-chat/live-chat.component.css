@@ -1,0 +1,63 @@
+.card {
+  box-shadow: 0 0.5px 1px 0;
+  border: none !important;
+}
+.card .card-header img {
+  width: 40%;
+}
+
+.card-body {
+  height: 252px;
+  /* width: 210px; */
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 16px;
+}
+.card .card-color-link .the-link {
+  color: #000000;
+}
+.card .card-height-max {
+  max-height: 7em;
+  height: 7em;
+  font-size: 16px;
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .card .card-height-max {
+    height: 7em;
+    max-height: 7em;
+  }
+}
+.card .contact-card-link {
+  color: #000000;
+  text-decoration: underline;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+.card .contact-header,
+.card .contact-card-bg-blue {
+  background-color: #006a8e !important;
+}
+
+@media (max-width: 1200px) {
+  .card-body h2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* a.the-link {
+    color: #000000;
+    font-size: 14px;
+  } */
+
+  .card .card-height-max {
+    max-height: 9em;
+    height: 9em;
+    font-size: 17px;
+  }
+}

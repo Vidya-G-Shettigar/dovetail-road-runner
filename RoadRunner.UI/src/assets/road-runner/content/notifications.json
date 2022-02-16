@@ -1,0 +1,80 @@
+{
+  "route_name": "notifications",
+  "heading": "LATEST NOTIFICATIONS",
+  "subheading": "",
+  "title": "",
+  "data": {
+    "message": "You have quotes to complete"
+  },
+  "serviceErrors": [
+    {
+      "status": 204,
+      "message": "No saved quotes"
+    },
+    {
+      "status": 500,
+      "message": "Error while loading the data"
+    },
+    {
+      "status": 503,
+      "message": "Error while loading the data"
+    },
+    {
+      "status": 404,
+      "message": "Error while loading the data"
+    },
+    {
+      "status": 400,
+      "message": "Error while loading the data"
+    }
+  ],
+  "link": [
+    {
+      "url": "/dovetail/primary-rating-state"
+    }
+  ],
+  "cols": [
+    {
+      "header": "Subject",
+      "field": "subject"
+    },
+    {
+      "header": "Last Edited",
+      "field": "lastEdited"
+    },
+    {
+      "header": "Action",
+      "field": "linkTitle"
+    }
+  ],
+  "banner": {
+    "name": "notifications",
+    "backgroundImage": "assets/road-runner/images/background/light-blue-hero-bg.png",
+    "backgroundImageDesktop": "assets/road-runner/images/backgrounds/light-blue-hero-bg.png",
+    "backgroundImageMobile": "assets/road-runner/images/backgrounds/light-blue-hero-bg_Mobile_retina.png",
+    "title": "Your notifications",
+    "heading": "The latest updates",
+    "subHeading": "You have 10 new notifications.",
+    "subHeadingNote": "Note: Notifications expire 90 days after you read them for the first time.",
+    "titleColor": "black"
+  },
+  "groupedInstruments": [
+    {
+      "label": "All",
+      "value": "All"
+    },
+    {
+      "label": "In Progress",
+      "value": "In Progress"
+    },
+    {
+      "label": "To Renew",
+      "value": "To Renew"
+    },
+    {
+      "label": "Pending Cancellation",
+      "value": "Pending Cancellation"
+    }
+  ],
+  "link_utility": "link"
+}

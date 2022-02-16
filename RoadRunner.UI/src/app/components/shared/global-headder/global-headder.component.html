@@ -1,0 +1,302 @@
+<header class="header" *ngIf="router !== '/login'">
+  <nav class="navbar navbar-expand-lg dashboard-nav">
+    <div class="logo flex-grow-1">
+      <a class="navbar-brand" href="#">
+        <img
+          class="dovetail-logo"
+          src="./assets/road-runner/images/general/dovetail-for-agents-rgb-stacked.png"
+          alt="OneVictor"
+        />
+      </a>
+
+      <div class="company-info d-md-inline-flex">
+        <a class="text-black mb-1" href="tel:8334230746">(833) 423 0746</a
+        ><span>Monday - Friday, 8 AM - 9 PM ET</span>
+      </div>
+    </div>
+
+    <ul class="nav justify-content-end d-md-none">
+      <li class="nav-item">
+        <a
+          class="
+            nav-link
+            border-0
+            text-underline
+            pr-4
+            call-us
+            d-none d-md-inline-block
+          "
+          href="tel:8334230746"
+        >
+          Call us
+        </a>
+      </li>
+    </ul>
+
+    <ul class="nav justify-content-end d-none d-xl-flex">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/notifications']" routerLinkActive="active-link">Notifications</a>
+        <div class="overflow-hidden nav-badge-container ng-star-inserted">
+          <span class="badge nav-badge">10</span>
+        </div>
+      </li>
+
+      <li class="nav-item header-dropdown">
+        <a
+          data-toggle="header-dropdown"
+          role="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          [routerLink]="['/portfolio']"
+          routerLinkActive="active-link"
+          class="nav-link dropdown-toggle"
+          >Portfolio
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" [routerLink]="['/portfolio']">Overview</a>
+          <a class="dropdown-item" [routerLink]="['/portfolio/quotes']"
+            >Quotes</a
+          >
+          <a class="dropdown-item" [routerLink]="['/portfolio/policies']"
+            >Policies</a
+          >
+        </div>
+      </li>
+
+      <li class="nav-item header-dropdown">
+        <a
+          data-toggle="header-dropdown"
+          role="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          class="nav-link dropdown-toggle"
+          [routerLink]="['/resources']"
+          routerLinkActive="active-link"
+          >Resources
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" [routerLink]="['/resources']">Overview</a>
+          <a class="dropdown-item" [routerLink]="['/resources/sample-policies']"
+            >Sample policies</a
+          >
+          <a class="dropdown-item" [routerLink]="['/resources/appetite-checks']"
+            >Appetite checks</a
+          >
+          <a class="dropdown-item" [routerLink]="['/resources/insights']"
+            >Insights</a
+          >
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="['/contact-us']"
+          routerLinkActive="active-link"
+          >Contact us</a
+        >
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/Search']">Search</a>
+        <!-- <a class="nav-link" [routerLink]="['/Search']"> -->
+        <!-- <a class="nav-link" style="padding-bottom: 0px">
+          <input type="text" class="search" name="search2" />
+          <button
+            type="submit"
+            class="searchbutton"
+            [routerLink]="['/search-results']"
+          >
+            <i class="bi bi-search"></i>
+          </button>
+        </a> -->
+
+        <!-- <div style="text-align: center; margin: 24px 2px 10px 0">
+          <div class="searchbar">
+            <div class="bar">
+              <input
+                type="text"
+                #searchbar
+                [(ngModel)]="searchInput"
+                (keyup)="fetchSeries($event)"
+                placeholder="Search"
+              />
+              <p>{{ searchInput }}</p>
+            </div>
+            <ul>
+              <li *ngFor="let show of searchResult">
+                <p>{{ show.name }}</p>
+              </li>
+            </ul>
+          </div>
+        </div> -->
+      </li>
+
+      <li
+        class="nav-item icon-style new-quotes-nav bg-orange header-class-quote"
+      >
+        <a
+          href="javascript:void(0)"
+          class="nav-link text-white cursor-pointer"
+          style="border-left: 0px"
+          [routerLink]="['/primary-rating-state']"
+          routerLinkActive="active-link"
+          ><span>Get new quotes</span></a
+        >
+      </li>
+
+      <li class="nav-item icon-style header-dropdown">
+        <a
+          data-toggle="header-dropdown"
+          role="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          class="nav-link dropdown-toggle bg-black text-white cursor-pointer"
+          ><i class="bi bi-person"></i
+        ></a>
+        <div class="dropdown-menu dropdown-menu-right cursor-pointer">
+          <div></div>
+          <div>
+            <a class="dropdown-item logout">Logout</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="nav justify-content-end d-xl-none">
+      <li class="nav-item icon-style new-quotes-nav bg-orange">
+        <a class="nav-link text-white" [routerLink]="['/primary-rating-state']"
+          ><i class="bi bi-currency-dollar"></i
+        ></a>
+      </li>
+    </ul>
+
+    <ul class="nav justify-content-end d-xl-none">
+      <ng-container
+        *ngFor="
+          let row of HeadderData.mobileMenu?.horizontalMenu;
+          let i = index
+        "
+      >
+        <li
+          class="nav-item icon-style new-quotes-nav bg-orange"
+          *ngIf="row.name == 'dollarSign'"
+        ></li>
+
+        <li class="nav-item icon-style" *ngIf="row.name == 'toggleNavigation'">
+          <a
+            class="
+              nav-link
+              bg-black
+              text-white
+              menu-toggle
+              text-decoration-none
+            "
+            [attr.aria-expanded]="collapse"
+            (click)="toggleNavigation()"
+          >
+            <span class="sr-only"></span>
+          </a>
+        </li>
+      </ng-container>
+    </ul>
+    <div *ngIf="collapse" class="mobile-nav-collapse">
+      <div class="mobile-nav">
+        <div class="container">
+          <ng-container
+            *ngFor="
+              let row of HeadderData?.mobileMenu?.hamburgerMenu;
+              let i = index
+            "
+          >
+            <div *ngIf="row.subMenu">
+              <button
+                class="large button mobile-link header-dropdown dropdown-toggle"
+                data-toggle="collapse"
+                aria-haspopup="true"
+                [attr.aria-expanded]="row.collapse"
+                (click)="toggleSubLinks(row)"
+              >
+                <!-- <em class="fas fa-{{ row.labelIcon }}"></em> {{ row.label }} -->
+                <i class="bi bi-{{ row.labelIcon }}"></i>
+                {{ row.label }}
+              </button>
+
+              <div *ngIf="row.collapse">
+                <a
+                  class="button large mobile-link inverted"
+                  [routerLink]="menu.target"
+                  *ngFor="let menu of row.subMenu; let k = index"
+                  (click)="closeNavigation()"
+                  ><img
+                    src="{{ HeadderData?.arrow }}"
+                    alt="{{ HeadderData?.arrowTitle }}"
+                  />
+                  {{ menu.label }}</a
+                >
+              </div>
+            </div>
+            <div *ngIf="!row.subMenu">
+              <a
+                [routerLink]="row.target"
+                class="large button mobile-link"
+                (click)="
+                  row.name == 'search-widget' ? showModal() : closeNavigation()
+                "
+              >
+                <!-- <em class="fas fa-{{ row.label.Icon }}"></em>
+                {{ row.label }} -->
+                <i class="bi bi-{{ row.labelIcon }}"></i>
+                {{ row.label }}
+              </a>
+
+              <a
+                [routerLink]="row.target"
+                (click)="closeNavigation()"
+                class="large button highlight mobile-link"
+                *ngIf="row.highlight"
+                >{{ row.label }}</a
+              >
+            </div>
+          </ng-container>
+          <button
+            class="
+              large
+              button
+              justify-content-center
+              text-uppercase
+              mobile-close-button
+              px-0
+              mt-5
+            "
+            (click)="toggleNavigation()"
+          >
+            close
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<header *ngIf="router == '/login'">
+  <div class="container">
+    <div class="row">
+      <div class="col-9">
+        <input type="hidden" id="forgeryToken" value="" />
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-3">
+        <a class="navbar-brand" href="#">
+          <img
+            id="imgLogo"
+            src="./assets/road-runner/images/Dovetail-Logo.png"
+            alt="OneVictor"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</header>

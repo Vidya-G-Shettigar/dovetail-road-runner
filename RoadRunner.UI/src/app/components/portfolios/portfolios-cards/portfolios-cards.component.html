@@ -1,0 +1,171 @@
+<section
+  class="overlap-above position-relative resource-cards portfolio-cards_footer"
+>
+  <div class="container topsection w-100">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <!-- <div class="card bg-white"> -->
+        <div
+          class="card"
+          [style.background-color]="card.cards[0].backgroundColor"
+        >
+          <div class="card-header">
+            <img [src]="card.cards[0].image" alt="{{ card.cards[0].name }}" />
+          </div>
+          <div class="card-body shadow-hard">
+            <h2 class="mb-sm-4 mt-2">{{ card.cards[0].heading }}</h2>
+            <p>{{ card.cards[0].subheading }}</p>
+
+            <ng-container>
+              <ul class="card-items list-unstyled">
+                <li *ngFor="let rowLabel of card.cards[0].rowLabels">
+                  <ng-container *ngIf="rowLabel?.link; else void">
+                    <a
+                      href="{{ rowLabel?.link }}"
+                      target="{{ rowLabel?.target }}"
+                    >
+                      <strong class="pointer"
+                        ><span>{{ rowLabel?.value }}</span> </strong
+                      ><span class="portfolio-data-value pointer">
+                        {{ rowLabel?.label }}</span
+                      >
+                    </a>
+                  </ng-container>
+                  <ng-template #void>
+                    <a href="javaScript:void(0)">
+                      <strong class="pointer"
+                        ><span>{{ rowLabel?.value }}</span> </strong
+                      ><span class="portfolio-data-value pointer">
+                        {{ rowLabel?.label }}</span
+                      >
+                    </a>
+                  </ng-template>
+                </li>
+              </ul>
+
+              <a
+                class="position-absolute card-footer-link"
+                [routerLink]="['/portfolio/quotes']"
+                >{{ card.cards[0].link.label }}</a
+              >
+            </ng-container>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <!-- <div class="card bg-white"> -->
+        <div
+          class="card"
+          [style.background-color]="card.cards[1].backgroundColor"
+        >
+          <div class="card-header">
+            <img [src]="card.cards[1].image" alt="{{ card.cards[1].name }}" />
+          </div>
+          <div class="card-body shadow-hard">
+            <h2 class="mb-sm-4 mt-2">{{ card.cards[1].heading }}</h2>
+            <p>{{ card.cards[1].subheading }}</p>
+
+            <ng-container>
+              <ul class="card-items list-unstyled">
+                <li *ngFor="let rowLabel of card.cards[1].rowLabels">
+                  <ng-container *ngIf="rowLabel?.link; else void">
+                    <a
+                      href="{{ rowLabel?.link }}"
+                      target="{{ rowLabel?.target }}"
+                    >
+                      <strong class="pointer"
+                        ><span>{{ rowLabel?.value }}</span> </strong
+                      ><span class="portfolio-data-value pointer">
+                        {{ rowLabel.label }}</span
+                      >
+                    </a>
+                  </ng-container>
+                  <ng-template #void>
+                    <a href="javaScript:void(0)">
+                      <strong class="pointer"
+                        ><span>{{ rowLabel?.value }}</span> </strong
+                      ><span class="portfolio-data-value pointer">
+                        {{ rowLabel?.label }}</span
+                      >
+                    </a>
+                  </ng-template>
+                </li>
+              </ul>
+
+              <a
+                class="position-absolute card-footer-link"
+                [routerLink]="['/portfolio//policies']"
+                >{{ card.cards[1].link.label }}</a
+              >
+            </ng-container>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <!-- <div class="card bg-white"> -->
+        <div
+          class="card"
+          [style.background-color]="card.cards[2].backgroundColor"
+        >
+          <div class="card-header">
+            <img [src]="card.cards[2].image" alt="{{ card.cards[2].name }}" />
+          </div>
+          <div class="card-body shadow-hard">
+            <h2 class="mb-sm-4 mt-2">{{ card.cards[2].heading }}</h2>
+            <p>{{ card.cards[2].subheading }}</p>
+
+            <ng-container>
+              <ul class="card-items list-unstyled">
+                <li *ngFor="let rowLabel of card.cards[2].rowLabels">
+                  <ng-container *ngIf="rowLabel?.link; else void">
+                    <a
+                      href="{{ rowLabel?.link }}"
+                      target="{{ rowLabel?.target }}"
+                    >
+                      <strong class="pointer"
+                        ><span>{{ rowLabel?.value }}</span> </strong
+                      ><span class="portfolio-data-value-email">
+                        {{ rowLabel?.label }}</span
+                      >
+                    </a>
+                  </ng-container>
+                  <ng-template #void>
+                    <a href="javaScript:void(0)">
+                      <strong class="pointer"
+                        ><span>{{ rowLabel?.value }}</span> </strong
+                      ><span class="portfolio-data-value pointer">
+                        {{ rowLabel?.label }}</span
+                      >
+                    </a>
+                  </ng-template>
+                </li>
+              </ul>
+
+              <a
+                class="position-absolute card-footer-link pointer"
+                [routerLink]="card.cards[2].link.url"
+                >{{ card.cards[2].link.label }}</a
+              >
+            </ng-container>
+
+            <!-- <ng-template #error>
+              <img
+                src="/onevictor/assets/dovetail/images/AlertIcon.svg"
+                alt="Alert icon"
+                class="d-inline-block"
+              />
+              {{ serviceError.message }}
+            </ng-template> -->
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+
+      <!--  -->
+    </div>
+  </div>
+</section>

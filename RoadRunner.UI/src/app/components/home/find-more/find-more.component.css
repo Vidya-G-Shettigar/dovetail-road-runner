@@ -1,0 +1,376 @@
+.card {
+  word-wrap: break-word;
+  background-clip: border-box;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  position: relative;
+}
+
+.bi::before {
+  font-size: 16px !important;
+  /* font-weight: bold !important; */
+  margin-top: 5px !important;
+  -webkit-text-stroke-width: thick !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+.find-more .container-fluid .p-grid .card-tile .card,
+.find-more .container-lg .p-grid .card-tile .card,
+.find-more .container-md .p-grid .card-tile .card,
+.find-more .container-sm .p-grid .card-tile .card,
+.find-more .container-xl .p-grid .card-tile .card {
+  margin: 0px 52px 33px;
+}
+
+.find-more .container-fluid .p-grid .card-tile .card-header .icon,
+.find-more .container-lg .p-grid .card-tile .card-header .icon,
+.find-more .container-md .p-grid .card-tile .card-header .icon,
+.find-more .container-sm .p-grid .card-tile .card-header .icon,
+.find-more .container-xl .p-grid .card-tile .card-header .icon {
+  background-color: #000;
+  color: #fff;
+  height: 30px;
+  padding: 3px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+}
+
+.card {
+  margin: 0 0 33px;
+  border: none;
+  border-radius: 0;
+  color: #231f20;
+  box-shadow: 0 1px 2px 0 #7d7d7d;
+}
+
+.card .card-header {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+}
+
+/* .card-header img {
+  display: block;
+  margin: auto;
+  width: 34%;
+} */
+
+.card-header img {
+  display: block;
+  margin: auto;
+  width: 52%;
+}
+
+.card-body {
+  background-color: #fff;
+}
+.card-title {
+  letter-spacing: 0;
+  font-family: dinOT, Arial, Helvetica, sans-serif !important;
+}
+.card-text {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: dinOT, Arial, Helvetica, sans-serif !important;
+}
+
+.card a {
+  color: #231f20;
+  /* color: black; */
+  text-decoration: underline;
+  position: absolute;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  font-family: dinOT, Arial, Helvetica, sans-serif !important;
+}
+
+.find-more {
+  background-color: #006a8e;
+  padding: 10px;
+  width: 100%;
+  font-family: dinOT, Arial, Helvetica, sans-serif;
+}
+.find-more .pos-relative {
+  position: relative;
+}
+
+.find-more .title {
+  color: #ffffff;
+}
+
+.find-more .title h3 {
+  font-family: dinOT, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+/* find more  */
+
+.find-more {
+  background-color: #006a8e;
+  padding: 10px;
+  width: 100%;
+  font-family: dinOT, Arial, Helvetica, sans-serif;
+}
+.find-more .pos-relative {
+  position: relative;
+}
+/* // component title */
+
+.find-more .title {
+  color: #ffffff;
+}
+
+.find-more .title h3 {
+  font-family: dinOT, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+/* 
+// Media Queries
+
+// title */
+
+.ui-carousel-content {
+  padding: 0;
+  position: relative;
+  overflow: hidden !important;
+}
+.ui-carousel-content .ui-carousel-next {
+  position: absolute;
+  right: -33px;
+  padding: 30px;
+  background: #efefef e6;
+}
+.ui-carousel-content .ui-carousel-prev {
+  position: absolute;
+  left: -33px;
+  padding: 30px;
+  background: #efefef e6;
+}
+
+.find-more .container-fluid .p-grid .card-tile .card-header .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  padding: 0px;
+  background-color: #000;
+}
+
+/* res */
+
+@media screen and (min-width: 1024px) {
+  .find-more .title h3 {
+    margin: 46px 0 40px;
+    font-size: 40px;
+    line-height: 42px;
+    margin-left: -19px;
+  }
+
+  .card-body {
+    min-height: 192px;
+    padding: 24px 32px 27px;
+  }
+
+  .find-more .title h3 {
+    margin: 46px 0 40px;
+    font-size: 40px;
+    line-height: 42px;
+  }
+  .card a {
+    bottom: 27px;
+  }
+  .find-more .container-fluid .p-grid .card-tile .card {
+    /* margin: 0 42px 33px; */
+    /* margin: 0 24px 33px; */
+    margin-right: 20px;
+    margin-left: 17px;
+  }
+
+  .card-header {
+    height: 264px;
+  }
+  .card {
+    margin: 0 0 33px;
+  }
+
+  .find-more .contanier-fluid .p-grid .card-tile .card-header {
+    height: 264px;
+  }
+
+  .card-tile {
+    /* padding-left: 29px; */
+  }
+
+  .find-more .container-fluid .p-grid .card-tile .card {
+    /* margin: 0 0px 33px; */
+    /* margin: 0 42px 33px; */
+    /* margin: 0 24px 33px; */
+    margin-right: 20px;
+    margin-left: 17px;
+  }
+
+  .find-more .contanier-fluid .p-grid .card-tile .card-header {
+    height: 264px;
+  }
+  .find-more .title h3 {
+    margin: 46px 0 40px;
+    font-size: 40px;
+    line-height: 42px;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .title {
+    margin: 40px 0 32px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .card-body {
+    min-height: 240px;
+    padding: 22px;
+  }
+
+  .card-header {
+    height: 196px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  .find-more .container-fluid .p-grid .card-tile .card {
+    /* margin: 0 15px 33px; */
+    margin-right: 20px;
+    margin-left: 17px;
+  }
+
+  .find-more .container-fluid .p-grid .card-tile .card-header {
+    height: 196px;
+  }
+
+  .card {
+    margin: 0 0 33px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .find-more .container-fluid .p-grid .card-tile .card-body {
+    min-height: 200px;
+    padding: 22px;
+  }
+
+  .card-header img {
+    width: 52%;
+    margin: auto;
+  }
+
+  .card-header {
+    height: 196px;
+  }
+  .card-body {
+    min-height: 185px;
+    padding: 22px;
+  }
+
+  .find-more .title h3 {
+    margin: 30px 0;
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  .card a {
+    bottom: 22px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .find-more .container-fluid .p-grid .card-tile .card-header img {
+    width: auto;
+    margin: auto;
+  }
+
+  .find-more .title h3 {
+    margin: 30px 0;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .find-more .ui-carousel-content .ui-carousel-next {
+    background-color: transparent !important;
+    border: transparent !important;
+    right: 0;
+    bottom: 23px;
+    font-size: large;
+    color: white !important;
+  }
+  .find-more .ui-carousel-content .ui-carousel-prev {
+    background-color: transparent !important;
+    border: transparent !important;
+    bottom: 23px;
+    left: 0;
+    font-size: large;
+    color: white !important;
+  }
+
+  .card-header {
+    height: 155px;
+  }
+  .find-more .container-fluid .p-grid .card-tile .card-header {
+    height: 155px;
+  }
+
+  .card-body {
+    min-height: 190px;
+    padding: 22px;
+  }
+
+  .find-more .container-fluid .p-grid .card-tile .card,
+  .find-more .container-lg .p-grid .card-tile .card,
+  .find-more .container-md .p-grid .card-tile .card,
+  .find-more .container-sm .p-grid .card-tile .card,
+  .find-more .container-xl .p-grid .card-tile .card {
+    margin: 0px 16px 33px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .find-more .contanier-fluid .p-grid .card-tile .card-header img {
+    width: 54%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card-title {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .card-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+    margin-bottom: 8px;
+  }
+
+  .find-more .title h3 {
+    margin: 30px 0;
+    font-size: 48px;
+    line-height: 48px;
+  }
+}

@@ -1,0 +1,78 @@
+<div class="card text-white overlap-above mb-3">
+  <div class="card-body">
+    <span class="icon-top-right"> <i class="bi bi-bell"></i></span>
+    <h2 class="mb-4 mt-2 dashboard-title-width">
+      {{ cards.latestNotificationCard.heading }}
+    </h2>
+    <!-- <p>
+      <my-dynamic-link [field]="dynamicLink"></my-dynamic-link>
+    </p> -->
+    <ul class="card-items list-unstyled">
+      <li>
+        <a>
+          <strong><span> 0</span> </strong>
+          renewals offered
+          <span class="absolute-right">
+            <i class="bi bi-chevron-right"></i>
+          </span>
+        </a>
+      </li>
+      <!-- <li>
+        <a>
+          <strong><span> 541 </span> </strong>
+          quotes to complete
+          <span class="absolute-right">
+            <i class="bi bi-chevron-right"></i>          </span>
+        </a>
+      </li> -->
+      <li>
+        <a>
+          <strong><span> 0</span> </strong>
+          policies pending cancellation
+          <span class="absolute-right">
+            <i class="bi bi-chevron-right"></i>
+          </span>
+        </a>
+      </li>
+    </ul>
+
+    <a
+      [routerLink]="['/notifications']"
+      class="position-absolute card-footer-link ng-star-inserted"
+    >
+      {{ cards.latestNotificationCard.link.label }}</a
+    >
+  </div>
+</div>
+<!-- skeleton view
+<ng-template #skeleton>
+  <div
+    class="skeleton card text-white overlap-above mb-3"
+    [style.background-color]="card?.backgroundColor"
+  >
+    <div class="card-body">
+      <h2 class="mb-4 mt-2 dashboard-title-width"></h2>
+      <ul class="card-items list-unstyled">
+        <li>
+          <a routerLink="" class="text-black"
+            ><strong><span></span></strong>
+            <span class="absolute-right"> </span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="" class="text-black"
+            ><strong><span></span></strong>
+            <span class="absolute-right"> </span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="" class="text-black"
+            ><strong><span></span></strong>
+            <span class="absolute-right"> </span>
+          </a>
+        </li>
+      </ul>
+      <a class="position-absolute card-footer-link" routerLink=""></a>
+    </div>
+  </div>
+</ng-template> -->

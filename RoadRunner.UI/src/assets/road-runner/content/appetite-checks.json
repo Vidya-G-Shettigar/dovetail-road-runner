@@ -1,0 +1,42 @@
+{
+  "route_name": "appetite-checks",
+  "heading": "Is Your Client a Match?",
+  "subheading": "Learn more about our many eligible classes of business by downloading our product appetite guides.",
+  "title": "",
+  "banner": {
+    "backgroundImage": "assets/road-runner/images/background/orange-hero-bg.png",
+    "backgroundImageDesktop": "assets/road-runner/images/backgrounds/orange-hero-bg.png",
+    "backgroundImageMobile": "assets/road-runner/images/Portfolio/your-quotes-hero-banner-retina-mobile.png",
+    "title": "Check risk appetites",
+    "heading": "to determine eligibility",
+    "subHeading": "Choose a product below to see the details.",
+    "titleColor": "white",
+    "link": [
+      {
+        "title": "BACK TO RESOURCES",
+        "label": "BACK TO RESOURCES",
+        "target": "/resources/"
+      }
+    ]
+  },
+  "appetite": [
+    {
+      "name": "Workers Compensation",
+      "target": "assets/road-runner/documents/Workers Comp Guide.pdf",
+      "downloadTitle": "Download",
+      "downloadIcon": "/assets/road-runner/images/Download_Icon_Blue.svg"
+    },
+    {
+      "name": "Business Owners Policies",
+      "target": "assets/road-runner/documents/Business Owners Policy Guide.pdf",
+      "downloadTitle": "Download",
+      "downloadIcon": "/assets/road-runner/images/Download_Icon_Blue.svg"
+    },
+    {
+      "name": "General Liability",
+      "target": "assets/road-runner/documents/General Liability Guide.pdf",
+      "downloadTitle": "Download",
+      "downloadIcon": "/assets/road-runner/images/Download_Icon_Blue.svg"
+    }
+  ]
+}

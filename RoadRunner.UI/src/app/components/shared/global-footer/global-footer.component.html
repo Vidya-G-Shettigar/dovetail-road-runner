@@ -1,0 +1,74 @@
+<footer class="footer" id="footer">
+  <div class="container-fluid d-flex flex-sm-row flex-column px-sm-3 px-0">
+    <div class="d-md-inline-flex flex-grow-1 logo">
+      <a href="#" class="pointer"
+        ><img
+          class="dovetail-logo"
+          src="{{ FooterData.logoLink.url }}"
+          alt="dovetail-logo "
+      /></a>
+      <div
+        class="
+          company-info
+          d-lg-inline-flex
+          flex-shrink-0
+          justify-content-center
+          text-left text-white
+        "
+      >
+        <a class="mb-1" href="{{ FooterData?.contact?.url }}">{{
+          FooterData?.contact?.desktoplabel
+        }}</a>
+        <span>{{ FooterData?.contact?.text }}</span>
+      </div>
+    </div>
+    <ul
+      class="
+        d-inline-flex
+        flex-column flex-sm-row
+        justify-content-sm-end justify-content-start
+        ml-md-5
+        nav
+        w-100
+        chat-push
+      "
+    >
+      <ng-container
+        *ngFor="
+          let row of FooterData?.desktopMenu?.horizontalMenu;
+          let i = index
+        "
+      >
+        <ng-container *ngIf="row?.target === '_blank'; else navigate">
+          <li class="nav-item">
+            <a
+              href="{{ row?.url }}"
+              target="{{ row?.target }}"
+              class="nav-link"
+              >{{ row?.label }}</a
+            >
+          </li>
+        </ng-container>
+        <ng-template #navigate>
+          <li class="nav-item">
+            <a [routerLink]="row?.url" class="nav-link">{{ row?.label }}</a>
+          </li>
+        </ng-template>
+      </ng-container>
+    </ul>
+    <img
+      id="wsa_image_dock"
+      class="wsa_dock"
+      style="
+        position: fixed;
+        width: auto;
+        height: auto;
+        right: 10px;
+        bottom: 20px;
+        display: block;
+      "
+      alt="Chat Now Button"
+      src="https://images.websitealive.com/images/hosted/upload/2020-07-28_1595950353693_uysuglyroo.jpeg"
+    />
+  </div>
+</footer>

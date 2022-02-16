@@ -1,0 +1,347 @@
+{
+  "route_name": "dashboard",
+  "heading": "Hi, ",
+  "subheading": "Let's get to work.",
+  "title": "",
+  "quickSummaryCard": {
+    "heading": "Quick summary",
+    "subheading": "Here’s where we’ll record your quotes and policies and written premium. It doesn’t look like you’ve quoted for anything yet - | [ try it out now ### * ### try it out now] |",
+    "backgroundColor": "#ffffff",
+    "iconClass": "bi bi-search",
+    "link": {
+      "name": "viewMore",
+      "label": "VIEW MORE",
+      "url": "/road-runner/portfolio"
+    },
+    "rowLabels": [
+      {
+        "label": "accepted quotes",
+        "value": "",
+        "link": {
+          "status": "/road-runner/portfolio/quotes",
+          "param": "Quoted"
+        }
+      },
+      {
+        "label": "policies sold",
+        "value": "",
+        "link": {
+          "status": "/road-runner/portfolio/policies",
+          "param": "All"
+        }
+      },
+      {
+        "label": "of total written premium",
+        "value": "",
+        "link": {
+          "status": "/road-runner/portfolio/policies",
+          "param": "All"
+        }
+      }
+    ],
+    "serviceErrors": [
+      {
+        "status": 500,
+        "message": "Error while loading the data"
+      },
+      {
+        "status": 404,
+        "message": "Error while loading the data"
+      }
+    ]
+  },
+  "latestNotificationCard": {
+    "heading": "Latest notifications",
+    "subheading": "Here’s where we’ll record your quotes and policies and written premium. It doesn’t look like you’ve quoted for anything yet - | [ try it out now ### * ### try it out now] |",
+    "backgroundColor": "#006a8e",
+    "iconClass": "bi bi-bell",
+    "link": {
+      "name": "viewAll",
+      "label": "VIEW ALL",
+      "url": "/road-runner/notifications"
+    },
+    "rowLabels": [
+      {
+        "label": "policies to renew",
+        "value": "",
+        "link": {
+          "status": "/road-runner/notifications",
+          "param": "To Renew"
+        }
+      },
+      {
+        "label": "quotes to complete",
+        "value": "",
+        "link": {
+          "status": "/road-runner/notifications",
+          "param": "In Progress"
+        }
+      },
+      {
+        "label": "policies pending cancellation",
+        "value": "",
+        "link": {
+          "status": "/road-runner/notifications",
+          "param": "Pending Cancellation"
+        }
+      }
+    ],
+    "serviceErrors": [
+      {
+        "status": 500,
+        "message": "Error while loading the data"
+      },
+      {
+        "status": 404,
+        "message": "Error while loading the data"
+      }
+    ]
+  },
+  "getQuoteCard": {
+    "heading": "Get new quotes",
+    "subheading": "Get quotes and policies for your clients in minutes.",
+    "backgroundColor": "#e35205",
+    "iconClass": "bi bi-currency-dollar",
+    "buttons": [
+      {
+        "name": "continue",
+        "type": "continuebutton",
+        "label": "START A NEW QUOTE"
+      }
+    ],
+    "link": {
+      "url": "/road-runner/primary-rating-state"
+    }
+  },
+  "recentActivity": {
+    "heading": "Recent Activity",
+    "link": {
+      "url": "/road-runner/primary-rating-state"
+    },
+    "tables": [
+      {
+        "name": "quoteTable",
+        "heading": "Saved Quotes",
+        "columnDefs": [
+          "CLIENT NAME",
+          "PROPOSAL #",
+          "DATE EDITED",
+          "BUSINESS LINE",
+          "STATUS"
+        ],
+        "link": {
+          "name": "pendingQuote",
+          "label": "See all pending quotes",
+          "url": "portfolio/quotes"
+        }
+      },
+      {
+        "name": "policyTable",
+        "heading": "Policies Sold",
+        "columnDefs": [
+          "CLIENT NAME",
+          "BUSINESS LINE",
+          "SOLD BY",
+          "PREMIUM",
+          "DATE SOLD"
+        ],
+        "link": {
+          "name": "allPolicies",
+          "label": "View all policies",
+          "url": "portfolio/policies"
+        },
+        "serviceErrors": [
+          {
+            "status": 204,
+            "message": "No policies found"
+          },
+          {
+            "status": 500,
+            "message": "Error while loading the data"
+          }
+        ]
+      }
+    ],
+    "quoteServiceErrors": [
+      {
+        "status": 204,
+        "message": "No saved quotes."
+      },
+      {
+        "status": 500,
+        "message": "Error while loading the data"
+      },
+      {
+        "status": 503,
+        "message": "Error while loading the data"
+      },
+      {
+        "status": 404,
+        "message": "Error while loading the data"
+      },
+      {
+        "status": 400,
+        "message": "Error while loading the data"
+      },
+      {
+        "status": 502,
+        "message": "Error while loading the data"
+      }
+    ],
+    "policyServiceErrors": [
+      {
+        "status": 204,
+        "message": "No policy saved"
+      },
+      {
+        "status": 500,
+        "message": "Error while loading the data"
+      },
+      {
+        "status": 503,
+        "message": "Error while loading the data"
+      },
+      {
+        "status": 404,
+        "message": "Error while loading the data"
+      },
+      {
+        "status": 400,
+        "message": "Error while loading the data"
+      },
+      {
+        "status": 502,
+        "message": "Error while loading the data"
+      }
+    ]
+  },
+  "productAvailability": {
+    "heading": "Product availability",
+    "subheading": "I’D LIKE TO FIND AVAILABLE PRODUCTS IN:",
+    "fields": [
+      {
+        "type": "typeahead",
+        "label": "",
+        "name": "productSearch",
+        "placeholder": "Enter a state to search",
+        "options": []
+      }
+    ],
+    "serviceErrors": [
+      {
+        "status": 204,
+        "message": "No  products are currently available in"
+      },
+      {
+        "status": 503,
+        "message": "Error while loading the data"
+      },
+      {
+        "status": 404,
+        "message": "Error while loading the data"
+      },
+      {
+        "status": 400,
+        "message": "Error while loading the data"
+      }
+    ],
+    "links": [
+      {
+        "name": "searchAgain",
+        "label": "SEARCH AGAIN",
+        "url": ""
+      },
+      {
+        "name": "getQuote",
+        "label": "GET A QUOTE",
+        "url": ""
+      }
+    ]
+  },
+  "findMoreCard": {
+    "heading": "Find More",
+    "subheading": "",
+    "title": "",
+    "cards": [
+      {
+        "name": "card1",
+        "heading": "READ NOTIFICATIONS",
+        "subheading": "Review renewals and take action on open quotes.",
+        "link": {
+          "name": "discoverMore",
+          "label": "DISCOVER MORE",
+          "url": "/road-runner/notifications"
+        },
+        "image": "assets/road-runner/images/shield-check-white.png",
+        "iconClass": "fa fa-search",
+        "backgroundColor": "#e35208"
+      },
+      {
+        "name": "card2",
+        "heading": "CHECK RISK APPETITES",
+        "subheading": "Check out our appetite guide to find out what industries and class codes are eligible.",
+        "link": {
+          "name": "learnMore",
+          "label": "LEARN MORE",
+          "url": "/road-runner/resources/appetite-checks"
+        },
+        "image": "assets/road-runner/images/RiskAppetiteTile_Icon_MOBILE.svg",
+        "iconClass": "fa fa-exclamation",
+        "backgroundColor": "#8d4e7b"
+      },
+      {
+        "name": "card3",
+        "heading": "FIND SAMPLE POLICIES",
+        "subheading": "Locate a specimen policy form to read through coverage details you can use to inform your client.",
+        "link": {
+          "name": "findASample",
+          "label": "FIND A SAMPLE",
+          "url": "/road-runner/resources/sample-policies"
+        },
+        "image": "assets/road-runner/images/YourProfileTile_Icon_MOBILE.svg",
+        "iconClass": "fa fa-search",
+        "backgroundColor": "#64ccc9"
+      },
+      {
+        "name": "card4",
+        "heading": "AGENCY OF THE FUTURE",
+        "subheading": "Find out how new technologies are empowering agents to enhance their value.",
+        "link": {
+          "name": "learnMore",
+          "label": "LEARN MORE",
+          "target": "blank",
+          "url": "https://engage.dovetailinsurance.com/acton/fs/blocks/showLandingPage/a/39204/p/p-0054/t/page/fm/1"
+        },
+        "image": "assets/road-runner/images/star-white.png",
+        "iconClass": "fa fa-user",
+        "backgroundColor": "#e35208"
+      },
+      {
+        "name": "card5",
+        "heading": "OUR RESOURCES",
+        "subheading": "Find useful documents to support your work and get the best results for your clients. ",
+        "link": {
+          "name": "seeMore",
+          "label": "SEE MORE",
+          "url": "/road-runner/resources"
+        },
+        "image": "assets/road-runner/images/Document_multiple-white.png",
+        "iconClass": "fa fa-exclamation",
+        "backgroundColor": "#64ccc9"
+      },
+      {
+        "name": "card6",
+        "heading": "CONTACT US",
+        "subheading": "We're here if you need us, on live chat, phone and email.",
+        "link": {
+          "name": "getInTouch",
+          "label": "GET IN TOUCH",
+          "url": "/road-runner/contact-us"
+        },
+        "image": "assets/road-runner/images/YourProfileTile_Icon_MOBILE.svg",
+        "iconClass": "fa fa-search",
+        "backgroundColor": "#8d4e7b"
+      }
+    ]
+  }
+}

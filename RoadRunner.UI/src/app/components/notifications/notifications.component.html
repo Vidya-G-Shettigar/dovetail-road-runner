@@ -1,0 +1,115 @@
+<section>
+    <section>
+        <app-global-small-banner></app-global-small-banner>
+    </section>
+</section>
+<section class="mt-4 mb-0">
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-md-12 d-flex justify-content-start align-items-center mt-3 mb-1">
+                <div class="filter-header"> Filter </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4 d-flex align-items-center my-2 my-md-0">
+                <p-dropdown [options]="statuses" [(ngModel)]="selectedFilter"
+                    [style]="{'border': 'none', 'width': '16rem'}" (onChange)="onFilter($event.value)">
+                    <ng-template let-option pTemplate="item">
+                        <span>{{option.label}}</span>
+                    </ng-template>
+                </p-dropdown>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="victor-recent-cover">
+    <section class="mt-4 notifications_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12">
+                    <section>
+                        <p-table id="table-parent" class="notificationTableData" #dt [value]="notificationTableData"
+                            [rows]="5" [paginator]="true" [showCurrentPageReport]="true"
+                            [rowsPerPageOptions]="[5,10,25,50]" [loading]="loading"
+                            styleClass="p-datatable-customers p-datatable-gridlines" [(selection)]="selectedSubjects"
+                            currentPageReportTemplate="Showing {first} - {last} of {totalRecords} entries"
+                            [style]="{'background-color':'white'}">
+                            <!-- above globalFilterFields if for sarching the respective column -->
+                            <ng-template pTemplate="header">
+                                <tr class='notify-header'>
+                                    <td class="d-flex  align-items-center justify-content-between">
+                                        <div style="flex:0 0 0%">
+                                            <p-tableHeaderCheckbox class="notify-chbx"></p-tableHeaderCheckbox>
+                                        </div>
+                                        <div style="flex:0 0 33%">
+                                            SUBJECT
+                                        </div>
+                                        <div>DATE
+                                            <p-sortIcon pSortableColumn="date" field="date"></p-sortIcon>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <p-tableHeaderCheckbox class="notify-chbx"></p-tableHeaderCheckbox>
+                                    </th>
+                                    <th>SUBJECT</th>
+                                    <th>DATE
+                                        <p-sortIcon pSortableColumn="date" field="date"></p-sortIcon>
+                                    </th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-notification>
+                                <tr class="tabel-rows" [ngClass]="{ highlight: !notification.read }">
+                                    <td>
+                                        <p-tableCheckbox class="notify-chbx" [value]="notification">
+                                        </p-tableCheckbox>
+                                    </td>
+                                    <td>
+                                        <span class="text-underline">
+                                            {{notification.subject ? notification.subject : "--"}}
+                                            <span *ngIf="notification.showIcon">
+                                                <i class="pi pi-exclamation-circle notification-icon"></i>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class='data-overflowclip notify-table-date-col'>{{notification.date |
+                                            date: 'mediumDate'}}</span>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="emptymessage">
+                                <tr>
+                                    <td colspan="7">No notification found.</td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                        <div class="row custom-row m-0">
+                            <button type="button" pButton pRipple (click)="deleteSelected()"
+                                class="text-uppercase custom-button col-lg-2 col-md-3 col-sm-3 col-xs-12 mb-2">
+                                delete selected</button>
+                            <button type="button" pButton pRipple (click)="markUnread()"
+                                class="text-uppercase custom-button col-lg-3 col-md-4 col-sm-4 col-xs-12 mb-2">
+                                mark selected as unread</button>
+                            <button type="button" pButton pRipple (click)="markRead()"
+                                class="text-uppercase custom-button col-lg-3 col-md-4 col-sm-4 col-xs-12 mb-2">
+                                mark selected as read</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div *ngIf="errorPopup" class="no-background pb-5 error-popup">
+    <div class="card mt-5">
+        <div class="card-header">
+            {{errorHeader}}
+            <button class="no-background custom-button-close mb-0" (click)="onCloseError()">X</button>
+        </div>
+        <div class="card-body">
+            <span>{{errorBody}}</span>
+        </div>
+    </div>
+</div>

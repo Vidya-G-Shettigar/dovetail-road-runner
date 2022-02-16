@@ -1,0 +1,234 @@
+{
+  "route_name": "policies",
+  "heading": "RECENTLY SOLD POLICIES",
+  "title": "",
+  "serviceErrors": [
+    {
+      "status": 204,
+      "message": "No saved policies"
+    },
+    {
+      "status": 500,
+      "message": "Error while loading the data"
+    },
+    {
+      "status": 503,
+      "message": "Error while loading the data1"
+    },
+    {
+      "status": 404,
+      "message": "Error while loading the data1"
+    }
+  ],
+  "link": {
+    "url": "/road-runner/primary-rating-state"
+  },
+  "banner": {
+    "backgroundImage": "assets/road-runner/images/background/light-blue-hero-bg.png",
+    "backgroundImageDesktop": "assets/road-runner/images/backgrounds/light-blue-hero-bg.png",
+    "backgroundImageMobile": "assets/road-runner/images/backgrounds/light-blue-hero-bg_Mobile_retina.png",
+    "title": "Your policies",
+    "heading": "Track your success",
+    "subHeading": "View recent sales and premiums generated, and spot new opportunities by checking current coverages.",
+    "titleColor": "black",
+    "buttons": [
+      {
+        "name": "new_quote",
+        "type": "button",
+        "label": "START A NEW QUOTE"
+      }
+    ],
+    "link": [
+      {
+        "url": "/road-runner/primary-rating-state"
+      }
+    ]
+  },
+
+  "field": {
+    "message": "",
+    "messagePrefix": "In the last  ",
+    "msgBetween": " months, you’ve sold ",
+    "messageSuffix": " policies in total.",
+    "placeholder": "Type in a policy number or client name to find a specific policy..."
+  },
+  "policies": [
+    {
+      "clientName": "Alpha Inc",
+      "quote": "ABCD1234",
+      "policy": "Workers Compensation",
+      "state": "FL",
+      "dateCreated": "01/25/2020",
+      "status": "DECLINED",
+      "premium": "",
+      "createdBY": "Eve Sample",
+      "downloadIcon": "/onevictor/assets/road-runner/images/Download_Icon_Blue.svg"
+    },
+    {
+      "clientName": "Beta Inc",
+      "quote": "EFGH5678",
+      "policy": "Workers Compensation",
+      "state": "NY",
+      "dateCreated": "01/14/2020",
+      "status": "Issued",
+      "premium": "",
+      "createdBY": "David Sample",
+      "downloadIcon": "/onevictor/assets/road-runner/images/Download_Icon_Blue.svg"
+    },
+    {
+      "clientName": "Gamma Inc",
+      "quote": "IJKL9012",
+      "policy": "Workers Compensation",
+      "state": "AZ",
+      "dateCreated": "12/15/2019",
+      "status": "Issued",
+      "premium": "",
+      "createdBY": "Eve Sample",
+      "downloadIcon": "/onevictor/assets/road-runner/images/Download_Icon_Blue.svg"
+    },
+    {
+      "clientName": "Eta Inc",
+      "quote": "MNOP3456",
+      "policy": "Workers Compensation",
+      "state": "NL",
+      "dateCreated": "12/15/2019",
+      "status": "Issued",
+      "premium": "",
+      "createdBY": "Eve Sample",
+      "downloadIcon": "/onevictor/assets/road-runner/images/Download_Icon_Blue.svg"
+    },
+    {
+      "clientName": "Zeta Inc",
+      "quote": "QRST7890",
+      "policy": "Workers Compensation",
+      "state": "FL",
+      "dateCreated": "12/15/2019",
+      "status": "Issued",
+      "premium": "",
+      "createdBY": "John Sample",
+      "downloadIcon": "/onevictor/assets/road-runner/images/Download_Icon_Blue.svg"
+    }
+  ],
+  "header": [
+    {
+      "headerName": "CLIENT NAME",
+      "field": "clientName"
+    },
+    {
+      "headerName": "POLICY #",
+      "field": "policyNumber"
+    },
+    {
+      "headerName": "BUSINESS LINE",
+      "field": "businessLine"
+    },
+    {
+      "headerName": "STATE",
+      "field": "state"
+    },
+    {
+      "headerName": "DATE ENTERED",
+      "field": "activityDate"
+    },
+    {
+      "headerName": "STATUS",
+      "field": "status"
+    },
+    {
+      "headerName": "PREMIUM",
+      "field": "premium"
+    },
+    {
+      "headerName": "Created By",
+      "field": "soldBy"
+    },
+    {
+      "headerName": "",
+      "field": "downloadIcon"
+    }
+  ],
+  "mobileHeader": [
+    {
+      "headerName": "CLIENT NAME",
+      "field": "clientName"
+    },
+    {
+      "headerName": "POLICY #",
+      "field": "policyNumber"
+    },
+    {
+      "headerName": "BUSINESS LINE",
+      "field": "businessLine"
+    },
+    {
+      "headerName": "",
+      "field": "downloadIcon"
+    }
+  ],
+  "tabHeader": [
+    {
+      "headerName": "CLIENT NAME",
+      "field": "clientName"
+    },
+    {
+      "headerName": "POLICY #",
+      "field": "policyNumber"
+    },
+    {
+      "headerName": "BUSINESS LINE",
+      "field": "businessLine"
+    },
+    {
+      "headerName": "STATE",
+      "field": "state"
+    },
+    {
+      "headerName": "STATUS",
+      "field": "status"
+    },
+    {
+      "headerName": "PREMIUM",
+      "field": "premium"
+    },
+    {
+      "headerName": "",
+      "field": "downloadIcon"
+    }
+  ],
+  "statusList": [
+    {
+      "label": "All",
+      "value": "All"
+    },
+    {
+      "label": "Active",
+      "value": "Active"
+    },
+    {
+      "label": "To Renew",
+      "value": "To Renew"
+    },
+    {
+      "label": "Cancelled",
+      "value": "Cancelled"
+    },
+    {
+      "label": "Pending Cancellation",
+      "value": "Pending Cancellation"
+    }
+  ],
+  "policyYears": [
+    {
+      "label": "24 Months",
+      "value": "24"
+    },
+    {
+      "label": "18 Months",
+      "value": "18"
+    },
+    {
+      "label": "12 Months",
+      "value": "12"
+    }
+  ]
+}

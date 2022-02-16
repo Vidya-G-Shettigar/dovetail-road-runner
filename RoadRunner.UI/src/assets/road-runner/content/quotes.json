@@ -1,0 +1,280 @@
+{
+  "route_name": "quotes",
+  "tabs": [
+    {
+      "tabHeader": "SAVED QUOTES",
+      "field": "QUOTED"
+    },
+    {
+      "tabHeader": "EXPIRED QUOTES",
+      "field": "EXPIRED"
+    }
+  ],
+  "groupedInstruments": [
+    {
+      "label": "All",
+      "value": "ALL"
+    },
+    {
+      "label": "Quoted",
+      "value": "Quoted"
+    },
+    {
+      "label": "In Progress",
+      "value": "In Progress"
+    },
+    {
+      "label": "Declined",
+      "value": "Declined"
+    },
+    {
+      "label": "Needs Referral",
+      "value": "Needs Referral"
+    },
+    {
+      "label": "Under Review",
+      "value": "Under Review"
+    },
+    {
+      "label": "Ineligible",
+      "value": "Ineligible"
+    },
+    {
+      "label": "Awaiting Bind",
+      "value": "Awaiting Bind"
+    }
+  ],
+  "quotesYears": [
+    {
+      "label": "24 Months",
+      "value": "24"
+    },
+    {
+      "label": "18 Months",
+      "value": "18"
+    },
+    {
+      "label": "12 Months",
+      "value": "12"
+    }
+  ],
+  "saveQuoteServiceErrors": [
+    {
+      "status": 204,
+      "message": "No saved quotes"
+    },
+    {
+      "status": 500,
+      "message": "Error while loading the data"
+    },
+    {
+      "status": 503,
+      "message": "Error while loading the data"
+    },
+    {
+      "status": 404,
+      "message": "Error while loading the data"
+    }
+  ],
+  "expiredQuoteServiceErrors": [
+    {
+      "status": 204,
+      "message": "No expired quotes"
+    },
+    {
+      "status": 500,
+      "message": "Error while loading the data"
+    },
+    {
+      "status": 503,
+      "message": "Error while loading the data"
+    },
+    {
+      "status": 404,
+      "message": "Error while loading the data"
+    },
+    {
+      "status": 400,
+      "message": "Error while loading the data"
+    }
+  ],
+  "link": {
+    "url": "/road-runner/primary-rating-state"
+  },
+  "title": "",
+  "field": {
+    "message": "",
+    "messagePrefix": "You have ",
+    "messageSuffix": " quotes to complete.",
+    "placeholder": "Type in a quote number or client name to ﬁnd an existing quote…"
+  },
+  "banner": {
+    "backgroundImage": "assets/road-runner/images/Portfolio/Your-quotes_Hero-banner.png",
+    "backgroundImageDesktop": "assets/road-runner/images/Portfolio/Your-quotes_Hero-banner.png",
+    "backgroundImageMobile": "assets/road-runner/images/Portfolio/your-quotes-hero-banner-retina-mobile.png",
+
+    "title": "Your quotes",
+    "heading": "Ready to go?",
+    "subHeading": "Choose a saved quote to complete, view expired quotes, or get a new quote right now.",
+    "buttons": [
+      {
+        "name": "new_quote",
+        "type": "button",
+        "label": "START A NEW QUOTE"
+      }
+    ],
+    "link": [
+      {
+        "url": "/road-runner/portfolio/quotes"
+      }
+    ]
+  },
+  "quotesHeader": [
+    {
+      "headerName": "CLIENT NAME",
+      "field": "clientName"
+    },
+    {
+      "headerName": "PROPOSAL NAME",
+      "field": "proposalName"
+    },
+    {
+      "headerName": "PROSOSAL #",
+      "field": "proposalId"
+    },
+    {
+      "headerName": "STATE",
+      "field": "state"
+    },
+    {
+      "headerName": "DATE CREATED",
+      "field": "activityDate"
+    },
+    {
+      "headerName": "BUSINESS LINE",
+      "field": "businessLine"
+    },
+    {
+      "headerName": "STATUS",
+      "field": "status"
+    },
+    {
+      "headerName": "PREMIUM",
+      "field": "premium"
+    },
+    {
+      "headerName": "CREATED BY",
+      "field": "createdBy"
+    },
+    {
+      "headerName": "",
+      "field": "downloadIcon"
+    }
+  ],
+  "quotesMobileHeader": [
+    {
+      "headerName": "CLIENT NAME",
+      "field": "clientName"
+    },
+    {
+      "headerName": "PROPOSAL #",
+      "field": "proposalId"
+    },
+    {
+      "headerName": "BUSINESS LINE",
+      "field": "businessLine"
+    },
+    {
+      "headerName": "",
+      "field": "downloadIcon"
+    }
+  ],
+  "quotesTabHeader": [
+    {
+      "headerName": "CLIENT NAME",
+      "field": "clientName"
+    },
+    {
+      "headerName": "PROPOSAL #",
+      "field": "proposalId"
+    },
+    {
+      "headerName": "BUSINESS LINE",
+      "field": "businessLine"
+    },
+    {
+      "headerName": "STATUS",
+      "field": "status"
+    },
+    {
+      "headerName": "",
+      "field": "downloadIcon"
+    }
+  ],
+  "quotesIpadProHeader": [
+    {
+      "headerName": "CLIENT NAME",
+      "field": "clientName"
+    },
+    {
+      "headerName": "PROPOSAL #",
+      "field": "proposalId"
+    },
+    {
+      "headerName": "STATE",
+      "field": "state"
+    },
+    {
+      "headerName": "BUSINESS LINE",
+      "field": "businessLine"
+    },
+    {
+      "headerName": "STATUS",
+      "field": "status"
+    },
+    {
+      "headerName": "PREMIUM",
+      "field": "premium"
+    },
+    {
+      "headerName": "",
+      "field": "downloadIcon"
+    }
+  ],
+  "expiredQuotesHeader": [
+    {
+      "headerName": "CLIENT NAME",
+      "field": "clientName"
+    },
+    {
+      "headerName": "PROPOSAL NAME",
+      "field": "proposalName"
+    },
+    {
+      "headerName": "PROPOSAL #",
+      "field": "proposalId"
+    },
+    {
+      "headerName": "POLICY",
+      "field": "businessLine"
+    },
+    {
+      "headerName": "STATE",
+      "field": "state"
+    },
+    {
+      "headerName": "LAST EDITED",
+      "field": "activityDate"
+    },
+    {
+      "headerName": "PREMIUM",
+      "field": "premium"
+    },
+    {
+      "headerName": "",
+      "field": "downloadIcon"
+    }
+  ],
+  "inProgressQuotes": "IN_PROGRESS",
+  "defaultQuotetype": "QUOTED"
+}

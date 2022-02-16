@@ -1,0 +1,1232 @@
+<div _ngcontent-cek-c118="" id="myTabContent" class="tab-content">
+  <div
+    _ngcontent-cek-c118=""
+    id="home"
+    role="tabpanel"
+    aria-labelledby="home-tab"
+    class="tab-pane fade show active"
+  >
+    <section class="mt-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-12">
+            <section
+              id="quotestable-active"
+              class="policy-filter ng-star-inserted"
+            >
+              <div class="d-flex">
+                <!-- <button type="button" pButton pRipple icon="pi pi-file-o" (click)="dt.exportCSV()" class="p-button-plain p-mr-2 mx-1" pTooltip="csv" tooltipPosition="bottom"></button> -->
+                <button
+                  type="button"
+                  pButton
+                  pRipple
+                  icon="pi pi-file-excel"
+                  (click)="exportAsXLSXActive()"
+                  class="p-button-success p-mr-2"
+                  pTooltip="Excel"
+                  tooltipPosition="bottom"
+                ></button>
+                <button
+                  type="button"
+                  pButton
+                  pRipple
+                  icon="pi pi-file-pdf"
+                  (click)="exportPdfActive()"
+                  class="mx-1 p-button-warning p-mr-2"
+                  pTooltip="PDF"
+                  tooltipPosition="bottom"
+                ></button>
+                <button
+                  type="button"
+                  pButton
+                  pRipple
+                  icon="pi pi-file-o"
+                  (click)="dt.exportCSV()"
+                  class="p-mr-2 mx-1"
+                  pTooltip="CSV"
+                  tooltipPosition="bottom"
+                ></button>
+                <button
+                  type="button" style="display:none"
+                  pButton
+                  pRipple
+                  icon="pi pi-filter"
+                  (click)="dt.exportCSV({ selectionOnly: true })"
+                  class="p-button-info p-ml-auto"
+                  pTooltip="Selection CSV"
+                  tooltipPosition="bottom"
+                ></button>
+                <a
+                  (click)="clear(dt)"
+                  style="
+                    color: black;
+                    cursor: pointer;
+                    text-decoration: underline;
+                  "
+                  class="ms-auto"
+                  >Clear results</a
+                >
+              </div>
+              <p class="my-3">Search by proposal number or client name</p>
+              <div class="mb-2 d-flex;align-items-center">
+                <input 
+                [(ngModel)]="inpData"
+                  pInputText
+                  type="text"
+                  class="active-quotes__search"
+                  (input)="
+                    dt.filterGlobal($any($event.target).value, 'contains')
+                  "
+                  placeholder="Search keyword"
+                />
+                <a class="bg-black active-quotes__search-icone"
+                  ><i _ngcontent-gux-c117="" class="pi pi-search"></i
+                ></a>
+              </div>
+              <p-table
+                id="tabel-parent"
+                #dt
+                [value]="activequotes"
+                [columns]="colsForCsv"
+                selectionMode="multiple"
+                [(selection)]="selectedProducts"
+                dataKey="proposall"
+                [rows]="5"
+                [showCurrentPageReport]="true"
+                [rowsPerPageOptions]="[5, 10, 25, 50]"
+                [loading]="loading"
+                styleClass="p-datatable-customers p-datatable-gridlines"
+                [paginator]="true"
+                currentPageReportTemplate="Showing {first} - {last} of {totalRecords} entries"
+                [globalFilterFields]="[
+                  'clientName',
+                  'proposall',
+                  'polic.policy',
+                  'status'
+                ]"
+              >
+                <!-- above globalFilterFields if for sarching the respective column -->
+                <ng-template pTemplate="header">
+                  <tr
+                    id="active-table__header"
+                    class="tabel-mv__col quotes-table__header"
+                  >
+                    <td
+                      id="checkbox-child"
+                      style="width: auto !important; margin-right: 0"
+                    >
+                      <p-tableHeaderCheckbox
+                        class="portf-chkbx__design"
+                      ></p-tableHeaderCheckbox>
+                    </td>
+                    <td
+                      class="webvw-hide"
+                      id="mv-col__disp"
+                      style="
+                        font-family: dinOT-bold !important;
+                        color: #333 !important;
+                      "
+                    >
+                      CLIENT NAME
+
+                      <div
+                        class="d-flex align-items-center"
+                        style="margin-top: -6px"
+                      >
+                        <p-sortIcon
+                          pSortableColumn="clientName"
+                          field="clientName"
+                        ></p-sortIcon>
+                        <p-columnFilter
+                          type="text"
+                          field="clientName"
+                          display="menu"
+                        ></p-columnFilter>
+                      </div>
+                    </td>
+                    <td class="webvw-hide" id="tab-view__po">
+                      POLICY #
+
+                      <br /><p-sortIcon
+                        pSortableColumn="country.name"
+                        field="country.name"
+                      ></p-sortIcon>
+                    </td>
+                    <td
+                      class="webvw-hide"
+                      id="mv-col__disp"
+                      style="
+                        font-family: dinOT-bold !important;
+                        color: #333 !important;
+                      "
+                    >
+                      BUSINESS LINE
+                      <div
+                        class="d-flex align-items-center"
+                        style="margin-top: -6px"
+                      >
+                        <p-sortIcon
+                          pSortableColumn="policy"
+                          field="policy"
+                        ></p-sortIcon>
+                        <p-columnFilter
+                          field="polic"
+                          matchMode="in"
+                          display="menu"
+                          [showMatchModes]="false"
+                          [showOperator]="false"
+                          [showAddButton]="false"
+                        >
+                          <ng-template pTemplate="header">
+                            <div class="p-px-3 p-pt-3 p-pb-0">
+                              <span class="p-text-bold"
+                                >Search by Business Line</span
+                              >
+                            </div>
+                          </ng-template>
+                          <ng-template
+                            pTemplate="filter"
+                            let-value
+                            let-filter="filterCallback"
+                          >
+                            <p-multiSelect
+                              [ngModel]="value"
+                              [options]="businessLine"
+                              placeholder="Any"
+                              (onChange)="filter($event.value)"
+                              optionLabel="name"
+                            >
+                              <ng-template let-option pTemplate="item">
+                                <div
+                                  class="p-multiselect-representative-option"
+                                >
+                                  <span class="p-ml-1">{{ option.name }}</span>
+                                </div>
+                              </ng-template>
+                            </p-multiSelect>
+                          </ng-template>
+                        </p-columnFilter>
+                      </div>
+                    </td>
+                    <th style="padding-top: 24px">
+                      <p-tableHeaderCheckbox
+                        class="portf-chkbx__design"
+                      ></p-tableHeaderCheckbox>
+                    </th>
+                    <th>
+                      CLIENT NAME <br />
+                      <div
+                        class="d-flex align-items-center"
+                        style="margin-top: -6px"
+                      >
+                        <p-sortIcon
+                          pSortableColumn="clientName"
+                          field="clientName"
+                        ></p-sortIcon>
+                        <p-columnFilter
+                          type="text"
+                          field="clientName"
+                          display="menu"
+                        ></p-columnFilter>
+                      </div>
+                    </th>
+                    <th>
+                      PROPOSAL NAME <br />
+                      <div
+                        class="d-flex align-items-center"
+                        style="margin-top: -6px"
+                      >
+                        <p-sortIcon
+                          pSortableColumn="proposalName"
+                          field="proposalName"
+                        ></p-sortIcon>
+                        <p-columnFilter
+                          type="text"
+                          field="proposalName"
+                          display="menu"
+                        ></p-columnFilter>
+                      </div>
+                    </th>
+                    <th>
+                      PROPOSAL #
+                      <div
+                        class="d-flex align-items-center"
+                        style="margin-top: -6px"
+                      >
+                        <p-sortIcon
+                          pSortableColumn="proposall"
+                          field="proposall"
+                        ></p-sortIcon>
+                        <p-columnFilter
+                          type="text"
+                          field="proposall"
+                          display="menu"
+                        ></p-columnFilter>
+                      </div>
+                    </th>
+                    <th class="table-mv__hide-column">
+                      STATE
+                      <br />
+                      <div
+                        class="d-flex align-items-center"
+                        style="margin-top: -6px"
+                      >
+                        <p-sortIcon
+                          pSortableColumn="state"
+                          field="state"
+                        ></p-sortIcon>
+                        <p-columnFilter
+                          type="text"
+                          field="state"
+                          display="menu"
+                        ></p-columnFilter>
+                      </div>
+                    </th>
+
+                    <th class="table-mv__hide-column">
+                      Date Created
+                      <br />
+                      <div
+                        class="d-flex align-items-center"
+                        style="margin-top: -6px"
+                      >
+                        <p-sortIcon pSortableColumn="dateCreated"></p-sortIcon>
+                        <p-columnFilter
+                          type="date"
+                          field="dateCreated"
+                          display="menu"
+                        ></p-columnFilter>
+                      </div>
+                    </th>
+
+                    <th class="table-mv__hide-column">
+                      BUSINESS LINE
+                      <br />
+                      <div
+                        class="d-flex align-items-center"
+                        style="margin-top: -6px"
+                      >
+                        <p-sortIcon
+                          pSortableColumn="policy"
+                          field="policy"
+                        ></p-sortIcon>
+                        <p-columnFilter
+                          field="polic"
+                          matchMode="in"
+                          display="menu"
+                          [showMatchModes]="false"
+                          [showOperator]="false"
+                          [showAddButton]="false"
+                        >
+                          <ng-template pTemplate="header">
+                            <div class="p-px-3 p-pt-3 p-pb-0">
+                              <span class="p-text-bold"
+                                >Search by Business Line</span
+                              >
+                            </div>
+                          </ng-template>
+                          <ng-template
+                            pTemplate="filter"
+                            let-value
+                            let-filter="filterCallback"
+                          >
+                            <p-multiSelect
+                              [ngModel]="value"
+                              [options]="businessLine"
+                              placeholder="Any"
+                              (onChange)="filter($event.value)"
+                              optionLabel="name"
+                            >
+                              <ng-template let-option pTemplate="item">
+                                <div
+                                  class="p-multiselect-representative-option"
+                                >
+                                  <span class="p-ml-1">{{ option.name }}</span>
+                                </div>
+                              </ng-template>
+                            </p-multiSelect>
+                          </ng-template>
+                        </p-columnFilter>
+                      </div>
+                    </th>
+
+                    <th class="table-mv__hide-column">
+                      STATUS
+                      <br />
+                      <div
+                        class="d-flex align-items-center"
+                        style="margin-top: -6px"
+                      >
+                        <p-sortIcon
+                          pSortableColumn="statis"
+                          field="statis"
+                        ></p-sortIcon>
+                        <p-columnFilter
+                          type="text"
+                          field="clientName"
+                          display="menu"
+                        ></p-columnFilter>
+                      </div>
+                    </th>
+                    <th class="table-mv__hide-column">
+                      PREMIUM
+                      <br />
+                      <div
+                        class="d-flex align-items-center"
+                        style="margin-top: -6px"
+                      >
+                        <p-sortIcon
+                          pSortableColumn="premium"
+                          field="balance"
+                        ></p-sortIcon>
+                        <p-columnFilter
+                          type="numeric"
+                          field="premium"
+                          display="menu"
+                          currency="USD"
+                        ></p-columnFilter>
+                      </div>
+                    </th>
+                    <th class="table-mv__hide-column">
+                      Effective Date
+                      <br />
+                      <div
+                        class="d-flex align-items-center"
+                        style="margin-top: -6px"
+                      >
+                        <p-sortIcon pSortableColumn="effectiveDate" field="effectiveDate"></p-sortIcon>
+                        <p-columnFilter
+                          type="date"
+                          field="effectiveDate"
+                          display="menu"
+                        ></p-columnFilter>
+                      </div>
+                    </th>
+                    <th class="table-mv__hide-column">
+                      Last Edited Date
+                      <br />
+                      <div
+                        class="d-flex align-items-center"
+                        style="margin-top: -6px"
+                      >
+                        <p-sortIcon pSortableColumn="lastEdited" field="lastEdited"></p-sortIcon>
+                        <p-columnFilter
+                          type="date"
+                          field="lastEdited"
+                          display="menu"
+                        ></p-columnFilter>
+                      </div>
+                    </th>
+                  </tr>
+                </ng-template>
+
+                <ng-template
+                  pTemplate="body"
+                  let-customer
+                  let-expanded="expanded"
+                >
+                  <tr class="tabel-mv__rows">
+                    <td id="checkbox-child__webview">
+                      <p-tableCheckbox
+                        class="portf-chkbx__design"
+                        [value]="customer"
+                      ></p-tableCheckbox>
+                    </td>
+                    <td id="checkbox-child" style="width: auto !important">
+                      <p-tableCheckbox
+                        class="portf-chkbx__design"
+                        [value]="customer"
+                      ></p-tableCheckbox>
+                    </td>
+
+                    <td class="d-flex align-items-center">
+                      <div class="data-overflowclip nameclip">
+                        {{ customer.clientName ? customer.clientName : "--" }}
+                      </div>
+                      <a
+                        _ngcontent-gux-c117=""
+                        id="btn-mv-hide"
+                        class="bg-black"
+                        ><i
+                          _ngcontent-gux-c117=""
+                          class="bi bi-chevron-right"
+                        ></i
+                      ></a>
+                    </td>
+                    <td id="tab-view__po">
+                      <span class="data-overflowclip">{{
+                        customer.proposalName ? customer.proposalName : "--"
+                      }}</span>
+                    </td>
+
+                    <td class="table-mv__hide-column">
+                      <span class="data-overflowclip">{{
+                        customer.proposall ? customer.proposall : "--"
+                      }}</span>
+                    </td>
+                    <td class="table-mv__hide-column">
+                      <span class="data-overflowclip">
+                        {{ customer.state ? customer.state : "--" }}
+                      </span>
+                    </td>
+                    <td class="table-mv__hide-column">
+                      <span class="data-overflowclip">{{
+                        customer.dateCreated | date: "MM/dd/yyyy"
+                      }}</span>
+                    </td>
+                    <td
+                      class="mv-policy"
+                      style="padding-right: 25px !important"
+                    >
+                      <!-- <span >{{customer.policy?customer.policy:"--"}}</span> -->
+                      <div
+                        class="data-overflowclip row-data__marginarray"
+                        *ngFor="let policy of customer.policy"
+                      >
+                        <!-- <span >{{customer.policy?customer.policy:"--"}}</span> -->
+                        <span
+                          ><img
+                            class="businessimage"
+                            src="{{ policy.image }}"
+                          />
+                        </span>
+                        <span class="data-overflowclips">
+                          {{ policy.name }}
+
+                          <br />
+                        </span>
+                      </div>
+                      <button
+                        type="button"
+                        (click)="quotesTableMobviewDropbtn($event)"
+                        pButton
+                        pRipple
+                        [pRowToggler]="customer"
+                        id="btn-clickinmv"
+                        class="p-button-text p-button-rounded p-button-plain"
+                        [icon]="
+                          expanded
+                            ? 'pi pi-chevron-down'
+                            : 'pi pi-chevron-right'
+                        "
+                        _ngcontent-gux-c117=""
+                        class="bg-black"
+                      ></button>
+                    </td>
+
+                    <td class="table-mv__hide-column">
+                      <div
+                        class="data-overflowclip row-data__marginarray"
+                        *ngFor="let policy of customer.statis"
+                      >
+                        {{ policy }}
+                        <br />
+                      </div>
+                    </td>
+
+                    <td class="table-mv__hide-column">
+                      <div
+                        class="data-overflowclip row-data__marginarray"
+                        *ngFor="let premium of customer.premium"
+                      >
+                        {{
+                          premium ? (premium | currency: "USD":"symbol") : "--"
+                        }}
+                      </div>
+                    </td>
+                    <td class="table-mv__hide-column">
+                      <span class="data-overflowclip">{{
+                        customer.effectiveDate | date: "MM/dd/yyyy"
+                      }}</span>
+                    </td>
+                    <td class="table-mv__hide-column">
+                      <span class="data-overflowclip">{{
+                        customer.lastEdited | date: "MM/dd/yyyy"
+                      }}</span>
+                    </td>
+                  </tr>
+                </ng-template>
+                <ng-template pTemplate="emptymessage">
+                  <tr>
+                    <td colspan="7">No customers found.</td>
+                  </tr>
+                </ng-template>
+                <ng-template
+                  style="width: 100%"
+                  pTemplate="rowexpansion"
+                  let-customer
+                >
+                  <div
+                    id="row-dropdown"
+                    class="rowexpansion-mv__parent"
+                  >
+                    <!-- <p>{{customer.clientName}}</p> -->
+                    <div
+                      *ngFor="let policy of customer.policy"
+                      class="rowexpansion-mv__cards"
+                    >
+                      <div>
+                        <img class="businessimage" src="{{ policy.image }}" />
+                      </div>
+
+                      <div style="margin-left: 1rem">
+                        <span style="font-weight: 800;">
+                        {{ policy.name }}
+                      </span>
+                        <br />
+                        Status : {{policy.status}}
+                        <br />
+                        Premium : {{ policy.premium ? (policy.premium| currency: "USD":"symbol"): "--" }}
+                      </div>
+
+                      <!-- <span *ngFor="let policy of customer.statis">{{policy}}
+                          <br/> 
+                        </span>-->
+                    </div>
+                    <div  class="rowexpansion-mv__rowdata-parent">
+                      <div class="rowexpansion-mv__rowdata-each"
+                      >
+                        <span>ProposalName </span>
+                        <br />
+                        {{
+                          customer.proposalName ? customer.proposalName : "---"
+                        }}
+                      </div>
+                      <div class="rowexpansion-mv__rowdata-each"                     >
+                        <span>Proposal# </span>
+                        <br />
+                        {{ customer.proposall }}
+                      </div>
+                      <div
+                      class="rowexpansion-mv__rowdata-each">
+                        <span>State </span>
+                        <br />
+                        {{ customer.state }}
+                      </div>
+                      <div class="rowexpansion-mv__rowdata-each">
+                        <span>Date Entered </span>
+                        <br />
+                        {{ customer.dateCreated | date: "MM/dd/yyyy" }}
+                      </div>
+                      <div class="rowexpansion-mv__rowdata-each">
+                        <span>Effective Date</span>
+                        <br />
+                        {{ customer.effectiveDate | date: "MM/dd/yyyy"}}
+                      </div>
+                      <div style="padding: 0.5rem 1rem">
+                        <span style="font-weight: 700">Last Edited </span>
+                        <br />
+                        {{ customer.lastEdited | date: "MM/dd/yyyy"}}
+
+                      </div>
+                      <div
+                        class="text-center my-2 rowexpansion-mv__rowdata-btnparent">
+                        <a href="" style="width: 100%">
+                          <button
+                            class="btn rounded-0 rowexpansion-mv__rowdata-btn">
+                            View Quote
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </p-table>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- expired tab starts -->
+  <div
+    _ngcontent-cek-c118=""
+    id="profile"
+    role="tabpanel"
+    aria-labelledby="profile-tab"
+    class="tab-pane fade"
+  >
+    <section class="mt-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-12">
+            <section
+              id="quotestableexpired"
+              class="policy-filter ng-star-inserted"
+            >
+              <div class="d-flex">
+                <button
+                  type="button"
+                  pButton
+                  pRipple
+                  icon="pi pi-file-excel"
+                  (click)="exportAsXLSXExpired()"
+                  class="p-button-success p-mr-2"
+                  pTooltip="Excel"
+                  tooltipPosition="bottom"
+                ></button>
+                <button
+                  type="button"
+                  pButton
+                  pRipple
+                  icon="pi pi-file-pdf"
+                  (click)="exportPdfExpired()"
+                  class="mx-1 p-button-warning p-mr-2"
+                  pTooltip="PDF"
+                  tooltipPosition="bottom"
+                ></button>
+                <button
+                  type="button"
+                  pButton
+                  pRipple
+                  icon="pi pi-file-o"
+                  (click)="expiredQuotes.exportCSV()"
+                  class="p-mr-2 mx-1"
+                  pTooltip="CSV"
+                  tooltipPosition="bottom"
+                ></button>
+                <button
+                  type="button"
+                  pButton
+                  pRipple
+                  icon="pi pi-filter"
+                  (click)="expiredQuotes.exportCSV({ selectionOnly: true })"
+                  class="p-button-info p-ml-auto"
+                  pTooltip="Selection CSV"
+                  tooltipPosition="bottom"
+                  style="display: none;"
+                ></button>
+                <a
+                  (click)="clearTheExpiredFilters(expiredQuotes)"
+                  style="
+                    color: black;
+                    cursor: pointer;
+                    text-decoration: underline;
+                  "
+                  class="ms-auto"
+                  >Clear results</a
+                >
+              </div>
+
+              <p-table
+                id="tabel-parent"
+                #expiredQuotes
+                [value]="expiredQuotes__data"
+                [columns]="colsForCsvExpired"
+                selectionMode="multiple"
+                [(selection)]="selectedProductsExpired"
+                dataKey="proposall"
+                [rows]="5"
+                [showCurrentPageReport]="true"
+                [rowsPerPageOptions]="[5, 10, 25, 50]"
+                [loading]="loading"
+                styleClass="p-datatable-customers p-datatable-gridlines"
+                [paginator]="true"
+                currentPageReportTemplate="Showing {first} - {last} of {totalRecords} entries"
+                [globalFilterFields]="[
+                  'clientName',
+                  'dateCreated',
+                  'businessLine.name',
+                  'status'
+                ]"
+              >
+                <!-- globalFilterFields:  to filter data -->
+
+                <ng-template pTemplate="header">
+                  <tr>
+                    <th colspan="12" class="expierd-quotes__drpDown">
+                      <label _ngcontent-gct-c229="" class="expired-lable">Time Period</label>
+                      <p-columnFilter
+                        field="status"
+                        matchMode="equals"
+                        [showMenu]="false"
+                      >
+                        <ng-template
+                          pTemplate="filter"
+                          let-value
+                          let-filter="filterCallback"
+                        >
+                          <p-dropdown
+                            [ngModel]="value"
+                            [options]="statuses"
+                            (onChange)="filter($event.value)"
+                            placeholder="24 Months"
+                            [showClear]="true"
+                          >
+                            <ng-template let-option pTemplate="item">
+                              <span
+                                [class]="
+                                  'customer-badge status-' + option.value
+                                "
+                                >{{ option.label }}</span
+                              >
+                            </ng-template>
+                          </p-dropdown>
+                        </ng-template>
+                      </p-columnFilter>
+                    </th>
+                    <td
+                      colspan="12"
+                      class="expierd-quotes__drpDown expired-quotes__mv"
+                    >
+                      <label _ngcontent-gct-c229="">Time Period</label>
+                      <p-columnFilter
+                        field="status"
+                        matchMode="equals"
+                        [showMenu]="false"
+                      >
+                        <ng-template
+                          pTemplate="filter"
+                          let-value
+                          let-filter="filterCallback"
+                        >
+                          <p-dropdown
+                            [ngModel]="value"
+                            [options]="statuses"
+                            (onChange)="filter($event.value)"
+                            placeholder="24 Months"
+                            [showClear]="true"
+                          >
+                            <ng-template let-option pTemplate="item">
+                              <span
+                                [class]="
+                                  'customer-badge status-' + option.value
+                                "
+                                >{{ option.label }}</span
+                              >
+                            </ng-template>
+                          </p-dropdown>
+                        </ng-template>
+                      </p-columnFilter>
+                    </td>
+                  </tr>
+                  <tr id="vt" class="tabel-mv__col quotes-table__expiredheader">
+                    <td
+                      id="checkbox-child"
+                      style="width: auto !important; margin-right: 0"
+                    >
+                      <p-tableHeaderCheckbox
+                        class="portf-chkbx__design"
+                      ></p-tableHeaderCheckbox>
+                    </td>
+                    <td
+                      class="webvw-hide"
+                      id="mv-col__disp"
+                      style="
+                        font-family: dinOT-bold !important;
+                        color: #333 !important;
+                      "
+                    >
+                      CLIENT NAME
+                      <br />
+                      <div class="filteralignments">
+                        <p-sortIcon
+                          pSortableColumn="clientName"
+                          field="clientName"
+                        ></p-sortIcon>
+                        <p-columnFilter
+                          type="text"
+                          field="clientName"
+                          display="menu"
+                        ></p-columnFilter>
+                      </div>
+                    </td>
+                    <td class="webvw-hide" id="tab-view__po">
+                      POLICY #
+
+                      <br /><p-sortIcon
+                        pSortableColumn="country.name"
+                        field="country.name"
+                      ></p-sortIcon>
+                    </td>
+                    <td
+                      class="webvw-hide"
+                      style="
+                        font-family: dinOT-bold !important;
+                        color: #333 !important;
+                      "
+                      id="mv-col__disp"
+                    >
+                      BUSINESS LINE
+                      <div class="d-flex align-items-center filteralignments">
+                        <p-sortIcon
+                          pSortableColumn="policy"
+                          field="policy"
+                        ></p-sortIcon>
+                        <p-columnFilter
+                          field="businessLine"
+                          matchMode="in"
+                          display="menu"
+                          [showMatchModes]="false"
+                          [showOperator]="false"
+                          [showAddButton]="false"
+                        >
+                          <ng-template pTemplate="header">
+                            <div class="p-px-3 p-pt-3 p-pb-0">
+                              <span class="p-text-bold">Search by Business Line</span>
+                            </div>
+                          </ng-template>
+                          <ng-template
+                            pTemplate="filter"
+                            let-value
+                            let-filter="filterCallback"
+                          >
+                            <p-multiSelect
+                              [ngModel]="value"
+                              [options]="businessLine"
+                              placeholder="Any"
+                              (onChange)="filter($event.value)"
+                              optionLabel="name"
+                            >
+                              <ng-template let-option pTemplate="item">
+                                <div
+                                  class="p-multiselect-representative-option"
+                                >
+                                  <span class="p-ml-1">{{ option.name }}</span>
+                                </div>
+                              </ng-template>
+                            </p-multiSelect>
+                          </ng-template>
+                        </p-columnFilter>
+                      </div>
+                    </td>
+                    <th
+                      style="padding-top: 30px; padding-right: 0px; width: 10px"
+                    >
+                      <p-tableHeaderCheckbox
+                        class="portf-chkbx__design"
+                      ></p-tableHeaderCheckbox>
+                    </th>
+                    <th>
+                      CLIENT NAME <br />
+                      <div class="d-flex align-items-center filteralignments">
+                        <p-sortIcon
+                          pSortableColumn="clientName"
+                          field="clientName"
+                        ></p-sortIcon>
+                        <p-columnFilter
+                          type="text"
+                          field="clientName"
+                          display="menu"
+                        ></p-columnFilter>
+                      </div>
+                    </th>
+                    <th>
+                      PROPOSAL NAME <br />
+                      <div class="d-flex align-items-center filteralignments">
+                        <p-sortIcon
+                          pSortableColumn="proposalName"
+                          field="proposalName"
+                        ></p-sortIcon>
+                        <p-columnFilter
+                          type="text"
+                          field="proposalName"
+                          display="menu"
+                        ></p-columnFilter>
+                      </div>
+                    </th>
+                    <th>
+                      PROPOSAL #<br />
+                      <div class="d-flex align-items-center filteralignments">
+                        <p-sortIcon
+                          pSortableColumn="proposall"
+                          field="proposall"
+                        ></p-sortIcon>
+                        <p-columnFilter
+                          type="text"
+                          field="proposall"
+                          display="menu"
+                        ></p-columnFilter>
+                      </div>
+                    </th>
+                    <th class="table-mv__hide-column">
+                      BUSINESS LINE <br />
+                      <div class="d-flex align-items-center filteralignments">
+                        <p-sortIcon
+                          pSortableColumn="policy"
+                          field="policy"
+                        ></p-sortIcon>
+                        <p-columnFilter
+                          field="businessLine"
+                          matchMode="in"
+                          display="menu"
+                          [showMatchModes]="false"
+                          [showOperator]="false"
+                          [showAddButton]="false"
+                        >
+                          <ng-template pTemplate="header">
+                            <div class="p-px-3 p-pt-3 p-pb-0">
+                              <span class="p-text-bold">Search by Business Line</span>
+                            </div>
+                          </ng-template>
+                          <ng-template
+                            pTemplate="filter"
+                            let-value
+                            let-filter="filterCallback"
+                          >
+                            <p-multiSelect
+                              [ngModel]="value"
+                              [options]="businessLine"
+                              placeholder="Any"
+                              (onChange)="filter($event.value)"
+                              optionLabel="name"
+                            >
+                              <ng-template let-option pTemplate="item">
+                                <div
+                                  class="p-multiselect-representative-option"
+                                >
+                                  <span class="p-ml-1">{{ option.name }}</span>
+                                </div>
+                              </ng-template>
+                            </p-multiSelect>
+                          </ng-template>
+                        </p-columnFilter>
+                      </div>
+                    </th>
+                    <th class="table-mv__hide-column">
+                      STATE
+                      <br />
+                      <div class="d-flex align-items-center filteralignments">
+                        <p-sortIcon
+                          pSortableColumn="state"
+                          field="state"
+                        ></p-sortIcon>
+                        <p-columnFilter
+                          type="text"
+                          field="state"
+                          display="menu"
+                        ></p-columnFilter>
+                      </div>
+                    </th>
+                    <th class="table-mv__hide-column">
+                      LAST EDITED
+                      <br />
+                      <div class="d-flex align-items-center filteralignments">
+                        <p-sortIcon
+                          pSortableColumn="dateCreated"
+                          field="dateCreated"
+                        ></p-sortIcon>
+                        <p-columnFilter
+                          type="date"
+                          field="dateCreated"
+                          display="menu"
+                        ></p-columnFilter>
+                      </div>
+                    </th>
+                    <th class="table-mv__hide-column">
+                      PREMIUM
+                      <br />
+                      <div class="d-flex align-items-center filteralignments">
+                        <p-sortIcon
+                          pSortableColumn="premium"
+                          field="premium"
+                        ></p-sortIcon>
+                        <p-columnFilter
+                        type="numeric"
+                        field="premium"
+                        display="menu"
+                        currency="USD"
+                      ></p-columnFilter>
+                      </div>
+                    </th>
+                  </tr>
+                </ng-template>
+                <ng-template
+                  pTemplate="body"
+                  let-customer
+                  let-expanded="expanded"
+                >
+                  <tr class="tabel-mv__rows">
+                    <td id="expiredcheckbox-child__webview">
+                      <p-tableCheckbox
+                        class="portf-chkbx__design"
+                        [value]="customer"
+                      ></p-tableCheckbox>
+                    </td>
+                    <td
+                      id="expiredcheckbox-child"
+                      style="width: auto !important"
+                    >
+                      <p-tableCheckbox
+                        class="portf-chkbx__design"
+                        [value]="customer"
+                      ></p-tableCheckbox>
+                    </td>
+                    <td class="d-flex align-items-center">
+                      <!-- <p-tableCheckbox></p-tableCheckbox> -->
+
+                      <div class="data-overflowclip nameclip">
+                        {{ customer.clientName ? customer.clientName : "--" }}
+                      </div>
+                      <a
+                        _ngcontent-gux-c117=""
+                        id="btn-mv-hide"
+                        class="bg-black"
+                        ><i
+                          _ngcontent-gux-c117=""
+                          class="bi bi-chevron-right"
+                        ></i
+                      ></a>
+                    </td>
+                    <td id="tab-view__po">
+                      <span class="data-overflowclip">{{
+                        customer.proposalName ? customer.proposalName : "--"
+                      }}</span>
+                    </td>
+
+                    <td class="table-mv__hide-column">
+                      <span class="data-overflowclip">{{
+                        customer.proposall ? customer.proposall : "--"
+                      }}</span>
+                    </td>
+                    <td
+                      class="mv-policy"
+                      style="padding-right: 25px !important"
+                    >
+                      <!-- <span >{{customer.policy?customer.policy:"--"}}</span> -->
+                      <div
+                        class="data-overflowclip"
+                        *ngFor="let policy of customer.policy"
+                      >
+                        <!-- <span >{{customer.policy?customer.policy:"--"}}</span> -->
+
+                        <span
+                          ><img
+                            class="businessimage"
+                            src="{{ policy.image }}"
+                          />
+                        </span>
+
+                        <span class="data-overflowclip">
+                          {{ policy.name }}
+
+                          <br />
+                        </span>
+                      </div>
+                      <button
+                        type="button"
+                        (click)="quotesTableMobviewDropbtn($event)"
+                        pButton
+                        pRipple
+                        [pRowToggler]="customer"
+                        id="btn-clickinmv"
+                        class="p-button-text p-button-rounded p-button-plain"
+                        [icon]="
+                          expanded
+                            ? 'pi pi-chevron-down'
+                            : 'pi pi-chevron-right'
+                        "
+                        _ngcontent-gux-c117=""
+                        class="bg-black"
+                      ></button>
+                    </td>
+                    <td class="table-mv__hide-column">
+                      <span class="data-overflowclip"
+                        >{{ customer.state ? customer.state : "--" }}
+                      </span>
+                    </td>
+                    <td class="table-mv__hide-column">
+                      <span class="data-overflowclip">{{
+                        customer.dateCreated ? customer.dateCreated : "--"
+                      }}</span>
+                    </td>
+
+                    <td class="table-mv__hide-column">
+                      <div
+                        class="data-overflowclip"
+                        *ngFor="let prem of customer.premium"
+                      >
+                        {{ prem ? (prem | currency: "USD":"symbol") : "--" }}
+                        <br />
+                      </div>
+                    </td>
+                  </tr>
+                </ng-template>
+                <ng-template pTemplate="emptymessage">
+                  <tr>
+                    <td colspan="7">No customers found.</td>
+                  </tr>
+                </ng-template>
+                <ng-template
+                  style="width: 100%"
+                  pTemplate="rowexpansion"
+                  let-customer
+                >
+                  <div
+                    id="row-dropdown"
+                    class="rowexpansion-mv__parent"
+                  >
+                    <div
+                      *ngFor="let policy of customer.policy"
+                      class="rowexpansion-mv__cards"
+                     
+                    >
+                      <div>
+                        <img class="businessimage" src="{{ policy.image }}" />
+                      </div>
+
+                      <div style="margin-left: 1rem">
+                        <span style="font-weight: 800;">
+                        {{ policy.name }}
+                        </span>
+                        <br />
+                        Premium : {{ policy.premium ? (policy.premium| currency: "USD":"symbol"): "--" }}
+                      </div>
+
+                      <!-- <span *ngFor="let policy of customer.statis">{{policy}}
+                              <br/> 
+                            </span>-->
+                    </div>
+                    <div class="rowexpansion-mv__rowdata-parent">
+                      <div
+                      class="rowexpansion-mv__rowdata-each"
+                      >
+                        <span >Proposal Name </span>
+                        <br />
+                        {{
+                          customer.proposalName ? customer.proposalName : "---"
+                        }}
+                      </div>
+                      <div
+                      class="rowexpansion-mv__rowdata-each"
+                      >
+                        <span>Proposal# </span>
+                        <br />
+                        {{ customer.proposall }}
+                      </div>
+                      <div
+                      class="rowexpansion-mv__rowdata-each"
+                      >
+                        <span>State </span>
+                        <br />
+                        {{ customer.state }}
+                      </div>
+                      <div style="padding: 0.5rem 1rem">
+                        <span style="font-weight: 700">Last Edited </span>
+                        <br />
+                        {{ customer.dateCreated | date: "MM/dd/yyyy" }}
+                      </div>
+                      <div
+                        class="text-center my-2  rowexpansion-mv__rowdata-btnparent"
+                      
+                      >
+                        <a href="" style="width: 100%">
+                          <button
+                            class="btn rounded-0 rowexpansion-mv__rowdata-btn"
+                           
+                          >
+                            View Quote
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </p-table>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

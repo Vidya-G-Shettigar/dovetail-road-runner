@@ -1,0 +1,179 @@
+<div class="container" style="margin-top: 134px; height: 300px">
+  <div id="divLogin">
+    <div class="row">
+      <div class="d-none d-sm-block col-sm-4 col-lg-4"></div>
+      <div class="col-xs-12 col-sm-4 col-lg-4" style="padding-bottom: 50px">
+        <div id="divSignInBox" class="signInBoxRD">
+          <div class="row">
+            <div class="col-xs-12 col-lg-12 headerRDA">
+              Welcome to Dovetail for Agents
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-xs-12 col-lg-12">
+              <h4 style="font-weight: 600">
+                Quote, bind and issue BOP and general liability with Homesite
+                and workers comp with AmTrust in minutes.
+              </h4>
+              <p>
+                Dovetail for Agents is a secure application. Access is
+                restricted to authorized users only.
+              </p>
+            </div>
+          </div>
+          <br />
+
+          <div id="divChkAgree" class="row">
+            <div class="col-xs-12 col-lg-12">
+              <input
+                id="coupon_question"
+                type="checkbox"
+                name="coupon_question"
+                value="1"
+                onclick=" myFunction() "
+              />
+              <label for="coupon_question">I Agree.</label>
+            </div>
+          </div>
+
+          <form [formGroup]="loginForm" id="frm1">
+            <div class="form">
+              <div class="row">
+                <div class="col-xs-12 col-lg-12" style="font-weight: bold">
+                  First time using Dovetail for Agents?
+                  <a
+                    id="lnkActivate"
+                    href="https://engage.dovetailinsurance.com/acton/media/39204/dovetail-for-agents-account-creation-instructions?sid=TV2:TNVdKvfip"
+                    target="_blank"
+                    >Activate your account to get started</a
+                  ><br /><br />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-xs-12 col-lg-12">
+                  <input
+                    type="text"
+                    formControlName="email"
+                    class="form-control textboxRDTL"
+                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                    name="txt_username"
+                    id="txt_username"
+                    size="25"
+                    placeholder="Please enter email address"
+                    required=""
+                  />
+                </div>
+                <div
+                  *ngIf="submitted && f.email.errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f.email.errors.required">
+                    Please enter email address
+                  </div>
+                  <div *ngIf="f.email.errors.pattern">
+                    Hmm…that doesn't look right. Please re-enter your email (ex.
+                    name@email.com).
+                  </div>
+                </div>
+              </div>
+
+              <br />
+
+              <div id="divPassword">
+                <div class="row">
+                  <div class="col-xs-12 col-lg-12 form-group">
+                    <input
+                      type="password"
+                      formControlName="password"
+                      [ngClass]="{
+                        'is-invalid': submitted && f.password.errors
+                      }"
+                      class="form-control textboxRDTL"
+                      name="password"
+                      id="password"
+                      size="25"
+                      placeholder="Password"
+                      autocomplete="off"
+                      required=""
+                    />
+                    <div
+                      *ngIf="submitted && f.password.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="f.password.errors.required">
+                        Please enter password
+                      </div>
+                      <!-- <div *ngIf="f.password.errors.minlength">
+                        Password must be at least 6 characters
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br />
+
+              <div class="row">
+                <div class="col-xs-12 col-lg-12">
+                  <input
+                    type="button"
+                    class="SignInRDTL"
+                    id="btnSignIn"
+                    value="Sign in"
+                    style="width: 100%"
+                  />
+                  <!-- <button
+                    type="button"
+                    id="btnSignIn"
+                    class="btn SignInRDTL"
+                    value="Sign in"
+                    style="width: 100%"
+                    (click)="onSubmit()"
+                  >
+                    Sign in
+                  </button> -->
+                </div>
+              </div>
+              <br />
+
+              <div class="row">
+                <div class="col-xs-12 col-lg-12" style="font-size: smaller">
+                  <a id="lnkForgotPassword" href="">Forgot password?</a>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-12 col-lg-12" style="font-size: smaller">
+                  <a
+                    href="https://engage.dovetailinsurance.com/acton/media/39204/add-a-new-user"
+                    target="_blank"
+                    >Add a new user to your agency</a
+                  >
+                </div>
+              </div>
+              <br />
+              <br />
+              <div id="divDovetailTermsAndConditions" class="row">
+                <div class="col-xs-12 col-lg-12" style="font-size: smaller">
+                  <a
+                    id="lnkTermsAndConditions"
+                    href="https://www.dovetailinsurance.com/terms-and-conditions.html#terms-and-conditions"
+                    target="_blank"
+                    >Terms and Conditions</a
+                  >&nbsp;&nbsp;&nbsp;<a
+                    id="lnkPrivacy"
+                    href=" https://www.dovetailinsurance.com/privacy-policy.html"
+                    target="_blank"
+                    >Privacy Policy</a
+                  >
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

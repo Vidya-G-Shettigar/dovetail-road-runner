@@ -1,0 +1,114 @@
+{
+  "route_name": "portfolio",
+  "heading": "Your Portfolio",
+  "subHeading": "A top-level view",
+  "title": "",
+  "backgroundImage": "assets/dovetail/images/backgrounds/blue-hero-lg-bg.png",
+  "backgroundImageMobile": "assets/dovetail/images/backgrounds/portfolio-hero-banner-Mobile.png",
+  "backgroundImageDesktop": "assets/dovetail/images/backgrounds/blue-hero-lg-bg.png",
+  "cards": [
+    {
+      "name": "quote",
+      "heading": "Your Quotes",
+      "subheading": "Pick up saved quotes where you left off or check the status.",
+      "backgroundColor": "#E35205",
+      "image": "/assets/road-runner/images/Your-quotes_Tile_Icon_White.svg",
+      "redirectUrl": "/portfolio/quotes",
+      "link": {
+        "name": "viewAll",
+        "label": "VIEW ALL"
+      },
+      "rowLabels": [
+        {
+          "label": "quotes to complete",
+          "value": "4636"
+        },
+        {
+          "label": "accepted quotes",
+          "value": "9028"
+        },
+        {
+          "label": "expired quotes",
+          "value": "659"
+        }
+      ],
+      "serviceErrors": [
+        {
+          "status": 500,
+          "message": "Error while loading the data"
+        },
+        {
+          "status": 404,
+          "message": "Error while loading the data"
+        }
+      ]
+    },
+    {
+      "name": "policy",
+      "heading": "Your Policies",
+      "subheading": "View your policies, renewals and pending cancellations.",
+      "backgroundColor": "#64CCC9",
+      "redirectUrl": "/portfolio/policies",
+      "image": "/assets/road-runner/images/Your-policies_Tile_Icon_White_Mobile.svg",
+      "link": {
+        "name": "viewAll",
+        "label": "VIEW ALL"
+      },
+      "rowLabels": [
+        {
+          "label": "renewals offered",
+          "value": "0"
+        },
+        {
+          "label": "active policies",
+          "value": "2452"
+        },
+        {
+          "label": "policies pending cancellation",
+          "value": "0"
+        }
+      ],
+      "serviceErrors": [
+        {
+          "status": 500,
+          "message": "Error while loading the data"
+        },
+        {
+          "status": 404,
+          "message": "Error while loading the data"
+        }
+      ]
+    },
+    {
+      "name": "needHelp",
+      "heading": "Need Help?",
+      "subheading": "We're standing by ready to help. Contact us any time.",
+      "backgroundColor": "#8D4E7B",
+      "image": "/assets/road-runner/images/MyClientsTile_Icon_MOBILE.svg",
+      "link": {
+        "name": "",
+        "label": ""
+      },
+      "rowLabels": [
+        {
+          "label": "info@dovetailinsurance.com",
+          "value": "Email:",
+          "link": "mailto:info@dovetailinsurance.com",
+          "target": ""
+        },
+        {
+          "label": "(833) 423 0746 (M-F, 8 AM - 9 PM ET)",
+          "value": "Phone:",
+          "link": "tel:8669549770",
+          "target": ""
+        },
+        {
+          "label": "M-F, 8 AM - 9 PM ET",
+          "value": "Live chat:",
+          "link": "",
+          "target": ""
+        }
+      ]
+    }
+  ]
+}

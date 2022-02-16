@@ -1,0 +1,54 @@
+
+version: '3.4'
+services:
+    agents-master-api:
+        env_file: .env
+        image: "agents-master-api:${MASTER_TAG}"
+        container_name: agents-master-api
+        build:
+            context: .
+            dockerfile: ./Agents.VictorInsurance.Api/Agents.VictorInsurance.Api.Master/Dockerfile
+        ports:
+            - ${MASTER_HOST_PORT}:${MASTER_SERVER_PORT}
+        restart: always
+        networks:
+            - victor_drr
+    agents-authorization-api:
+        env_file: .env
+        image: "agents-authorization-api:${AUTH_TAG}"
+        container_name: agents-authorization-api
+        build:
+            context: .
+            dockerfile: ./Agents.VictorInsurance.Api/Agents.VictorInsurance.Api.Authorization/Dockerfile
+        ports:
+            - ${AUTH_HOST_PORT}:${AUTH_SERVER_PORT}
+        restart: always
+        networks:
+            - victor_drr
+    agents-documents-api:
+        env_file: .env
+        image: "agents-documents-api:${DOCUMENTS_TAG}"
+        container_name: agents-documents-api
+        build:
+            context: .
+            dockerfile: ./Agents.VictorInsurance.Api/Agents.VictorInsurance.Api.Documents/Dockerfile
+        ports:
+            - ${DOCUMENTS_HOST_PORT}:${DOCUMENTS_SERVER_PORT}
+        restart: always
+        networks:
+            - victor_drr
+    agents-services-api:
+        env_file: .env
+        image: "agents-services-api:${SERVICES_TAG}"
+        container_name: agents-services-api
+        build:
+            context: .
+            dockerfile: ./Agents.VictorInsurance.Api/Agents.VictorInsurance.Api.Services/Dockerfile
+        ports:
+            - ${SERVICES_HOST_PORT}:${SERVICES_SERVER_PORT}
+        restart: always
+        networks:
+            - victor_drr
+networks:
+      victor_drr:
+         external: true

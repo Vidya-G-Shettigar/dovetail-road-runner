@@ -1,0 +1,86 @@
+strong{
+    font-weight: 700;
+  }
+  
+  td{
+    border-top: 1px solid rgba(100,204,201,.3);
+    padding: 15px 0;
+  }
+  .section{
+    background-color: rgba(100,204,201,.08);
+    color: #231f20;
+    font-size: 12px;
+    line-height: 22px;
+    margin-bottom: 16px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .section th,.section td{
+    font-size: 12px;
+  }
+  .policy-confo__title{font-size: 32px;
+  font-weight: 100;
+  padding: 24px 22px;
+  }
+  .policy-confo__content{background: #fff;
+  box-shadow: 0 2px 2px 0;
+  margin-bottom: 56px;
+  margin-top: 41px;
+  padding-bottom: 10px;
+  padding-left: 8px;
+  padding-right: 8px;}
+  
+  /* first table */
+  .inner-padding {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  
+  .card-title{
+    border-bottom: 1px solid #64ccc9;
+    font-weight: 700;
+    margin-bottom: 3px;
+    padding-bottom: 15px;
+    padding-top: 24px;
+  }
+  .font-600{
+    font-weight: 600;
+  }
+  .border-none {
+    border-top: none;
+  }
+  @media screen and (min-width: 992px){
+  table{
+      white-space: nowrap;
+  }}
+  @media (min-width: 768px){
+  .text-md-right {
+      text-align: right!important;
+  }}
+  
+  td{
+    border-bottom: none;
+  }
+  @media screen and (max-width: 1199px) and (min-width: 320px)
+  {
+  .policy-confo__title {
+      font-size: 22px;
+      padding: 24px 12px;
+  }}
+  @media screen and (max-width: 767px) and (min-width: 320px){
+    td {
+      clear: both;
+      display: block;
+      padding: 11px 0 2px;
+      width: 99.9%;
+  }
+  .data-padding {
+    padding-bottom: 11px;
+    padding-top: 1px;
+  }
+  .border-xs-none{
+    border-top: none;
+  }
+  }
+  
+  

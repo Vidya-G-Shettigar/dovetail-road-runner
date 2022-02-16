@@ -1,0 +1,88 @@
+<div class="card card-bg-white overlap-above mb-3">
+  <div class="card-body">
+    <span class="icon-top-right"
+      ><i class="{{ cards.quickSummaryCard.iconClass }}"></i>
+    </span>
+    <h2 class="mb-4 mt-2 dashboard-title-width">
+      {{ cards.quickSummaryCard.heading }}
+    </h2>
+    <h2 class="mb-4 mt-2 dashboard-subheading">Recent 90 day activity</h2>
+    <!-- <p>
+      <my-dynamic-link [field]="dynamicLink"></my-dynamic-link>
+    </p> -->
+    <ul class="card-items list-unstyled">
+      <li>
+        <a
+          ><strong><span> 5377</span></strong>
+          accepted quotes
+          <span class="absolute-right">
+            <!-- <em class="fas fa-chevron-right"></em> -->
+            <i  class="bi bi-chevron-right"></i>
+
+          </span>
+        </a>
+      </li>
+
+      <li>
+        <a
+          ><strong><span> 5377</span></strong>
+          policies sold
+          <span class="absolute-right">
+            <i  class="bi bi-chevron-right"></i>
+          </span>
+        </a>
+      </li>
+
+      <li class="ng-star-inserted">
+        <a
+          ><strong><span>$7,419,397.00</span></strong>
+          of total written premium
+          <span class="absolute-right"
+            >
+            <i  class="bi bi-chevron-right"></i>
+            </span
+        ></a>
+      </li>
+    </ul>
+
+    <a
+      [routerLink]="['/portfolio']"
+      class="position-absolute card-footer-link text-black"
+    >
+      {{ cards.quickSummaryCard.link.label }}</a
+    >
+  </div>
+</div>
+
+<!-- skeleton view -->
+<!-- <ng-template #skeleton>
+  <div
+    class="skeleton card card-bg-white overlap-above mb-3"
+    [style.background-color]="card?.backgroundColor"
+  >
+    <div class="card-body">
+      <h2 class="mb-4 mt-2 dashboard-title-width"></h2>
+      <ul class="card-items list-unstyled">
+        <li>
+          <a href="" class="text-black"
+            ><strong><span></span></strong>
+            <span class="absolute-right"> </span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="text-black"
+            ><strong><span></span></strong>
+            <span class="absolute-right"> </span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="text-black"
+            ><strong><span></span></strong>
+            <span class="absolute-right"> </span>
+          </a>
+        </li>
+      </ul>
+      <a class="position-absolute card-footer-link text-black" href=""></a>
+    </div>
+  </div>
+</ng-template> -->

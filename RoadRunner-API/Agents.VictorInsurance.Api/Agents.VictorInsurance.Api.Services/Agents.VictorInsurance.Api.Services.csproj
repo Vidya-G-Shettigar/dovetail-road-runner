@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+ <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+ <ItemGroup>
+   <PackageReference Include="AutoMapper" Version="10.1.1" />
+   <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+ </ItemGroup>
+
+ <ItemGroup>
+   <ProjectReference Include="..\..\Agents.VictorInsurance.BuildingBlocks\Agents.VictorInsurance.BuildingBlocks.csproj" />
+   <ProjectReference Include="..\..\Agents.VictorInsurance.Business\Policy\Agents.VictorInsurance.Business.Policy.Infrastructure\Agents.VictorInsurance.Business.Policy.Infrastructure.csproj" />
+   <ProjectReference Include="..\..\Agents.VictorInsurance.Business\Policy\Agents.VictorInsurance.Business.Policy.Services\Agents.VictorInsurance.Business.Policy.Services.csproj" />
+   <ProjectReference Include="..\..\Agents.VictorInsurance.Business\ApiProvider\Agents.VictorInsurance.Business.ApiProvider.Infrastructure\Agents.VictorInsurance.Business.ApiProvider.Infrastructure.csproj" />
+   <ProjectReference Include="..\..\Agents.VictorInsurance.Business\ApiProvider\Agents.VictorInsurance.Business.ApiProvider.Services\Agents.VictorInsurance.Business.ApiProvider.Services.csproj" />
+   <ProjectReference Include="..\..\Agents.VictorInsurance.Business\Proposal\Agents.VictorInsurance.Business.Proposal.Infrastructure\Agents.VictorInsurance.Business.Proposal.Infrastructure.csproj" />
+   <ProjectReference Include="..\..\Agents.VictorInsurance.Business\Proposal\Agents.VictorInsurance.Business.Proposal.Services\Agents.VictorInsurance.Business.Proposal.Services.csproj" />
+   <ProjectReference Include="..\..\Agents.VictorInsurance.Business\Questionnaire\Agents.VictorInsurance.Business.Questionnaire.Infrastructure\Agents.VictorInsurance.Business.Questionnaire.Infrastructure.csproj" />
+   <ProjectReference Include="..\..\Agents.VictorInsurance.Business\Questionnaire\Agents.VictorInsurance.Business.Questionnaire.Services\Agents.VictorInsurance.Business.Questionnaire.Services.csproj" />
+   <ProjectReference Include="..\..\Agents.VictorInsurance.Business\Quote\Agents.VictorInsurance.Business.Quote.Infrastructure\Agents.VictorInsurance.Business.Quote.Infrastructure.csproj" />
+   <ProjectReference Include="..\..\Agents.VictorInsurance.Business\Quote\Agents.VictorInsurance.Business.Quote.Services\Agents.VictorInsurance.Business.Quote.Services.csproj" />
+   <ProjectReference Include="..\..\Agents.VictorInsurance.GenericRepository\Agents.VictorInsurance.GenericRepository.csproj" />
+   <ProjectReference Include="..\..\Agents.VictorInsurance.Business\Policy\Agents.VictorInsurance.Business.Policy.Repository\Agents.VictorInsurance.Business.Policy.Repository.csproj" />
+   <ProjectReference Include="..\..\Agents.VictorInsurance.Business\ApiProvider\Agents.VictorInsurance.Business.ApiProvider.Repository\Agents.VictorInsurance.Business.ApiProvider.Repository.csproj" />
+   <ProjectReference Include="..\..\Agents.VictorInsurance.Business\Proposal\Agents.VictorInsurance.Business.Proposal.Repository\Agents.VictorInsurance.Business.Proposal.Repository.csproj" />
+   <ProjectReference Include="..\..\Agents.VictorInsurance.Business\Questionnaire\Agents.VictorInsurance.Business.Questionnaire.Repository\Agents.VictorInsurance.Business.Questionnaire.Repository.csproj" />
+   <ProjectReference Include="..\..\Agents.VictorInsurance.Business\Quote\Agents.VictorInsurance.Business.Quote.Repository\Agents.VictorInsurance.Business.Quote.Repository.csproj" />
+ </ItemGroup>
+
+</Project>

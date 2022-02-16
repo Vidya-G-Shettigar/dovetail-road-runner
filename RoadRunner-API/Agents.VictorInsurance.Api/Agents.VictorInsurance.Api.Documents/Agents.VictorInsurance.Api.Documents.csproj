@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Agents.VictorInsurance.BuildingBlocks\Agents.VictorInsurance.BuildingBlocks.csproj" />
+    <ProjectReference Include="..\..\Agents.VictorInsurance.Business\Documents\Agents.VictorInsurance.Business.Documents.Infrastructure\Agents.VictorInsurance.Business.Documents.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Agents.VictorInsurance.Business\Documents\Agents.VictorInsurance.Business.Documents.Services\Agents.VictorInsurance.Business.Documents.Services.csproj" />
+    <ProjectReference Include="..\..\Agents.VictorInsurance.Business\Documents\Agents.VictorInsurance.Business.Documents.Repository\Agents.VictorInsurance.Business.Documents.Repository.csproj" />
+    <ProjectReference Include="..\..\Agents.VictorInsurance.GenericRepository\Agents.VictorInsurance.GenericRepository.csproj" />
+  </ItemGroup>
+
+
+</Project>

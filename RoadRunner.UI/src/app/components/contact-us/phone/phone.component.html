@@ -1,0 +1,19 @@
+<div class="card bg-white">
+  <div class="card-header text-center contact-card-bg-blue py-5">
+    <img [src]="card.contactCard2.image" alt="contact dovetail victor" />
+  </div>
+  <div class="card-body">
+    <h2 class="mb-4 mt-2">{{ card.contactCard2.name }}</h2>
+    <div class="card-height-max">
+      <p class="card-color-link">
+        <strong
+          ><a href="tel:{{ card.contactCard2.phone }}" class="the-link">{{
+            card.contactCard2.phone
+          }}</a></strong
+        >
+      </p>
+
+      <p>{{ card.contactCard2.subheading }}</p>
+    </div>
+  </div>
+</div>

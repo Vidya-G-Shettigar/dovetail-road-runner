@@ -1,0 +1,163 @@
+.purplev-lg-bg {
+  background: url(/assets/road-runner/images/resource/purple-hero-lg-bg.png)
+    no-repeat top;
+  background-size: cover;
+}
+
+.landing {
+  box-sizing: border-box;
+  max-height: 100%;
+  /* min-height: calc(100vh - 85px); */
+  min-height: calc(100vh - -264px);
+}
+.headname {
+  font-family: dinOT-bold;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.header-large {
+  min-height: 472px;
+  padding-bottom: 250px;
+}
+
+.header-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 74px;
+  /* min-height: 162px; */
+}
+
+.header-area h1 {
+  color: #000;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: 48px;
+}
+
+@media (max-width: 768px) {
+  .purplev-lg-bg {
+    background: url(/assets/road-runner/images/resource/purple-hero-lg-bg_mobile.png)
+      no-repeat top;
+    background-size: cover;
+  }
+
+  .header-area h1 {
+    color: #000;
+    font-size: 33px;
+    letter-spacing: 0;
+    line-height: 40px;
+    margin-bottom: 102px;
+  }
+
+  .header-large {
+    min-height: 350px;
+    padding-bottom: 190px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .landing {
+    box-sizing: border-box;
+    max-height: 100%;
+    min-height: calc(100vh - -175%);
+  }
+
+  .header-area h1 {
+    color: #000;
+    font-size: 33px;
+    letter-spacing: 0;
+    line-height: 40px;
+    margin-bottom: 89px;
+  }
+
+  .header-large {
+    min-height: 282px;
+    padding-bottom: 210px;
+    padding-top: 30px;
+  }
+}
+
+.last-edited-step-1
+  .mat-horizontal-stepper-header
+  + .mat-stepper-horizontal-line:nth-child(2) {
+  height: 2px;
+  background-image: linear-gradient(to right, #00b495, #00aeea);
+}
+.last-edited-step-2
+  .mat-horizontal-stepper-header
+  + .mat-stepper-horizontal-line:nth-child(2) {
+  height: 2px;
+  background-image: linear-gradient(to right, #00b495, #00aeea);
+}
+.last-edited-step-2
+  .mat-horizontal-stepper-header
+  + .mat-stepper-horizontal-line:nth-child(4) {
+  height: 2px;
+  background-image: linear-gradient(to right, #00b495, #00aeea);
+}
+.mat-stepper-label-position-bottom
+  .mat-horizontal-stepper-header:not(:first-child)::before,
+.mat-stepper-label-position-bottom
+  .mat-horizontal-stepper-header:not(:last-child)::after,
+[dir="rtl"]
+  .mat-stepper-label-position-bottom
+  .mat-horizontal-stepper-header:not(:first-child)::after,
+[dir="rtl"]
+  .mat-stepper-label-position-bottom
+  .mat-horizontal-stepper-header:not(:last-child)::before {
+  width: 0 !important;
+}
+.mat-step-header .mat-step-header-ripple {
+  display: none;
+}
+.mat-step-header.cdk-keyboard-focused,
+.mat-step-header.cdk-program-focused,
+.mat-step-header:hover {
+  background-color: #fff;
+}
+.mat-stepper-label-position-bottom .mat-horizontal-stepper-header {
+  padding: 8px 0 8px 0 !important;
+  /* width: 35px !important; */
+  width: 121px !important;
+}
+.mat-stepper-label-position-bottom .mat-stepper-horizontal-line {
+  top: 20px !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #e35205;
+  color: #fff;
+  /* font-weight: 700; */
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+}
+
+.accordion-button::after {
+  height: 0rem;
+  content: none;
+}
+
+.accordian-edit {
+  flex-shrink: 0;
+
+  margin-left: auto;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.accordian-edit-text {
+  display: none;
+}
+
+.displayshow {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

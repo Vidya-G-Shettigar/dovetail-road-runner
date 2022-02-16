@@ -1,0 +1,67 @@
+<section class="overlap-above position-relative resource-cards">
+  <div class="container topsection w-100">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="card bg-white">
+          <div class="card-header {{ card.resourceCard1.backgroundColor }}">
+            <img
+              [src]="card.resourceCard1.image"
+              alt="card.resourceCard1.name"
+            />
+          </div>
+          <div class="card-body shadow-hard">
+            <h2 class="mb-sm-4 mt-2">{{ card.resourceCard1.heading }}</h2>
+            <p>{{ card.resourceCard1.subheading }}</p>
+            <a
+              class="position-absolute card-footer-link"
+              [routerLink]="card.resourceCard1.link.url"
+              >{{ card.resourceCard1.link.label }}</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="card bg-white">
+          <div class="card-header {{ card.resourceCard2.backgroundColor }}">
+            <img
+              [src]="card.resourceCard2.image"
+              alt="card.resourceCard2.name"
+            />
+          </div>
+          <div class="card-body shadow-hard">
+            <h2 class="mb-sm-4 mt-2">{{ card.resourceCard2.heading }}</h2>
+            <p>{{ card.resourceCard2.subheading }}</p>
+            <a
+              class="position-absolute card-footer-link"
+              [routerLink]="card.resourceCard2.link.url"
+              >{{ card.resourceCard2.link.label }}</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="card bg-white">
+          <div class="card-header {{ card.resourceCard3.backgroundColor }}">
+            <img
+              [src]="card.resourceCard3.image"
+              alt="card.resourceCard3.name"
+            />
+          </div>
+          <div class="card-body shadow-hard">
+            <h2 class="mb-sm-4 mt-2">{{ card.resourceCard3.heading }}</h2>
+            <p>{{ card.resourceCard3.subheading }}</p>
+            <a
+              class="position-absolute card-footer-link"
+              [routerLink]="card.resourceCard3.link.url"
+              >{{ card.resourceCard3.link.label }}</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+    </div>
+  </div>
+</section>

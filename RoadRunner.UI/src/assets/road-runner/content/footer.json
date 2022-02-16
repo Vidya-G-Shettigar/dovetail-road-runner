@@ -1,0 +1,42 @@
+{
+  "locale": "en-US",
+
+  "desktopMenu": {
+    "horizontalMenu": [
+      {
+        "name": "about",
+        "label": "About Dovetail",
+        "title": "About Dovetail",
+        "target": "_blank",
+        "url": "https://www.dovetailinsurance.com/about-us.html"
+      },
+      {
+        "name": "privacy",
+        "label": "Privacy Policy",
+        "title": "Privacy Policy",
+        "target": "",
+        "url": "/privacy"
+      },
+      {
+        "name": "terms",
+        "label": "Terms & Conditions",
+        "title": "Terms & Conditions",
+        "target": "",
+        "url": "/terms"
+      }
+    ]
+  },
+  "logoLink": {
+    "name": "logo",
+    "label": "Dovetail Logo",
+    "title": "Dovetail Logo",
+    "url": "/assets/road-runner/images/dovetail-for-agents-white-stacked.png",
+    "target": "dovetail/dashboard"
+  },
+  "contact": {
+    "desktoplabel": "(833) 423 0746",
+    "mobilelabel": "Call us",
+    "text": "Monday - Friday, 8 AM - 9 PM EST",
+    "url": "tel:8334230746"
+  }
+}

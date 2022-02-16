@@ -1,0 +1,75 @@
+<section>
+    <section>
+        <app-global-small-banner></app-global-small-banner>
+    </section>
+</section>
+<section class="mt-4" [style]="{'padding-bottom': '100px'}">
+    <div class="container">
+        <ul id="quote-progressbar">
+            <li class="active" id="step1" [ngClass]="{ 'active-completed': completedSteps.step1Complete }">
+                <strong class="topclass">
+                    <span data-xtr-key="GetStarted">Get Started</span>
+                    <span id="getStartedPercent">{{step1Completion | number : '1.0-0'}}% completed</span>
+                    <span *ngIf="completedSteps.step1Complete" class="edit-txt" (click)="onClickEditStep1()">Edit</span>
+                </strong>
+            </li>
+            <li id="step2"
+                [ngClass]="{ 'active': activeSteps.step2Complete, 'active-completed': completedSteps.step2Complete }">
+                <strong class="topclass">
+                    <span data-xtr-key="ClientDetails">Client Details</span>
+                    <span *ngIf="!activeSteps.step2Complete" id="clientDetailsPercent">Pending</span>
+                    <span *ngIf="activeSteps.step2Complete" id="clientDetailsPercent">{{step2Completion | number :
+                        '1.0-0'}}% completed</span>
+                    <span *ngIf="completedSteps.step2Complete" class="edit-txt" (click)="onClickEditStep2()">Edit</span>
+                </strong>
+            </li>
+            <li id="step3"
+                [ngClass]="{ 'active': activeSteps.step3Complete, 'active-completed': completedSteps.step3Complete }">
+                <strong class="topclass">
+                    <span data-xtr-key="QuoteDetails">Quote Details</span>
+                    <span *ngIf="!activeSteps.step3Complete" id="quoteDetailsPercent">Pending</span>
+                    <span *ngIf="activeSteps.step3Complete" id="clientDetailsPercent">{{step3Completion | number :
+                        '1.0-0'}}% completed</span>
+                    <span *ngIf="completedSteps.step3Complete" class="edit-txt">Edit</span>
+                </strong>
+            </li>
+            <li id="step4"
+                [ngClass]="{ 'active': activeSteps.step4Complete, 'active-completed': completedSteps.step4Complete }">
+                <strong class="topclass">
+                    <span data-xtr-key="QuoteOptions">Quote Options</span>
+                    <span *ngIf="!activeSteps.step4Complete" id="quoteOptionsPercent">Pending</span>
+                    <span *ngIf="activeSteps.step4Complete" id="clientDetailsPercent">{{step4Completion | number :
+                        '1.0-0'}}% completed</span>
+                    <span *ngIf="completedSteps.step4Complete" class="edit-txt">Edit</span>
+                </strong>
+            </li>
+            <li id="step5"
+                [ngClass]="{ 'active': activeSteps.step5Complete, 'active-completed': completedSteps.step5Complete }">
+                <strong class="topclass">
+                    <span data-xtr-key="BindPolicy">Bind Policy</span>
+                    <span *ngIf="!activeSteps.step5Complete" id="bindPolicyPercent">Pending</span>
+                    <span *ngIf="activeSteps.step5Complete" id="clientDetailsPercent">{{step5Completion | number :
+                        '1.0-0'}}% completed</span>
+                    <span *ngIf="completedSteps.step5Complete" class="edit-txt">Edit</span>
+                </strong>
+            </li>
+        </ul>
+    </div>
+</section>
+<div *ngIf="!completedSteps.step1Complete" class="row m-5">
+    <button type="button" pButton pRipple (click)="calculatePercentageStep1(3, 1, 'step1ContinueDisabled')"
+        class="custom-button col-lg-1 col-md-1 col-sm-1 col-xs-12 m-2">
+        Yes</button>
+    <button type="button" pButton pRipple (click)="calculatePercentageStep1(3, 2, 'step1NextDisabled')"
+        [disabled]="buttonDisabled.step1ContinueDisabled"
+        class="custom-button col-lg-1 col-md-1 col-sm-1 col-xs-12 m-2">
+        Continue</button>
+    <button type="button" pButton pRipple (click)="calculatePercentageStep1(1, 1, '')"
+        [disabled]="buttonDisabled.step1NextDisabled" class="custom-button col-lg-1 col-md-1 col-sm-1 col-xs-12 m-2">
+        Next</button>
+</div>
+<div *ngIf="showStep2" class="row m-5">
+    <button type="button" pButton pRipple (click)="calculatePercentageStep2(1, 1)"
+        [disabled]="buttonDisabled.step1NextDisabled" class="custom-button col-lg-1 col-md-1 col-sm-1 col-xs-12 m-2">
+        Next</button>
+</div>

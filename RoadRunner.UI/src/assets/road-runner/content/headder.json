@@ -1,0 +1,253 @@
+{
+  "locale": "en-US",
+  "logo": "./assets/road-runner/images/dovetail-for-agents-rgb-stacked.png",
+  "logoTitle": "OneVictor",
+  "arrow": "./assets/road-runner/images/GoButton_Mobile.svg",
+  "arrowTitle": "arrow",
+  "routeName": "header",
+  "logoLink": {
+    "target": "road-runner/dashboard"
+  },
+  "contact": {
+    "desktoplabel": "(833) 423 0746",
+    "mobilelabel": "Call us",
+    "text": "Monday - Friday, 8 AM - 9 PM ET",
+    "url": "tel:8334230746"
+  },
+  "desktopIcon": {
+    "name": "userIcon",
+    "identifier": "bi-person-fill",
+    "links": [
+      {
+        "name": "changeagency",
+        "label": "Select Agency",
+        "title": "Select Agency",
+        "target": "road-runner/landing"
+      },
+      {
+        "name": "logout",
+        "label": "Logout",
+        "title": "Logout",
+        "target": "road-runner/dashboard"
+      }
+    ]
+  },
+  "desktopMenu": {
+    "horizontalMenu": [
+      {
+        "name": "notifications",
+        "label": "Notifications",
+        "title": "Notifications",
+        "target": "notifications"
+      },
+      {
+        "name": "portfolio",
+        "label": "Portfolio",
+        "title": "Portfolio",
+        "target": "/portfolio",
+        "subMenu": [
+          {
+            "name": "overview",
+            "label": "Overview",
+            "title": "Overview",
+            "target": "/portfolio"
+          },
+          {
+            "name": "quotes",
+            "label": "Quotes",
+            "title": "Quotes",
+            "target": "/portfolio/quotes"
+          },
+          {
+            "name": "policies",
+            "label": "Policies",
+            "title": "Policies",
+            "target": "/portfolio/policies"
+          }
+        ]
+      },
+      {
+        "name": "resources",
+        "label": "Resources",
+        "title": "Resources",
+        "target": "road-runner/resources",
+        "subMenu": [
+          {
+            "name": "overview",
+            "label": "Overview",
+            "title": "Overview",
+            "target": "road-runner/resources"
+          },
+          {
+            "name": "samplepolicies",
+            "label": "Sample policies",
+            "title": "Sample policies",
+            "target": "road-runner/resources/sample-policies"
+          },
+          {
+            "name": "appetiteChecks",
+            "label": "Appetite checks",
+            "title": "Appetite checks",
+            "target": "road-runner/resources/appetite-checks"
+          },
+          {
+            "name": "insights",
+            "label": "Insights",
+            "title": "Insights",
+            "target": "road-runner/resources/insights"
+          }
+        ]
+      },
+      {
+        "name": "contact",
+        "label": "Contact us",
+        "title": "Contact us",
+        "target": "road-runner/contact-us"
+      },
+      {
+        "name": "search-widget",
+        "label": "Search",
+        "title": "Search"
+      },
+      {
+        "name": "quote",
+        "label": "Get new quotes",
+        "title": "Get new quotes",
+        "target": "road-runner/primary-rating-state",
+        "highlight": true
+      },
+      {
+        "name": "colleague",
+        "label": "Colleague View",
+        "title": "Colleague View",
+        "target": "road-runner/colleague",
+        "highlight": true
+      }
+    ]
+  },
+  "mobileMenu": {
+    "horizontalMenu": [
+      {
+        "name": "dollarSign",
+        "label": "dollarSign",
+        "title": "dollarSign",
+        "target": "road-runner/primary-rating-state"
+      },
+      {
+        "name": "colleague",
+        "label": "Colleague Login",
+        "title": "Colleague Login",
+        "target": "road-runner/colleague"
+      },
+      {
+        "name": "toggleNavigation",
+        "label": "Toggle navigation",
+        "title": "Toggle navigation"
+      }
+    ],
+    "hamburgerMenu": [
+      {
+        "name": "changeagency",
+        "label": "Select Agency",
+        "title": "Select Agency",
+        "target": "road-runner/agency-login",
+        "labelIcon": "exchange-alt"
+      },
+      {
+        "name": "notifications",
+        "label": "Notifications",
+        "title": "Notifications",
+        "target": "/notifications",
+        "labelIcon": "bell-fill"
+      },
+      {
+        "name": "portfolio",
+        "label": "Portfolio",
+        "title": "Portfolio",
+        "target": "/portfolio",
+        "labelIcon": "file-earmark-fill",
+        "subMenu": [
+          {
+            "name": "overview",
+            "label": "Overview",
+            "title": "Overview",
+            "target": "/portfolio"
+          },
+          {
+            "name": "quotes",
+            "label": "Quotes",
+            "title": "Quotes",
+            "target": "/portfolio/quotes"
+          },
+          {
+            "name": "policies",
+            "label": "Policies",
+            "title": "Policies",
+            "target": "/portfolio/policies"
+          }
+        ]
+      },
+      {
+        "name": "resources",
+        "label": "Resources",
+        "title": "Resources",
+        "target": "/resources",
+        "labelIcon": "link-45deg",
+        "subMenu": [
+          {
+            "name": "overview",
+            "label": "Overview",
+            "title": "Overview",
+            "target": "/resources"
+          },
+          {
+            "name": "samplepolicies",
+            "label": "Sample policies",
+            "title": "Sample policies",
+            "target": "/resources/sample-policies"
+          },
+          {
+            "name": "appetiteChecks",
+            "label": "Appetite checks",
+            "title": "Appetite hcecks",
+            "target": "/resources/appetite-checks"
+          },
+          {
+            "name": "insights",
+            "label": "Insights",
+            "title": "Insights",
+            "target": "/resources/insights"
+          }
+        ]
+      },
+      {
+        "name": "contact",
+        "label": "Contact us",
+        "title": "Contact us",
+        "target": "/contact-us",
+        "labelIcon": "headset"
+      },
+      {
+        "name": "search-widget",
+        "label": "Search",
+        "title": "Search",
+        "labelIcon": "search"
+      },
+      {
+        "name": "logout",
+        "label": "Logout",
+        "title": "Logout",
+        "labelIcon": "person-fill"
+      }
+    ],
+
+    "close": [
+      {
+        "name": "close",
+        "label": "Close",
+        "title": "Close",
+        "close": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,166 @@
+.footer {
+  width: 100%;
+  background-color: #000000;
+  padding: 8px 20px 12px;
+  border-top: 4px #e35205 solid;
+  /* position: fixed;
+  bottom: 0;
+  width: 100%; */
+  /* height: auto; */
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.footer li:last-child a {
+  padding-right: 0;
+}
+.footer a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-size: 12px;
+  text-transform: uppercase;
+
+  /* -webkit-transition: color 200ms linear;
+      -moz-transition: color 200ms linear;
+      -o-transition: color 200ms linear;
+      -ms-transition: color 200ms linear;
+      transition: color 200ms linear; */
+  line-height: 40px;
+}
+
+.footer a:hover {
+  color: #e35205;
+}
+
+.dovetail-logo {
+  /* // padding: 10px 0; */
+  margin-left: -15px;
+  margin-right: 17px;
+  width: 12em;
+  margin-top: 10px;
+}
+
+.chat-push{
+  padding-right: 2.5rem;
+}
+.chat-toggle {
+  background-color: #e35205;
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  top: -54px;
+  right: 15px;
+  padding: 8px 60px 5px;
+  height: 44px;
+  text-transform: uppercase;
+
+  /* -webkit-transition: top 200ms linear;
+      -moz-transition: top 200ms linear;
+      -o-transition: yop 200ms linear;
+      -ms-transition: top 200ms linear;
+      transition: top 200ms linear; */
+}
+
+.chat-toggle a:hover {
+  opacity: 0.86;
+}
+
+a {
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.company-info {
+  padding: 0 20px;
+  align-self: center;
+  flex-direction: column;
+  border-left: 1px solid #ffffff;
+}
+.company-info a {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: normal;
+}
+
+/* .company-info  span {
+      a:last-child {
+        font-size: 74%;
+      } */
+@media (max-width: 1320px) {
+  .footer .chat-push {
+    margin-right: 9em;
+  }
+}
+
+@media (max-width: 991px) {
+  .footer .company-info {
+    display: none;
+  }
+  .nav-link {
+    padding: 0.5rem 0.46rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer .nav-link {
+    padding: 0.5rem;
+  }
+  .footer .container {
+    max-width: 100%;
+  }
+}
+@media (max-width: 375px) {
+  .dovetail-logo {
+    width: 34%;
+  }
+}
+@media (max-width: 575px) {
+  .footer {
+    padding: 28px 20px 12px;
+  }
+
+  .dovetail-logo {
+    padding: 5px 0;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    height: 37px;
+    width: 8em;
+  }
+  .chat-toggle {
+    right: -20px;
+    left: -20px;
+    text-align: left;
+    top: -70px;
+    padding: 10px 20px 5px;
+  }
+  a {
+    line-height: 40px;
+    padding: 0;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    position: relative;
+  }
+}
+
+.chat-push {
+  margin-right: 9em;
+}
+
+@media (max-width: 768px) {
+  .chat-push {
+    margin-right: 0;
+  }
+}

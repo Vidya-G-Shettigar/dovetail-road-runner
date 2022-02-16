@@ -1,0 +1,106 @@
+#quote-progressbar::before {
+    content: "|";
+    font-size: 20px;
+    color: #e35205;
+    position: relative;
+    float: left;
+    font-weight: bold;
+    top: 63px;
+    left: 6px;
+}
+
+#quote-progressbar::after {
+    content: "|";
+    font-size: 20px;
+    color: #a6a6a6;
+}
+
+#quote-progressbar li {
+    width: 18%;
+    height: 100px;
+    float: left;
+    position: relative;
+}
+
+#quote-progressbar #step1:before {
+    content: "";
+}
+
+#quote-progressbar li.active:before {
+    background: url(/assets/road-runner/images/tracker_active_orange_retina.png);
+    background-size: 30px 30px !important;
+}
+
+#quote-progressbar li.active-completed:before {
+    background: url(/assets/road-runner/images/tracker_completed_orange_retina.png);
+    background-size: 30px 30px !important;
+}
+
+#quote-progressbar li:before {
+    margin: 0 auto 5px auto;
+    background: #a6a6a6;
+    height: 30px;
+    width: 30px;
+    margin-top: 60px;
+    display: block;
+    border-radius: 50%;
+    content: "";
+}
+
+#quote-progressbar li.active:after {
+    background: #e35205;
+    margin-left: 100px;
+}
+
+#quote-progressbar li:after {
+    left: -50%;
+    top: 75px;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    z-index: -1;
+}
+
+ul {
+    list-style: none;
+}
+
+strong {
+    font-family: Din-AltBold;
+    font-weight: bold;
+    color: black;
+}
+
+#getStartedPercent, #clientDetailsPercent, #quoteDetailsPercent, #quoteOptionsPercent, #bindPolicyPercent {
+    position: relative;
+    top: 9px;
+    display: block;
+    font-weight: normal !important;
+}
+
+.topclass {
+    position: absolute;
+    top: 0px;
+    left: 33%;
+    text-align: center;
+}
+
+.custom-button, .custom-button:hover {
+    color: #fff !important;
+    background-color: black !important;
+    font-weight: bold;
+    display: block;
+}
+
+.edit-txt {
+    position: relative;
+    top: 55px;
+    right: 7px;
+    width: 30px;
+    font-size: 14px;
+    text-decoration: underline;
+    color: #ac2187;
+    cursor: pointer;
+}

@@ -1,0 +1,148 @@
+<section class="common-quote-header top">
+  <section
+    *ngIf="data"
+    class="top-section"
+    [ngStyle]="{
+      'background-image': 'url(' + data.banner.backgroundImage + ')'
+    }"
+  >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="quote-area">
+            <div class="quote-header-area">
+              <div
+                class="header headname"
+                [ngClass]="
+                  data.banner.titleColor === 'black'
+                    ? 'text-black'
+                    : 'text-white'
+                "
+              >
+                {{ data.banner.title }}
+              </div>
+              <div
+                class="sub-header"
+                [ngClass]="
+                  data.banner.titleColor === 'black'
+                    ? 'text-black'
+                    : 'text-white'
+                "
+              >
+                {{ data.banner.heading }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section *ngIf="data" class="bottom-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="quote-header-area">
+            <div class="row">
+              <div
+                class="
+                  col-md-8
+                  d-flex
+                  justify-content-center
+                  align-content-center
+                  flex-column
+                "
+              >
+                <div
+                  [ngClass]="
+                    data.banner.buttons
+                      ? 'header-left mb-2 mb-sm-0'
+                      : 'header-left header-left-xl mb-2 mb-sm-0'
+                  "
+                >
+                  <span>{{ data.banner.subHeading }}</span>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-12 col-xs-12 link">
+                <div class="my-2 text-center text-md-end">
+                  <ng-container
+                    *ngIf="data.banner.link && data.banner.link.length > 0"
+                  >
+                    <a [routerLink]="data.banner.link[0]?.url">
+                      <button
+                        *ngIf="data.banner.buttons"
+                        class="btn rounded-0"
+                        type="submit"
+                      >
+                        {{ data.banner.buttons[0]?.label }}
+                      </button>
+                    </a>
+                  </ng-container>
+                  <a
+                    *ngIf="data.banner.link"
+                    class="
+                      text-uppercase
+                      underline-text
+                      text-decoration-underline
+                      demi-weight
+                    "
+                    [routerLink]="data.banner.link[0]?.target"
+                    >{{ data.banner.link[0]?.label }}</a
+                  >
+
+                  <!-- <my-dynamic-link
+                    [field]="dynamicLink"
+                    *ngIf="fieldConfig?.link"
+                  ></my-dynamic-link> -->
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="
+                  col-md-8
+                  d-flex
+                  justify-content-center
+                  align-content-center
+                  flex-column
+                "
+              >
+                <p>{{ data.banner.subHeadingNote }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bottom-section" style="margin-top: 6px">
+    <ng-container
+      *ngIf="
+        lastPartRout === 'sample-policies' || lastPartRout === 'appetite-checks'
+      "
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="quote-header-area">
+              <label
+                for="file-upload"
+                class="custom-file-upload"
+                name="filename"
+              >
+                <i class="bi bi-upload"></i> Upload File
+              </label>
+              <input
+                id="file-upload"
+                type="file"
+                accept=".xlsx,.csv,.xls"
+                name="filename"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </section>
+</section>

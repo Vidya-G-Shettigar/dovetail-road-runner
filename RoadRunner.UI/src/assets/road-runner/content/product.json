@@ -1,0 +1,83 @@
+{
+  "route_name": "product",
+  "title": "Product",
+  "heading": "Product availability",
+  "subheading": "I’D LIKE TO FIND AVAILABLE PRODUCTS IN:",
+
+  "States": [
+    {
+      "name": "New York",
+      "code": "NY",
+      "link": {
+        "name": "viewAll",
+        "label": "VIEW ALL"
+      },
+
+      "Business": [
+        {
+          "name": "Businers Owner policy",
+          "image": "/assets/road-runner/images/icons/BusinessOwnersPolicy.png",
+          "redirectUrl": "/portfolio/quotes"
+        },
+        {
+          "name": "General Liability",
+          "image": "/assets/road-runner/images/icons/GeneralLiability.png",
+          "redirectUrl": "/portfolio/quotes"
+        },
+        {
+          "label": "Get Quote"
+        }
+      ],
+      "serviceErrors": [
+        {
+          "status": 500,
+          "message": "Error while loading the data"
+        },
+        {
+          "status": 404,
+          "message": "Error while loading the data"
+        }
+      ]
+    },
+    {
+      "name": "Alabama",
+      "code": "NY",
+      "link": {
+        "name": "viewAll",
+        "label": "VIEW ALL"
+      },
+      "Business": [
+        {
+          "name": "Workers Compensation",
+          "image": "/assets/road-runner/images/icons/WorkersCompensation.png",
+          "redirectUrl": "/portfolio/quotes"
+        },
+        {
+          "name": "Businers Owner policy",
+          "image": "/assets/road-runner/images/icons/BusinessOwnersPolicy.png",
+          "redirectUrl": "/portfolio/quotes"
+        },
+        {
+          "name": "General Liability",
+          "image": "/assets/road-runner/images/icons/GeneralLiability.png",
+          "redirectUrl": "/portfolio/quotes"
+        },
+        {
+          "name": "Cyber Liability",
+          "image": "/assets/road-runner/images/icons/Icon_CyberLiability_Blue.png",
+          "redirectUrl": "/portfolio/quotes"
+        }
+      ],
+      "serviceErrors": [
+        {
+          "status": 500,
+          "message": "Error while loading the data"
+        },
+        {
+          "status": 404,
+          "message": "Error while loading the data"
+        }
+      ]
+    }
+  ]
+}

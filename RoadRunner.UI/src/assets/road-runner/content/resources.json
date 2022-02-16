@@ -1,0 +1,43 @@
+{
+  "route_name": "resources",
+  "title": "Resources",
+  "heading": "Resources",
+  "subheading": "Supporting your work",
+
+  "resourceCard1": {
+    "name": "Find specimen policies",
+    "backgroundColor": "bg-teal",
+    "heading": "Find specimen policies",
+    "subheading": "Research coverage options to inform your advice to clients.",
+    "link": {
+      "name": "samplePoliciesSearch",
+      "label": "FIND POLICIES",
+      "url": "sample-policies"
+    },
+    "image": "./assets/road-runner/images/Find-Policies_Tile_Icon_White.svg"
+  },
+  "resourceCard2": {
+    "name": "Check risk appetites",
+    "backgroundColor": "bg-orange",
+    "heading": "Check risk appetites",
+    "subheading": "Learn more about our many eligible classes of business by downloading our product appetite guides.",
+    "link": {
+      "name": "checkAppetites",
+      "label": "CHECK APPETITES",
+      "url": "appetite-checks"
+    },
+    "image": "./assets/road-runner/images/Risk-appetites_Tile_Icon_White.svg"
+  },
+  "resourceCard3": {
+    "name": "Our latest insights",
+    "backgroundColor": "bg-blue",
+    "heading": "Our latest insights",
+    "subheading": "Your knowledge is your success. Get our take on topics affecting you and your clients.",
+    "link": {
+      "name": "viewInsights",
+      "label": "VIEW All INSIGHTS",
+      "url": "insights"
+    },
+    "image": "./assets/road-runner/images/Insights_Tile_Icon_White.svg"
+  }
+}

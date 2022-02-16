@@ -1,0 +1,88 @@
+{
+  "findMoreCard": {
+    "heading": "Find More",
+    "subheading": "",
+    "title": "",
+    "cards": [
+      {
+        "name": "card1",
+        "heading": "READ NOTIFICATIONS",
+        "subheading": "Review renewals and take action on open quotes.",
+        "link": {
+          "name": "discoverMore",
+          "label": "DISCOVER MORE",
+          "url": "/notifications"
+        },
+        "image": "assets/road-runner/images/general/shield-check-white.png",
+        "iconClass": "bi bi-search",
+        "backgroundColor": "#e35208"
+      },
+      {
+        "name": "card2",
+        "heading": "CHECK RISK APPETITES",
+        "subheading": "Check out our appetite guide to find out what industries and class codes are eligible.",
+        "link": {
+          "name": "learnMore",
+          "label": "LEARN MORE",
+          "url": "/resources/appetite-checks"
+        },
+        "image": "assets/road-runner/images/general/RiskAppetiteTile_Icon_MOBILE.svg",
+        "iconClass": "bi bi-exclamation-lg",
+        "backgroundColor": "#8d4e7b"
+      },
+      {
+        "name": "card3",
+        "heading": "FIND SAMPLE POLICIES",
+        "subheading": "Locate a specimen policy form to read through coverage details you can use to inform your client.",
+        "link": {
+          "name": "findASample",
+          "label": "FIND A SAMPLE",
+          "url": "/resources/sample-policies"
+        },
+        "image": "assets/road-runner/images/general/YourProfileTile_Icon_MOBILE.svg",
+        "iconClass": "bi bi-search",
+        "backgroundColor": "#64ccc9"
+      },
+      {
+        "name": "card4",
+        "heading": "AGENCY OF THE FUTURE",
+        "subheading": "Find out how new technologies are empowering agents to enhance their value.",
+        "link": {
+          "name": "learnMore",
+          "label": "LEARN MORE",
+          "target": "blank",
+          "url": "https://engage.dovetailinsurance.com/acton/media/39204/dovetail-agency-of-the-future"
+        },
+        "image": "assets/road-runner/images/star-white.png",
+        "iconClass": "bi bi-person",
+        "backgroundColor": "#e35208"
+      },
+      {
+        "name": "card5",
+        "heading": "OUR RESOURCES",
+        "subheading": "Find useful documents to support your work and get the best results for your clients. ",
+        "link": {
+          "name": "seeMore",
+          "label": "SEE MORE",
+          "url": "/resources"
+        },
+        "image": "assets/road-runner/images/Document_multiple-white.png",
+        "iconClass": "bi bi-exclamation-lg",
+        "backgroundColor": "#64ccc9"
+      },
+      {
+        "name": "card6",
+        "heading": "CONTACT US",
+        "subheading": "We're here if you need us, on live chat, phone and email.",
+        "link": {
+          "name": "getInTouch",
+          "label": "GET IN TOUCH",
+          "url": "/contact-us"
+        },
+        "image": "assets/road-runner/images/general/YourProfileTile_Icon_MOBILE.svg",
+        "iconClass": "bi bi-search",
+        "backgroundColor": "#8d4e7b"
+      }
+    ]
+  }
+}

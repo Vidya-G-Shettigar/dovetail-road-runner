@@ -1,0 +1,125 @@
+.header-area {
+  min-height: 212px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* margin: 4.5rem 0 0; */
+}
+
+@media (max-width: 400px) {
+  .header-area {
+    /* margin-top: 62px; */
+  }
+}
+
+a {
+  color: #000 !important;
+}
+
+a:hover {
+  color: #0056b3 !important;
+  text-decoration: underline !important;
+}
+.risk-documents:last-child hr {
+  height: 0px;
+}
+.header-area a {
+  color: #000000;
+}
+.hr-line {
+  border: 1px solid #e35205;
+  margin-left: 20px;
+  margin-right: 20px;
+  opacity: unset !important;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+}
+.panels {
+  margin: 0 auto 30px;
+}
+.risk-wapper {
+  min-height: calc(100vh - 10px);
+}
+.risk-documents {
+  margin-right: 30px;
+  margin-left: 30px;
+  font-size: 16px;
+  color: #231f20;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .risk-documents {
+    line-height: 22px;
+  }
+  .risk-documents .overlap-above {
+    margin-top: -10rem;
+  }
+}
+.panels {
+  margin: 0 auto 30px;
+}
+.panels .card-header {
+  border-radius: 0;
+  min-height: 245px;
+  display: flex;
+}
+.panels .card {
+  min-height: 0;
+  overflow: hidden;
+  padding: 0 32px 15px;
+  margin-bottom: 20px;
+  line-height: 0;
+}
+.panels label {
+  font-weight: 600;
+}
+.panels caption {
+  position: absolute;
+  max-height: 1px;
+  padding: 8px;
+  left: -3000px;
+  color: #ffffff;
+}
+.panels h2 {
+  font-size: 20px;
+  color: #231f20;
+  line-height: 26px;
+  font-weight: 700;
+}
+.panels h5 {
+  font-size: 16px;
+  color: #231f20;
+  letter-spacing: 0;
+  line-height: 22px;
+  font-weight: 600;
+}
+.appetite-checks {
+  padding: 3rem 0px;
+  background-position: left;
+  margin-bottom: 1px;
+  padding-bottom: 171px !important;
+}
+
+.risk-documents {
+  color: #231f20;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 22px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+@media (max-width: 991px) {
+  .panels .card-header {
+    border-radius: 0;
+    min-height: 0;
+  }
+}
+/**** this will not show the last content's border ****/
+.risk-documents:last-child hr {
+  border: 0;
+}

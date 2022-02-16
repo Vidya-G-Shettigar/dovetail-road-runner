@@ -1,0 +1,128 @@
+/* // card */
+.card {
+  margin: 0 0 33px;
+  border: none;
+  border-radius: 0;
+  color: #231f20;
+  box-shadow: 0 1px 2px 0 #7d7d7d;
+}
+.card .card-header {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+}
+.card-header img {
+  display: block;
+  margin: auto;
+  width: 52%;
+}
+.card-body {
+  background-color: #ffffff;
+}
+.card-title {
+  letter-spacing: 0;
+}
+
+.card-text {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* //card link */
+.card a {
+  color: #231f20;
+  text-decoration: underline;
+  position: absolute;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+}
+
+/* // Media Queries
+    
+  //card */
+@media screen and (min-width: 1024px) {
+  .card {
+    margin: 0 0 33px;
+  }
+
+  .card-header {
+    height: 264px;
+  }
+
+  .card a {
+    bottom: 27px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  .card {
+    margin: 0 0 33px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .card-header {
+    height: 196px;
+  }
+
+  .card-header img {
+    width: 52%;
+    margin: auto;
+  }
+}
+
+/* // card body */
+@media screen and (min-width: 1024px) {
+  .card-body {
+    min-height: 192px;
+    padding: 24px 32px 27px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .card-body {
+    min-height: 240px;
+    padding: 22px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  .card a {
+    bottom: 22px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .card-body {
+    min-height: 185px;
+    padding: 22px;
+  }
+  .card-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+    margin-bottom: 8px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .card-body {
+    min-height: 190px;
+    padding: 22px;
+  }
+
+  .card-header {
+    height: 155px;
+  }
+
+  .card {
+    margin: 0 0 15px;
+  }
+}
+
+/* //card title */
+@media screen and (min-width: 768px) {
+  .card-title {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+}
